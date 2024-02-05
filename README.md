@@ -1,6 +1,7 @@
 # IoT Start Project
 
-This is your IoT Gitlab project. You can use it to store your code and documentation. 
+This is your IoT Gitlab project. You can use it to store your code and documentation.
+This projects belongs to Sara Benali.
 
 ## Getting Started
 
