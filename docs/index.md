@@ -5,4 +5,4 @@ appointments in the calender on the website. Everytime when they're is an appoin
 something will pop out of the clock as a reminder that a user has an appointment. The design I have chosen for this 
 project is a whale. I will use wood to build a whale and put a digital clock inside it that will show the time and name
 of the appointment. When it's time a sound will be heard and something will pop out of the hole of the whale.
-{{ mdocotion_header('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80') }}
+{{ mdocotion_header('https://www.google.com/url?sa=i&url=https%3A%2F%2Fnorcompsc.com%2Fiot-consumer%2F&psig=AOvVaw1YpDrmO9EpjP6Bzda0dXdq&ust=1707387045399000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKihj8T-mIQDFQAAAAAdAAAAABAR') }}
