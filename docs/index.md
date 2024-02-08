@@ -21,4 +21,4 @@ of the appointment. When it's time a sound will be heard and something will pop 
 11. Push button
 
 # Design of Website
-![image]((uploads/4a6a6771fdffc415a9576c81fac391ac/Calender-design.jpg)47fe5627b537ca7/Screenshot__280_.png)
+![](../../../Pictures/Screenshots/Calender-design.jpg)
