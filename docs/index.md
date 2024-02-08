@@ -12,3 +12,9 @@ of the appointment. When it's time a sound will be heard and something will pop 
 2. WeMos
 3. Stepper motor
 4. Sensors
+5. HX1838 IR receiver 38kHz
+6. 9V Battery
+7. 8x8 led matrix
+8. LCD Display 16*2 characters with white text and blue backlight
+9. Segment display
+10. Resistor
