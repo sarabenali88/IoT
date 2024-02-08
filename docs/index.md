@@ -18,3 +18,7 @@ of the appointment. When it's time a sound will be heard and something will pop 
 8. LCD Display 16*2 characters with white text and blue backlight
 9. Segment display
 10. Resistor
+11. Push button
+
+# Design of Website
+![Screenshot__280_](uploads/7dcb3f17d5c8fb198![Calender-design](uploads/4a6a6771fdffc415a9576c81fac391ac/Calender-design.jpg)47fe5627b537ca7/Screenshot__280_.png)
