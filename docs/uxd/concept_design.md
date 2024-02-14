@@ -29,8 +29,8 @@ lots of functionalities to actually understand the device. The pyramid will have
 This is because I can place different technical materials on different sides. The LCD-display screen will be placed on 
 the front of the pyramid. The push button to turn the buzzer off, will be placed on the right side of the pyramid. Below
 I have some starter designs for the pyramid I want to build:
-![Origami-1-design](assets/origami_1.jpg)
-![Origami-2-design](assets/origami_2.jpg)
+![origami_1-](../assets/origami_1.jpg)
+![origami_2](../assets/origami_2.jpg)
 Here I have made an origami pyramid. It doesn't look very nice because I made it from paper. But it does resemble the 
 design I want to have for my smart device.
 
