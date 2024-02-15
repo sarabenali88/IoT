@@ -9,9 +9,9 @@ heard and you can turn off the sound if you click on a button.
 
 # Materials
 1. Active buzzer
-2. WeMos 
+2. LDR 
 3. LCD Display 
 4. Push button
 
 # Design of Website
-![Calender-design](assets/Calender-design.jpg)
+![Calender-design](assets/Calendar-design.jpg)

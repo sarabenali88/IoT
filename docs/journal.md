@@ -26,4 +26,6 @@ port to COM5, and it ended up working. This is how it ended up looking:
 ![step3-LCD](assets/Step3_lcd.jpg)
 
 What I did was using female to female cables. I then connected each cable to its pin. SO for example, SCL would be connected
-to D1. I did this for all four pins. Lastly, I ran the code in Arduino and was able to display the "Hello world".  
+to D1. I did this for all four pins. Lastly, I ran the code in Arduino and was able to display the "Hello world". 
+This is a website link that helped me:
+[link for connecting WeMos to LCD](https://www.esp8266learning.com/wemos-mini-i2c-lcd-example.php)
