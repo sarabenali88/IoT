@@ -1,20 +1,29 @@
 # Learning journal
 
-### 2024-02-08
-Today I will continue working on my project. I will sketch out my design and ask for feedback, so I can improve my design. 
+## 2024-02-08
+- Today I will continue working on my project. I will sketch out my design and ask for feedback, so I can improve my design. 
 For now, I cannot continue working on my web-application because I have no idea where to start and what kind of setup I need.
 Today I will try to find that out.
---
-I made two designs for my website and I didn't know which one to choose, so I asked for feedback and opinions. I ended up 
+
+- I made two designs for my website and I didn't know which one to choose, so I asked for feedback and opinions. I ended up 
 choosing the second design, because that one felt a little simpler for a 10-week project and I think the second design is 
 easier to work with. I also think that I know how to start working on my website, because I saw some examples from other 
 classmates.
 
+## 2024-02-14
+- Today I have worked on trying to make to turn on the LCD-screen and I also wanted to print something simple as "Hello
+World" on it. The only thing I knew was that I needed to solder my backpack to my LCD-screen. So, that's the first thing
+I did. I then looked up some tutorials and I had found a lot but a lot of them didn't really explain what I was supposed 
+to do. I ended up being very confused because the things people were using in the video, were not in my kit. I ended up
+asking for help, and then I looked up some pictures with my teacher and I ended up being able to turn the LCD-screen on
+using my WeMos. Then, it was time to print "Hello World" on the LCD-screen. I picked my board and port in Arduino and 
+something went wrong again. I kept getting this error: "A fatal esptool.py error occurred: Write timeout". I didn't know 
+how to fix this at first, I switched from LCD-screen with a classmate, and it ended up working on her laptop. For some 
+reason, three ports were available, COM5, COM6, and COM7. I was using COM7 at first, normally I use COM5, so I changed the
+port to COM5, and it ended up working. This is how it ended up looking:
+![step1-LCD](assets/Step1_lcd.jpg)
+![step2-LCD](assets/Step2_lcd.jpg)
+![step3-LCD](assets/Step3_lcd.jpg)
 
-Your learning journal can be seen as a diary of your learning process. It is a place where you can reflect on your 
-learning, and where you can keep track of your progress. It is also a place where you can keep track of 
-your questions, and where you can write down your answers to those questions.
-
-So for example when you receive feedback on your project, you can write down the feedback and your reflection on it 
-in your learning journal. You can also write down what you have learned from the feedback, and how you will apply it 
-in your project.
+What I did was using female to female cables. I then connected each cable to its pin. SO for example, SCL would be connected
+to D1. I did this for all four pins. Lastly, I ran the code in Arduino and was able to display the "Hello world".  
