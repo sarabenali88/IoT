@@ -29,3 +29,11 @@ What I did was using female to female cables. I then connected each cable to its
 to D1. I did this for all four pins. Lastly, I ran the code in Arduino and was able to display the "Hello world". 
 This is a website link that helped me:
 [link for connecting WeMos to LCD](https://www.esp8266learning.com/wemos-mini-i2c-lcd-example.php)
+
+## 2024-02-15
+Today I have worked on several things. First, I have worked on adding the stuff I did on Wednesday to my learning journal. 
+After that I started working on my web-application. Since my whole design idea had changed, I also needed to change the 
+design of my website, mostly the colors. When I was working on my web-application I was struggling a little because it has 
+been a while since I worked with actual JavaScript. But I did manage to make the view of the page. On the website you can 
+now see a form where you can enter the date, time and name of an appointment. I also added validation for the fields. This 
+means if you don't enter anything, a warning message will be displayed. That is all what I worked on for the web-application
