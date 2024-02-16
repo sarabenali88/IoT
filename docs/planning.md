@@ -13,7 +13,7 @@ On Thursday I am going to work on the design of my website. At the end of the da
 so the week after that I can work on the functionalities of the website.
 - Friday:
 On Friday I want to work on my planning for week 3. I also want to do more research on how I can make a new thing work.
-- 
+
 ## 16-02-2024: Week 3
 During the break I want to try if I can already start on the research I have to do to put my device on the market.
 

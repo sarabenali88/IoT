@@ -14,4 +14,4 @@ heard and you can turn off the sound if you click on a button.
 4. Push button
 
 # Design of Website
-![Calender-design](assets/Calendar-design.jpg)
+![Calender-design](assets/Calendar.jpg)
