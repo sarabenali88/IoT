@@ -1,12 +1,18 @@
 # Concept & Design
 
 ### User needs
-This device is for someone who has a lot of appointments and keeps forgetting them. Someone who always forgets their 
-appointments is in need of reminders. For the ease of the user you can use a simple device for this. When you make an 
-appointment, you will receive a reminder for it. You will get notified by a sound. The smart 
-device will also have a button, so you can turn the sound off. You can also see the name and time of your appointment 
-displayed on the smart device. The device will be made in a way that you can place it anywhere you want; your desk, your
-bedroom, living room for example?
+This device is designed to assist individuals who struggle to remember their appointments due to their busy schedules. 
+It serves as a reliable reminder system tailored to their needs. The device operates simply: upon scheduling an appointment, 
+it automatically sets up reminders to ensure the user doesn't forget. These reminders are delivered audibly through a 
+notification sound.
+
+In addition to auditory alerts, the device features a practical button that allows users to easily mute or silence the 
+reminders, providing flexibility and control over their notification preferences. Furthermore, crucial details such as 
+the name and time of each appointment are displayed on the device's screen, enhancing visibility and accessibility.
+
+One of the key advantages of this device is its versatility in placement. Whether it's on a desk, bedside table, or in
+the living room, users can position it wherever it's most convenient for them, ensuring that they never miss an
+appointment again.
 
 ### Main goal
 So in short, the main goal of this device is to make it easier for a user to follow their appointments without having
