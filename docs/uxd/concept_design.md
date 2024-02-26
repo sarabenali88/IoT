@@ -41,3 +41,12 @@ I have some starter designs for the pyramid I want to build:
 Here I have made an origami pyramid. It doesn't look very nice because I made it from paper. But it does resemble the 
 design I want to have for my smart device.
 
+## Measurements
+I have chosen to use wood for my project and by using wood, I have to laser cut my design. The measurements I have chosen 
+is for the length of the pyramid around 17cm. I didn't want my design to be too big and also not too small, so around 17cm
+looks pretty good. For the LCD-screen, I have chosen the measurements 8x4cm. With these measurements the LCD-screen can fit
+perfectly in the front part of the pyramid. Below I have an example of design in 2D and 3D:
+![pyramid_2d](../assets/pyramid_2d.png)
+![pyramid_3d](../assets/pyramid_3d.png)
+The measurements and material for the buttons still need to be decided. Using the 3d printer is a possibility for the 
+buttons.
