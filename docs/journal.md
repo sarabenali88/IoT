@@ -45,4 +45,6 @@ would be very difficult, but it's actually very easy and pretty fun too. After t
 want to start on my own design. Even though I only did the front of the pyramid, I wanted to at least have a first 
 try/concept. This was a smart thing to do because now I know the measurements for my design. At first, I was unsure because 
 I didn't want my design to look to big or too small. By using the laser cutter, I was able to figure how big/small I need 
-some things to be. 
+some things to be. Below I have pictures of the pyramid design in the program and from the wood:
+![pyramid_software_program](assets/pyramid_program.jpg)
+![pyramid_wood](assets/pyramid_wood_1.jpg)
