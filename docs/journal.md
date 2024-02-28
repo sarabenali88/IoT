@@ -48,3 +48,22 @@ I didn't want my design to look to big or too small. By using the laser cutter, 
 some things to be. Below I have pictures of the pyramid design in the program and from the wood:
 ![pyramid_software_program](assets/pyramid_program.jpg)
 ![pyramid_wood](assets/pyramid_wood_1.jpg)
+
+## 2024-02-28
+Today I learned how to connect a push button to my active buzzer and Arduino. I started with searching up some tutorials 
+and websites to see how can I set up everything using the wires, breadboard, Arduino, active buzzer and push button. In 
+the beginning it was pretty difficult to actually find something that gives a clear explanation of what to do. But I did 
+end up figuring it out. I was able to make put everything together and a sound came from the buzzer, this was the first step. 
+After that I wanted to use the push button, because the whole idea is that the buzzer goes off, you click on the button and
+the buzzer stops. Everything I tried wasn't working and I didn't know what to do, according to the video everything looked 
+alright. I asked for help and the problem was that I was missing a wire that was connecting the push button to the power.
+I then was able to make a buzzer sound by using the push button and this was step 2. The last step was to make sure that 
+the buzzer turns off when I click on the button. I already had some example code from the video, but now I needed to adapt it
+to what I want it to do. Since I'm not familiar with C## I didn't really know how to write the code. I knew what I had to use 
+, but I didn't know how to apply it. I tried different things, but it didn't quiet work. So, I asked for help from the student
+assistant. I ended up figuring it out and for now the buzzer does what I need it to do. Below is the link for the video I used
+and some pictures from how everything looked like:
+[Link for setup active buzzer-Arduino](https://www.youtube.com/watch?v=gj-H_agfd6U&t=86s)
+![sound_1](assets/sound_1.jpg)
+![sound_2](assets/sound_2.jpg)
+![sound_3](assets/sound_3.jpg)
