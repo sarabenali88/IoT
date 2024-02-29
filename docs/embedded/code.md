@@ -7,7 +7,9 @@ I set the buzzer to HIGH, so it would always make a buzzing sound. I then use a 
 is supposed to stop buzzing. In the while-loop I used an if-statement to check if the button State is LOW, if it is then 
 the buzzer should also be LOW. I also added a delay in the while-loop and outside the while-loop, so when you actually 
 click on the button, the buzzer stops making a sound. For now, I have that the code runs again after 200 ms, but after
-I have more of my functionalities this will change. 
+I have more of my functionalities this will change.
+[Link to my embedded code](https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/embedded/test_code/active-sound-file.ino?ref_type=heads)
+
 
 
 
