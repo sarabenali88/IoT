@@ -67,3 +67,13 @@ and some pictures from how everything looked like:
 ![sound_1](assets/sound_1.jpg)
 ![sound_2](assets/sound_2.jpg)
 ![sound_3](assets/sound_3.jpg)
+
+## 2024-02-29
+Today I learned to start working with php. I didn't know how PHP works (I still don't know a lot), but I did work on making 
+a connection with my database. I have a database connection and also made a database design. At first, I only had two tables,
+the user table and the appointment table, in my design because I didn't know what I should be saving into database apart
+from that. I asked for help from the teacher, and he told me that I should also save the data from the sensors I have. 
+The sensors I am using are the push button and the LDR and I have also decided which data I want to save in the tables.
+Today I failed to accomplish one thing. I wanted to make sure that I could at least save the data from the appointment into
+the appointment table in the database. But I didn't manage to do that, because I still find PHP a little hard to work with. 
+I will try to take a look at this again tomorrow or in the weekend.
