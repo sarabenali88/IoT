@@ -23,7 +23,6 @@ function checkFields(){
         errorMsg.innerText = "Name cannot be empty!";
     } else {
         errorMsg.innerHTML = "";
-        new XMLHttpRequest();
     }
 }
 
