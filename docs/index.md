@@ -12,7 +12,6 @@ heard and you can turn off the sound if you click on a button.
 2. LDR 
 3. LCD Display 
 4. Push button
-5. Potentio meter
 
 # Design of Website
 ![Calender-design](assets/Calendar.jpg)
