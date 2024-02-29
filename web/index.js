@@ -7,7 +7,10 @@ let errorMsg = document.querySelector(".error");
 
 button.onclick = function (event) {
     event.preventDefault();
+    checkFields();
+}
 
+function checkFields(){
     let dateInput = dateField.value;
     let timeInput = timeField.value;
     let nameInput = nameField.value;
@@ -20,6 +23,10 @@ button.onclick = function (event) {
         errorMsg.innerText = "Name cannot be empty!";
     } else {
         errorMsg.innerHTML = "";
+        new XMLHttpRequest();
     }
 }
+
+
+
 
