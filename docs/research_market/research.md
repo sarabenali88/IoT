@@ -3,8 +3,8 @@
 ## Research question
 
 For the research market I will be researching about User Interaction. I want to find out how I can make it easier for 
-non-it people to  use my website and device. My research question is: - "What design and feature elements can be added to
-optimize the user interaction for people with no IT-background?"
+non-it people to  use my website and device. 
+My research question is: - "What design and feature elements can be added to optimize the user interaction for people with no IT-background?"
 
 ## Introduction 
 
