@@ -2,7 +2,7 @@ nav:
     - 🏚️ Home: index.md
     - 📦 System Architecture: system_architecture
     - ♟️ Learning journal: journal
-    - ♟   Planning: planning
+    - 📅   Planning: planning
     - 🧰 Embedded:
       - Requirements: embedded/requirements
       - Technical documentation: embedded/technical_documentation
@@ -16,3 +16,6 @@ nav:
       - Concept & Design: uxd/concept_design
       - Create & Test: uxd/create_test
       - Conclude & Reflect: uxd/conclude_reflect
+    - 📝 Research Market:
+      - Research: research_market/research
+      - Implementation: research_market/implementation
