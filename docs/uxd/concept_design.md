@@ -1,5 +1,7 @@
 # Concept & Design
 
+## Concept
+
 ### User needs
 This device is designed to assist individuals who struggle to remember their appointments due to their busy schedules. 
 It serves as a reliable reminder system tailored to their needs. The device operates simply: upon scheduling an appointment, 
@@ -47,7 +49,7 @@ I have some starter designs for the pyramid I want to build:
 Here I have made an origami pyramid. It doesn't look very nice because I made it from paper. But it does resemble the 
 design I want to have for my smart device.
 
-## Measurements
+### Measurements
 I have chosen to use wood for my project and by using wood, I have to laser cut my design. The measurements I have chosen 
 is for the length of the pyramid around 17cm. I didn't want my design to be too big and also not too small, so around 17cm
 looks pretty good. For the LCD-screen, I have chosen the measurements 8x4cm. With these measurements the LCD-screen can fit
@@ -56,3 +58,29 @@ perfectly in the front part of the pyramid. Below I have an example of design in
 ![pyramid_3d](../assets/pyramid_3d.png)
 The measurements and material for the buttons still need to be decided. Using the 3d printer is a possibility for the 
 buttons.
+
+## Digital Manufacturing
+
+### First prototype
+
+For the first prototype I used the speed/power 20.0/65.0. I used the material MDF with a measurement of 4mm
+and everything went well. Though I did find out one week after that I entered the wrong material in de software program.
+I entered wood (as I was told to enter)but I was actually using MDF. Even though I did enter the wrong material, 
+the design came out good. There were no burn marks or whatsoever. The only thing that wasn't accurate was the measurements
+for my design.
+![pyramid_wood](../assets/pyramid_wood_1.jpg)
+
+### Second prototype
+For the second prototype I used another material. This time I used plywood with a thickness of 4mm and with the same 
+speed/power 20.0/65.0. This time things didn't go all too well, because after the laser was done with cutting, 
+I saw some black spots on the back of my design. I think the power was too high for the plywood. I also didn't like how 
+the plywood felt and looked. So I have decided to definitely use the MDF material for my design. Something I also realised
+is the new measurements I used, weren't the right measurements either.
+![pyramid_wood](../assets/pyramid_pro2_1.jpg)
+![pyramid_wood](../assets/pyramid_pro2_2.jpg)
+![pyramid_wood](../assets/pyramid_pro2_3.jpg)
+
+
+
+
+
