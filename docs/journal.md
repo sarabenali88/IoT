@@ -18,7 +18,7 @@ to do. I ended up being very confused because the things people were using in th
 asking for help, and then I looked up some pictures with my teacher and I ended up being able to turn the LCD-screen on
 using my WeMos. Then, it was time to print "Hello World" on the LCD-screen. I picked my board and port in Arduino and 
 something went wrong again. I kept getting this error: "A fatal esptool.py error occurred: Write timeout". I didn't know 
-how to fix this at first, I switched from LCD-screen with a classmate, and it ended up working on her laptop. For some 
+how to fix this at first, I switched from LCD-screen with Seyma (my classmate), and it ended up working on her laptop. For some 
 reason, three ports were available, COM5, COM6, and COM7. I was using COM7 at first, normally I use COM5, so I changed the
 port to COM5, and it ended up working. This is how it ended up looking:
 ![step1-LCD](assets/Step1_lcd.jpg)
@@ -77,3 +77,11 @@ The sensors I am using are the push button and the LDR and I have also decided w
 Today I failed to accomplish one thing. I wanted to make sure that I could at least save the data from the appointment into
 the appointment table in the database. But I didn't manage to do that, because I still find PHP a little hard to work with. 
 I will try to take a look at this again tomorrow or in the weekend.
+
+## 2024-03-04
+Today I learned to create different measurements for my design during the laser cutting. Last week I went to the 
+makers-lab, and I was able to use the laser cutter. The only thing I didn't know how to do is create different 
+measurements for different shapes I want to cut out. It was actually very easy and the only thing I had to do was select 
+the shape. I cut out another pyramid side design like last week but with new measurements, but the new measurements for 
+the LCD-screen weren't accurate, so next week I will be going to the makers-lab again to cut out a new design with the 
+right measurements. 
