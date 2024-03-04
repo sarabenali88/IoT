@@ -20,21 +20,21 @@ the need to keep checking on which day the appointment is and what time the appo
 
 ### Requirements
 To meet the user needs, these are the requirements I have set up for the smart device:
+- As a user I have access to a website to make all of my appointments. A simple website will be provided so the user
+can enter the date, time and appointment name.
 - As a user I want the device to make use of an LCD-display screen, so I can see the name of my appointment. By using 
 the LCD-display the appointment name can be display on the device for the user. This is easy because you can immediately 
 read what your appointment is. 
 - As a user I want the device to contain an active buzzer. This buzzer will go off at least one hour before the 
-appointment so the user will have enough notice to prepare for the appointment. 
-- As a user I have access to a website to make all of my appointments. A simple website will be provided so the user 
-can enter the date, time and appointment name. 
+appointment so the user will have enough notice to prepare for the appointment.
 - As a user I can expect a push button to turn the buzzer off. With this push button the user can turn the buzzer off. 
 This is because it wouldn't be nice for the user to have a sound keep going off for one hour for example. 
+- As a user I can expect that the device makes use of an LDR. The moment that the device detects darkness, the color
+  of the screen will be changed. I think this is nice for the user because if it's night it doesn't bother the user with
+  a bright color.
 - As a user I can expect to see the next appointment after I turned the buzzer for the previous appointment off. 
 One requirement I want to try to make work is that the moment the user turns off the buzzer, the next appointment will 
-be displayed on the LCD-display screen. 
-- As a user I can expect that the device makes use of an LDR. The moment that the device detects darkness, the color 
-of the screen will be changed. I think this is nice for the user because if it's night it doesn't bother the user with 
-a bright color. 
+be displayed on the LCD-display screen.
 
 ### Design
 I have chosen to design a pyramid as the smart device. I think a pyramid is simple, easy to look at and doesn't require
