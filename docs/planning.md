@@ -36,7 +36,8 @@ how I can put my device on the market.
 On monday I plan on going to the makers-lab to work on my design. On this day I want to know if I can design all the
 sides of my device design. 
 - Wednesday: 
-On wednesday I want to work with embedded. On this day I want to try to get a wifi connection on the WeMos.
+On wednesday I want to work with embedded. On this day I want to work on my second sensor. I want to try work with the 
+LDR screen. 
 - Thursday: 
 On thursday I will continue working on my website. On this day I want to correct my ERD design. I want to make sure I can
 send data to my database and I want it to be saved. 
