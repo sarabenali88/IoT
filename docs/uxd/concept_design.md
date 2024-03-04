@@ -102,6 +102,7 @@ came out pretty small. So, I knew that it needed to look bigger.
 ![pyramid_2d](../assets/pyramid_2d_2.png)
 In this picture you can see that the pyramid looks bigger. The pyramid now looks bigger and during the laser cutting this 
 did look much better. 
+
 ### Documentation 
 
 
