@@ -22,18 +22,23 @@ the need to keep checking on which day the appointment is and what time the appo
 
 ### Requirements
 To meet the user needs, these are the requirements I have set up for the smart device:
-- As a user I have access to a website to make all of my appointments. A simple website will be provided so the user
+- As a user I have access to a website to make all of my appointments. A simple website will be provided so the user 
 can enter the date, time and appointment name.
+
 - As a user I want the device to make use of an LCD-display screen, so I can see the name of my appointment. By using 
 the LCD-display the appointment name can be display on the device for the user. This is easy because you can immediately 
 read what your appointment is. 
+
 - As a user I want the device to contain an active buzzer. This buzzer will go off at least one hour before the 
 appointment so the user will have enough notice to prepare for the appointment.
+
 - As a user I can expect a push button to turn the buzzer off. With this push button the user can turn the buzzer off. 
 This is because it wouldn't be nice for the user to have a sound keep going off for one hour for example. 
+
 - As a user I can expect that the device makes use of an LDR. The moment that the device detects darkness, the color
   of the screen will be changed. I think this is nice for the user because if it's night it doesn't bother the user with
   a bright color.
+
 - As a user I can expect to see the next appointment after I turned the buzzer for the previous appointment off. 
 One requirement I want to try to make work is that the moment the user turns off the buzzer, the next appointment will 
 be displayed on the LCD-display screen.
@@ -50,14 +55,10 @@ Here I have made an origami pyramid. It doesn't look very nice because I made it
 design I want to have for my smart device.
 
 ### Measurements
-I have chosen to use wood for my project and by using wood, I have to laser cut my design. The measurements I have chosen 
-is for the length of the pyramid around 17cm. I didn't want my design to be too big and also not too small, so around 17cm
-looks pretty good. For the LCD-screen, I have chosen the measurements 8x4cm. With these measurements the LCD-screen can fit
-perfectly in the front part of the pyramid. Below I have an example of design in 2D and 3D:
-![pyramid_2d](../assets/pyramid_2d.png)
-![pyramid_3d](../assets/pyramid_3d.png)
-The measurements and material for the buttons still need to be decided. Using the 3d printer is a possibility for the 
-buttons.
+*Latest measurements:* 
+
+Pyramid side: 17 cm. 
+LCD-screen: 7.2 x 2.4 cm.
 
 ## Digital Manufacturing
 
@@ -81,6 +82,27 @@ is the new measurements I used, weren't the right measurements either.
 ![pyramid_wood](../assets/pyramid_pro2_3.jpg)
 
 
+## Digital Design
+
+### Software choice
+The software I have chosen for my design is Inkscape. The reason why I have chosen Inkscape is that I have a pyramid as 
+my design. I find more joy in making designs in software programs like inkscape instead of openScad. 
+Even though the pyramid is a 3d object, I think it's better to use Inkscape. Mainly because of the type of material 
+I want to use. I want to use the wood MDF material, because I think given my design, it's easier to work with pyramid. 
+Wood gives me option to easily put the all the 4 sides together on the contrary with using polystyrene. The device I am 
+using to make my design is the laser cutter. Using the laser cutter is more efficient because it's fast and very precise.
+This is also a reason why I choose to not work with the 3d-printer. If I make a mistake during the laser cutting I can 
+easily fix it and cut out a new design, but with the 3d-printer it takes a while before I have the new design. 
+
+### Design process
+![pyramid_2d](../assets/pyramid_2d.png)
+In this picture you can see the 2d design I have created in Inkscape. For the first prototype, I just made a triangle 
+with a rectangle inside it. In the picture you can see that the pyramid is pretty small. When I first laser cut this, it 
+came out pretty small. So, I knew that it needed to look bigger. 
+![pyramid_2d](../assets/pyramid_2d_2.png)
+In this picture you can see that the pyramid looks bigger. The pyramid now looks bigger and during the laser cutting this 
+did look much better. 
+### Documentation 
 
 
 
