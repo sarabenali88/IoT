@@ -12,4 +12,8 @@ Add some images! 😉
 | EMBRQ#03            | The embedded device contains at least two types of input sensors (e.g. LDR, buttons, joystick, capacitive touch, etc.).                                                       | MUST       | NO            |
 | EMBRQ#04            | The embedded device contains at least two types of visual and/or sensory outputs (e.g. LED, LED Matrix, 7-segment display, motor, servo, actuator, LCD-screen, buzzer, etc.). | MUST       | NO            |
 | EMBRQ#05            | The embedded device uses the WifiManager for configuration of SSID and password (PWD) for connecting to the network.                                                          | MUST       | NO            |
+| EMBRQ#06            | The embedded device displays the name and date of an appointment.                                                                                                             | MUST       | NO            |
+| EMBRQ#07            | The embedded device makes use of an active buzzer combined with a push button                                                                                                 | MUST       | NO            |
+| EMBRQ#08            | The embedded device uses an LDR to change the state of the LED light                                                                                                          | MUST       | NO            |
+
  
