@@ -85,3 +85,19 @@ measurements for different shapes I want to cut out. It was actually very easy a
 the shape. I cut out another pyramid side design like last week but with new measurements, but the new measurements for 
 the LCD-screen weren't accurate, so next week I will be going to the makers-lab again to cut out a new design with the 
 right measurements. 
+
+## 2024-03-06
+Today I learned how to regulate a LED light by using an LDR. My idea for the LDR sensor changed, because I couldn't find 
+any (clear) tutorials or explanations on how to regulate the brightness of the LCD screen, so I decided to use a LED. 
+Now it works like this: When it's light the LED will be turned off, but the moment the LED senses darkness, the LED will
+be turned on. Last week I worked on the push button combined with the active buzzer, and today I tried to make the 
+buzzer/button work together with the LED/LDR. There were some complications first, because I couldn't get the buzzer to 
+work again. The problem ended up being a mistake in my code and one of my wires. The only thing I need to figure out now,
+is how to make sure I can use the ground and 5v pins for both input/output sensors. Below are some pictures of how I 
+did it:
+![ldr_1](assets/ldr_1.jpg)
+![ldr_2](assets/ldr_2.jpg)
+![ldr_3](assets/ldr_3.jpg)
+A link reference to the tutorial I followed:
+[Link for setup LDR/LED-Arduino](https://projecthub.arduino.cc/DCamino/ambient-light-sensor-using-photo-resistor-and-led-lights-79c2ed)
+
