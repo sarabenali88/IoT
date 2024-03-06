@@ -12,12 +12,13 @@ void loop() {
   buttonState = digitalRead(buttonPin);
   Serial.println(buttonState);
   digitalWrite(buzzerPin, HIGH);
-  while (buttonState == HIGH) {
+  while (buttonState == LOW) {
     buttonState = digitalRead(buttonPin);
-    if (buttonState == LOW) {
+    if (buttonState == HIGH) {
       digitalWrite(buzzerPin, LOW);
       delay(10);
     }
     delay(2000);
   }
+  delay(30);
 }
