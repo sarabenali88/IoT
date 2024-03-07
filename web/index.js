@@ -22,9 +22,35 @@ function checkFields(){
     } else if (nameInput === '') {
         errorMsg.innerText = "Name cannot be empty!";
     } else {
+        let appointment = {
+            "date_appointment": dateInput,
+            "time_appointment": timeInput,
+            "name": nameInput
+        };
+
+        fetch("script.php", {
+            "method" : "POST",
+            "headers" : {
+                "Content-Type" : "application/json; charset=utf-8"
+            },
+            "body" : JSON.stringify(appointment)
+        }).then(function (response){
+            return response.json();
+        }).then(function(data){
+            console.log(data);
+        });
+
         errorMsg.innerHTML = "";
+        alert("Your appointment has been added!");
+        // displayAppointment(appointment);
     }
+
+    //  function displayAppointment(){
+    //     let card = document.querySelector("card");
+    //     card.querySelector('h6').innerText = "Date:" + dateField.value;
+    // }
 }
+
 
 
 
