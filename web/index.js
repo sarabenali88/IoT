@@ -1,5 +1,6 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let dateField = document.getElementById("date-time-input");
+document.addEventListener("DOMContentLoaded", function () {
+    let dateField = document.getElementById("date-input");
+    let timeField = document.getElementById("time-input");
     let nameField = document.getElementById("app_name");
     let button = document.getElementById("button");
     let errorMsg = document.querySelector(".error");
@@ -9,35 +10,40 @@ document.addEventListener("DOMContentLoaded", function() {
         checkFields();
     }
 
-    function checkFields(){
-        let dateTimeInput = dateField.value;
+    function checkFields() {
+        let dateInput = dateField.value;
+        let timeInput = timeField.value
         let nameInput = nameField.value;
 
-        if (dateTimeInput === '') {
-            errorMsg.innerText = "Date and Time cannot be empty!";
+        if (dateInput === '') {
+            errorMsg.innerText = "Date cannot be empty!";
+        } else if (timeInput === '') {
+            errorMsg.innerText = "Time cannot be empty"
         } else if (nameInput === '') {
             errorMsg.innerText = "Name cannot be empty!";
         } else {
+            let dateTimeAppointment = dateInput + ' ' + timeInput
             let appointment = {
-                "date_time_appointment": dateTimeInput,
+                "dateTimeAppointment": dateTimeAppointment,
                 "name": nameInput
             };
 
-            fetch("script.php", {
-                "method" : "POST",
-                "headers" : {
-                    "Content-Type" : "application/json; charset=utf-8"
+            fetch("insert_data.php", {
+                "method": "POST",
+                "headers": {
+                    "Content-Type": "application/json; charset=utf-8"
                 },
-                "body" : JSON.stringify(appointment)
-            }).then(function (response){
+                "body": JSON.stringify(appointment)
+            }).then(function (response) {
                 return response.json();
-            }).then(function(data){
+            }).then(function (data) {
                 console.log(data);
             });
 
             errorMsg.innerHTML = "";
             alert("Your appointment has been added!");
             // displayAppointment(appointment);
+            console.log(JSON.stringify(appointment));
         }
 
         //  function displayAppointment(){
