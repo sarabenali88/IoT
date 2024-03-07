@@ -1,3 +1,28 @@
+fetch("get_data.php", {
+    "method": "GET",
+    "headers": {
+        "Content-Type": "application/json; charset=utf-8"
+    }
+}).then(function (response) {
+    return response.json();
+}).then(function (data) {
+    for (let appointment of data){
+        let div = document.createElement("div");
+        div.classList.add("appointment");
+        div.innerHTML = `
+            <p>${appointment.date_time_appointment} ${appointment.name}</p>`;
+        div.style.borderStyle = "solid"
+        div.style.borderColor = "#EDC9AFFF";
+        div.style.padding = "8px"; // Add padding
+        div.style.margin = "10px";
+        document.getElementById("card").appendChild(div);
+    }
+    console.log(data);
+});
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     let dateField = document.getElementById("date-input");
     let timeField = document.getElementById("time-input");
@@ -42,13 +67,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
             errorMsg.innerHTML = "";
             alert("Your appointment has been added!");
-            // displayAppointment(appointment);
-            console.log(JSON.stringify(appointment));
-        }
 
-        //  function displayAppointment(){
-        //     let card = document.querySelector("card");
-        //     card.querySelector('h6').innerText = "Date:" + dateField.value;
-        // }
+            fetch("get_data.php", {
+                "method": "GET",
+                "headers": {
+                    "Content-Type": "application/json; charset=utf-8"
+                }
+            }).then(function (response) {
+                return response.json();
+            }).then(function (data) {
+                console.log(data);
+            });
+        }
     }
 });

@@ -7,12 +7,10 @@
     background-color: #f3f3f3;
     border-color: #000000;
 }
-
-.card {
-    width: 20rem;
-    display: none;
+#card{
+    outline: black;
+    border-color: black;
 }
-
 .card-body {
     background-color: #edc9af;
 }
