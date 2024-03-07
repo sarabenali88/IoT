@@ -101,3 +101,10 @@ did it:
 A link reference to the tutorial I followed:
 [Link for setup LDR/LED-Arduino](https://projecthub.arduino.cc/DCamino/ambient-light-sensor-using-photo-resistor-and-led-lights-79c2ed)
 
+## 2024-03-07
+Today I learned how to create endpoints with php. At first, I had lots of problems with connecting everything to my database. 
+But I managed to solve them by asking for help and I realised that I entered the wrong things in some places. To create the 
+endpoints I used the knowledge base and video's. I also searched a lot of things on stackoverflow. I can now create an 
+appointment that saves to the database, and you can see a list of the appointments that have been created. Sometimes it 
+was difficult to add things to the js file, because it kept working and then it didn't, but I managed to fix everything 
+by searching on Google. 
