@@ -46,17 +46,22 @@ methods.
 
 When working with IT-related tools, there are several problems people face with the user interface. Common problems people
 experience are: 
+
 - Complex Navigation: Not knowing where to go or where to click next makes the user feel like they're lost. Lots of times 
-when users get too frustrated with the complex navigation, they tend the abandon the website completely.<br></br>
+when users get too frustrated with the complex navigation, they tend the abandon the website completely.
+
 - Inconsistency in layout: When people see to many colours at once, different fonts or button styling, it disrupts the
 user experience. It hinders the users by not having any focus while using the website or not being able to read everything 
-clearly. <br></br>
+clearly. 
+
 - Slow pages: People always expect for a page to immediately load when they're interacting with the website. So, when a
-page takes forever to load, they get frustrated and this will lead to increase in bounce rates. <br></br>
+page takes forever to load, they get frustrated and this will lead to increase in bounce rates. 
+
 - Vague error messages: Validation is something that has to be added to a website if you want people to enter the right 
 things for example. Though the error messages need to be clear, otherwise it could make the user feel helpless. When you 
 display an error message that doesn't quite explain what the problem is, it will make it harder for the user to use the 
-website.<br></br>
+website.
+
 - Disorganized content: Seeing to many things at once, makes the user feel like they don't know where to look or where 
 to start. 
 
@@ -69,15 +74,19 @@ When the user does not feel satisfied with how everything went while interacting
 there are issues with the user interface. User satisfaction is one of the key metrics in knowing how effective the website
 is. So, when users encounter frustration, confusion or difficulties it could impact their user experience. But what are 
 the consequences when this happens? 
+
 - Decrease user engagement: I already talked a little about how certain user interface problems make users feel. When the 
 user experiences any frustration or become disengaged, they tend to abandon the website completely which leads to no user 
-engagement and reduced revenue potential. <br></br>
+engagement and reduced revenue potential. 
+
 - Bad reviews: In today's world, users who experience bad interface will share their frustration with other people. Wether 
 it is online or face-to-face. Negative reviews will lead to a loss of potential customers, because people tend to trust 
-the opinions of people around them. When this happens, it will take a lot for the company to gain its users trust again. <br></br>
+the opinions of people around them. When this happens, it will take a lot for the company to gain its users trust again. 
+
 - Low conversion rates: Because a badly designed experience can result in lower conversion rates and lower income, user
 experience (UX) is essential for directing users through the conversion funnel. When users are not experiencing a good user 
-interface, they will abandon the app before they can explore all the features that the website provides. <br></br>
+interface, they will abandon the app before they can explore all the features that the website provides. 
+
 [3]
 
 ## Conclusion 
