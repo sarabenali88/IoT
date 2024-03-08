@@ -42,7 +42,7 @@ and what would help them to improve their user experience. I will also take a lo
 I will be conducting <em>descriptive research</em> and I hope I can get the answer to my research question by using these research 
 methods. 
 ## Results 
-*What are some common examples of user interface problems?*
+_**What are some common examples of user interface problems?**_
 
 When working with IT-related tools, there are several problems people face with the user interface. Common problems people
 experience are: 
@@ -68,7 +68,7 @@ to start.
 These are not the only problems people face when interacting with a website. More occurring problems are poor readability,
 poor accessibility, complex forms and a lot more. [1] [2] 
 
-*What are the consequences of user interface problems on website performance?* 
+_**What are the consequences of user interface problems on website performance?**_
 
 When the user does not feel satisfied with how everything went while interacting with the website, it often means that 
 there are issues with the user interface. User satisfaction is one of the key metrics in knowing how effective the website
