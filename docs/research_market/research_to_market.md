@@ -3,8 +3,13 @@
 ## Research question
 
 For the research market I will be researching about User Interaction. I want to find out how I can make it easier for 
-non-it people to  use my website and device. 
-My research question is: - "What design elements can be added to optimize the user interaction for people with no IT-background?"
+non-it people to  use my website and device. My research question is:
+- "What user interface elements can be added to optimize the user interaction for people with 
+no IT-background?"
+For this research question I have also added two sub questions:
+- What are some common examples of user interface problems?
+- What are the consequences of user interface problems on website performance?
+
 
 ## Introduction 
 
@@ -36,6 +41,31 @@ and what would help them to improve their user experience. I will also take a lo
 I will be conducting <em>descriptive research</em> and I hope I can get the answer to my research question by using these research 
 methods. 
 ## Results 
+*What are some common examples of user interface problems?*
+
+When working with IT-related tools, there are several problems people face with the user interface. Common problems people
+experience are: 
+- Complex Navigation: Not knowing where to go or where to click next makes the user feel like they're lost. Lots of times 
+when users get too frustrated with the complex navigation, they tend the abandon the website completely.<br></br>
+- Inconsistency in layout: When people see to many colours at once, different fonts or button styling, it disrupts the
+user experience. It hinders the users by not having any focus while using the website or not being able to read everything 
+clearly. <br></br>
+- Slow pages: People always expect for a page to immediately load when they're interacting with the website. So, when a
+page takes forever to load, they get frustrated and this will lead to increase in bounce rates. <br></br>
+- Vague error messages: Validation is something that has to be added to a website if you want people to enter the right 
+things for example. Though the error messages need to be clear, otherwise it could make the user feel helpless. When you 
+display an error message that doesn't quite explain what the problem is, it will make it harder for the user to use the 
+website.<br></br>
+- Disorganized content: Seeing to many things at once, makes the user feel like they don't know where to look or where 
+to start. 
+
+These are not the only problems people face when interacting with a website. More occurring problems are poor readability,
+poor accessibility, complex forms and a lot more. [1] [2] 
+
+- What are the consequences of user interface problems on website performance?
+
 ## Conclusion 
 ## Recommendations
 ## Sources
+1. A, S. (2024, 22 februari). UI Design: 15 Things That Tell You It Is a Problem. Beon Systems. https://beonsystems.com/ui-design-15-things-that-tell-you-it-is-a-problem/ 
+2. Nomensa. (2023, 14 november). 10 common usability problems with websites. Nomensa. https://www.nomensa.com/blog/10-common-usability-problems-with-websites/
