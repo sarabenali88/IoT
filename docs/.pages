@@ -17,5 +17,5 @@ nav:
       - Create & Test: uxd/create_test
       - Conclude & Reflect: uxd/conclude_reflect
     - 📝 Research Market:
-      - Research: research_market/research
+      - Research: research_market/research_to_market
       - Implementation: research_market/implementation
