@@ -44,7 +44,17 @@ send data to my database and I want it to be saved.
 - Friday:
 On friday I will continue working on my research market. I also want to see if I can take a look at other documentation. 
 
-
+## 2024-03-08: Week 6
+- Monday: 
+On monday I plan on working further on the design concept, mostly on the process. I also plan to go to the makers-lab again
+to laser cut my design hopefully for the last time before I can actually buy the material and cut the final design. 
+- Wednesday: 
+On wednesday I want to work with embedded. On this day I plan to make the Wi-Fi connection work on my Wemos. 
+- Thursday: 
+On thursday I want to see if I can improve my website any further and I want to try to save the data from the sensors 
+into the database. 
+- Friday: 
+On friday I will continue working on my research to market project. 
 
 
 
