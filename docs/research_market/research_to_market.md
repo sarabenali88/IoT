@@ -9,6 +9,7 @@ no IT-background?"
 For this research question I have also added two sub questions:
 - What are some common examples of user interface problems?
 - What are the consequences of user interface problems on website performance?
+- What are the experiences of different users while interacting with bad interface?
 
 
 ## Introduction 
@@ -62,10 +63,26 @@ to start.
 These are not the only problems people face when interacting with a website. More occurring problems are poor readability,
 poor accessibility, complex forms and a lot more. [1] [2] 
 
-- What are the consequences of user interface problems on website performance?
+*What are the consequences of user interface problems on website performance?* 
+
+When the user does not feel satisfied with how everything went while interacting with the website, it often means that 
+there are issues with the user interface. User satisfaction is one of the key metrics in knowing how effective the website
+is. So, when users encounter frustration, confusion or difficulties it could impact their user experience. But what are 
+the consequences when this happens? 
+- Decrease user engagement: I already talked a little about how certain user interface problems make users feel. When the 
+user experiences any frustration or become disengaged, they tend to abandon the website completely which leads to no user 
+engagement and reduced revenue potential. <br></br>
+- Bad reviews: In today's world, users who experience bad interface will share their frustration with other people. Wether 
+it is online or face-to-face. Negative reviews will lead to a loss of potential customers, because people tend to trust 
+the opinions of people around them. When this happens, it will take a lot for the company to gain its users trust again. <br></br>
+- Low conversion rates: Because a badly designed experience can result in lower conversion rates and lower income, user
+experience (UX) is essential for directing users through the conversion funnel. When users are not experiencing a good user 
+interface, they will abandon the app before they can explore all the features that the website provides. <br></br>
+[3]
 
 ## Conclusion 
 ## Recommendations
 ## Sources
 1. A, S. (2024, 22 februari). UI Design: 15 Things That Tell You It Is a Problem. Beon Systems. https://beonsystems.com/ui-design-15-things-that-tell-you-it-is-a-problem/ 
 2. Nomensa. (2023, 14 november). 10 common usability problems with websites. Nomensa. https://www.nomensa.com/blog/10-common-usability-problems-with-websites/
+3. Sharma, M. (2023, 24 mei). The Cost of Bad User Experience: Impact and Examples. Medium. https://medium.com/@mohituxer/the-cost-of-bad-user-experience-impact-and-examples-edfbbba070
