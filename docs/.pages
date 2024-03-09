@@ -13,6 +13,7 @@ nav:
       - Database: web/database
       - Code: web/code
       - HTML: web/HTML
+      - CSS: web/CSS
     - 👩‍🎨 User Experience Design:
       - Concept & Design: uxd/concept_design
       - Create & Test: uxd/create_test
