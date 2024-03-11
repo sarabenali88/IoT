@@ -115,5 +115,5 @@ wood and since we're not allowed to use any glue or tape or tools like that, I d
 I found a website that generated the design for me and I thought that I could use this, but the website generated a 
 pyramid with all the sides looking the same. So, the fingers did not even fit in the other holes. 
 I tried so many times to change the measurements, but everytime it didn't show the right design. I gave up and tried to
-make another design in the makers case. I do have a new design now, and I am going to try to cut it out next week. 
-Next week, I really want to use the laser cut for the last time. 
+make another design in the makers case. I do have a new design now, and I am going to try to cut it out next week. I must 
+say that it does look a little different. Next week, I really want to use the laser cut for the last time. 

@@ -116,6 +116,12 @@ than last time. Last time I used MDF and this time I went for plywood. I think t
 with because it was very rough. The new measurements I had for my design were partially not right, the length for the pyramid
 was ok but the time measurements for the LCD-screen were too big. I measured everything again and I plan on making a new 
 design next week with the right measurements. 
+
+#### Monday 11-03-2024
+On this day I went to the makers-lab again to cut out a design that has fingers. Today I worked with the multiplex material
+and this time it wasn't so bad like the last time. I thought I had a good design, but it ended up not looking too good.
+I tried to give the fingers in my design different measurements and nothing worked, it kept coming out the wrong way. 
+I tried to make another design in the makers case and I think I am going to use that one next week. 
 ### Documentation 
 
 
