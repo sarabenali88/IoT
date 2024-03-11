@@ -95,13 +95,18 @@ This is also a reason why I choose to not work with the 3d-printer. If I make a 
 easily fix it and cut out a new design, but with the 3d-printer it takes a while before I have the new design. 
 
 ### Design process
-![pyramid_2d](../assets/pyramid_2d.png)
-In this picture you can see the 2d design I have created in Inkscape. For the first prototype, I just made a triangle 
-with a rectangle inside it. In the picture you can see that the pyramid is pretty small. When I first laser cut this, it 
-came out pretty small. So, I knew that it needed to look bigger. 
-![pyramid_2d](../assets/pyramid_2d_2.png)
-In this picture you can see that the pyramid looks bigger. The pyramid now looks bigger and during the laser cutting this 
-did look much better.
+
+#### Monday 26-02-2024
+On this day I went to makers-lab to follow the workshop. The workshop was easy to understand and after the workshop I 
+wanted to try to laser cut something on my own. I did ask for some help because some things were a little too confusing,
+but I managed to make a first-design concept for my project. I also worked on the measurements I needed for my design
+
+#### Monday 4-03-2024
+On this day I went to the makers-lab again to cut a new design with some new measurements. This time I used another material
+than last time. Last time I used MDF and this time I went for plywood. I think the plywood material was not so nice to work
+with because it was very rough. The new measurements I had for my design were partially not right, the length for the pyramid
+was ok but the time measurements for the LCD-screen were too big. I measured everything again and I plan on making a new 
+design next week with the right measurements. 
 ### Documentation 
 
 
