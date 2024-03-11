@@ -108,3 +108,12 @@ endpoints I used the knowledge base and video's. I also searched a lot of things
 appointment that saves to the database, and you can see a list of the appointments that have been created. Sometimes it 
 was difficult to add things to the js file, because it kept working and then it didn't, but I managed to fix everything 
 by searching on Google. 
+
+## 2024-03-11
+Today I learned how to laser cut a design that uses fingers, but it didn't go all too well. I have decided to work with 
+wood and since we're not allowed to use any glue or tape or tools like that, I decided I wanted to add fingers to my design.
+I found a website that generated the design for me and I thought that I could use this, but the website generated a 
+pyramid with all the sides looking the same. So, the fingers did not even fit in the other holes. 
+I tried so many times to change the measurements, but everytime it didn't show the right design. I gave up and tried to
+make another design in the makers case. I do have a new design now, and I am going to try to cut it out next week. 
+Next week, I really want to use the laser cut for the last time. 
