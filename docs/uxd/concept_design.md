@@ -81,6 +81,15 @@ is the new measurements I used, weren't the right measurements either.
 ![pyramid_wood](../assets/pyramid_pro2_2.jpg)
 ![pyramid_wood](../assets/pyramid_pro2_3.jpg)
 
+### Third prototype
+Since we're not allowed to use any glue or tape, I wanted to work with fingers in my design. I used multiplex again, 
+because that's the only test material there was and this time it did look good. I searched on Google for some
+websites and I found one where I can laser cut a pyramid with. It didn't go too well. I cut out the first design, only 
+two sides of the pyramid, with the fingers and when the cutting was done, I saw that the fingers were the exact same. I then 
+tried some other measurements for the fingers, but it didn't fit again. I ended up with four different sides and none of them 
+fit with the other. I tried to make a new design in makers case and next time I am going to try to cut that design out.
+![pyramid_fingers](../assets/pyramid_fingers.jpg)
+
 
 ## Digital Design
 
