@@ -19,6 +19,7 @@ fetch("get_data.php", {
         document.getElementById("card").appendChild(div);
         div.querySelector(".deleteButton").addEventListener("click", function() {
             let appointmentId = appointment.appointment_id;
+
             fetch(`delete_data.php?appointment_id=${appointmentId}`, {
                 method: "DELETE",
                 headers: {
@@ -80,17 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             errorMsg.innerHTML = "";
             alert("Your appointment has been added!");
-
-            fetch("get_data.php", {
-                "method": "GET",
-                "headers": {
-                    "Content-Type": "application/json; charset=utf-8"
-                }
-            }).then(function (response) {
-                return response.json();
-            }).then(function (data) {
-                console.log(data);
-            });
         }
     }
 });
