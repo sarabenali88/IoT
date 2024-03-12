@@ -10,18 +10,31 @@ fetch("get_data.php", {
         let div = document.createElement("div");
         div.classList.add("appointment");
         div.innerHTML = `
-            <p>${appointment.date_time_appointment} ${appointment.name}</p>`;
+            <p>${appointment.date_time_appointment} ${appointment.name}</p> <button 
+            class="deleteButton form-control">Delete</button>`;
         div.style.borderStyle = "solid"
         div.style.borderColor = "#EDC9AFFF";
-        div.style.padding = "8px"; // Add padding
+        div.style.padding = "8px";
         div.style.margin = "10px";
         document.getElementById("card").appendChild(div);
+        div.querySelector(".deleteButton").addEventListener("click", function() {
+            let appointmentId = appointment.appointment_id;
+            fetch(`delete_data.php?appointment_id=${appointmentId}`, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json; charset=utf-8"
+                }
+            }).then(response => {
+                if (response.ok) {
+                    div.remove();
+                } else {
+                    console.error("Failed to delete appointment");
+                }
+            })
+        });
     }
     console.log(data);
 });
-
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
     let dateField = document.getElementById("date-input");

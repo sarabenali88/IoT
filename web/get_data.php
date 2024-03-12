@@ -8,5 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($dbConnection)) {
     if ($query_run){
         $res = mysqli_fetch_all($query_run, MYSQLI_ASSOC);
         echo json_encode($res);
+    }else{
+        echo json_encode(array("success" => false, "error" => $dbConnection->error));
     }
 }
