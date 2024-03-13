@@ -117,3 +117,17 @@ pyramid with all the sides looking the same. So, the fingers did not even fit in
 I tried so many times to change the measurements, but everytime it didn't show the right design. I gave up and tried to
 make another design in the makers case. I do have a new design now, and I am going to try to cut it out next week. I must 
 say that it does look a little different. Next week, I really want to use the laser cut for the last time. 
+
+## 2024-03-13
+Today I have learned how to configure Wi-Fi on my Wemos. It was a little confusing to know if it actually worked, but I think
+I did it. I ran some code that gave me my Mac adress, and then I configured it with iotroam. I ran some code I found in the
+knowledge base, and then I added my Wi-Fi network and password. Everything showed what was supposed to be shown. I thought 
+that this would take the whole day so this was my only goal, but I was done early. So, I worked on making my sensors and 
+outputs work together on my Arduino, and it worked! I also rewired everything, so now it looks clearer. I think I can start
+on the wiring diagram now.
+![configured_wires](assets/configured_wires_1.jpg)
+![configured_wires](assets/configured_wires_2.jpg)
+![configured_wires](assets/configured_wires_3.jpg)
+![configured_wires](assets/configured_wires_4.jpg)
+![configured_wires](assets/configured_wires_5.jpg)
+
