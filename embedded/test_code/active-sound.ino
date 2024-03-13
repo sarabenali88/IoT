@@ -16,9 +16,9 @@ void loop() {
     buttonState = digitalRead(buttonPin);
     if (buttonState == HIGH) {
       digitalWrite(buzzerPin, LOW);
-      delay(10);
+      delay(5);
     }
-    delay(2000);
+    delay(1000);
   }
   delay(30);
 }
