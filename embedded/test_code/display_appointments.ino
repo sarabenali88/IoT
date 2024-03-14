@@ -9,6 +9,7 @@
 // set the LCD number of columns and rows
 int lcdColumns = 16;
 int lcdRows = 2;
+int currentIndex = 0;
 
 // set LCD address, number of columns and rows
 // if you don't know your display address, run an I2C scanner sketch
@@ -51,11 +52,13 @@ void loop() {
     // Print the body of the GET-request response.
     String payload = httpClient.getString();
     deserializeJson(jsonBuffer, payload);
-    String appointmentDateTime = jsonBuffer[0]["date_time_appointment"];
-    String appointmentName = jsonBuffer[0]["name"];
+    currentIndex = (currentIndex + 1) % jsonBuffer.size();
+    String appointmentDateTime = jsonBuffer[currentIndex]["date_time_appointment"];
+    String appointmentName = jsonBuffer[currentIndex]["name"];
 
 
     Serial.println(payload);
+    lcd.clear();
     lcd.setCursor(0, 0);
 
     // print message
