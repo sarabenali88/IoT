@@ -131,3 +131,10 @@ on the wiring diagram now.
 ![configured_wires](assets/configured_wires_4.jpg)
 ![configured_wires](assets/configured_wires_5.jpg)
 
+## 2024-03-14
+Today I learned how to display my appointments on my LCD-screen. I made a connection with the Wi-Fi and my Wemos. I did 
+this by kind of merging my wifi-setup code and hello world together. I did a GET request on my tunnel page and by using 
+my get php code, and then I decoded the JSON object by using the JSON buffer. I then printed the decoded name on the 
+LCD-screen. I am glad that I am making progress with this and next time I want to make sure the buzzer works according 
+to the time. 
+![display_appointment](assets/display_appointment.jpg);
