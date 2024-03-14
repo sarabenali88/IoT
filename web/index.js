@@ -11,9 +11,9 @@ fetch("get_data.php", {
         div.classList.add("appointment");
         div.innerHTML = `
             <p>${appointment.date_time_appointment} ${appointment.name}</p> <button 
-            class="deleteButton form-control">Delete</button>`;
+            class="deleteButton form-control" data-id="${appointment.appointment_id}">Delete</button>`;
         div.style.borderStyle = "solid"
-        div.style.borderColor = "#EDC9AFFF";
+        // div.style.borderColor = "#EDC9AFFF";
         div.style.padding = "8px";
         div.style.margin = "10px";
         document.getElementById("card").appendChild(div);
@@ -21,7 +21,8 @@ fetch("get_data.php", {
 
         div.querySelector(".deleteButton").addEventListener("click", function(event) {
             event.preventDefault();
-            fetch('delete_data.php', {
+            let appointmentId = this.getAttribute('data-id');
+            fetch('delete_data.php?appointment_id=' + appointmentId, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json; charset=utf-8"
