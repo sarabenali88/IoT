@@ -17,10 +17,11 @@ fetch("get_data.php", {
         div.style.padding = "8px";
         div.style.margin = "10px";
         document.getElementById("card").appendChild(div);
-        div.querySelector(".deleteButton").addEventListener("click", function() {
-            let appointmentId = appointment.appointment_id;
 
-            fetch(`delete_data.php?appointment_id=${appointmentId}`, {
+
+        div.querySelector(".deleteButton").addEventListener("click", function(event) {
+            event.preventDefault();
+            fetch('delete_data.php', {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json; charset=utf-8"
