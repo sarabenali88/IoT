@@ -79,6 +79,15 @@ box will appear next to the form with a delete button if you want to delete the 
 looks like this:
 ![website_design](../assets/website.png)
 
+I want to ask three people on their opinions on my website. I want ask for their opinion by asking these five questions.
+
+1. What are your initial thoughts about the website design?
+2. What do you think of the card design that has your appointment details?
+3. Is it easy to understand what you need to do? 
+4. Is it easy to create a new appointment? 
+5. Is it easy to delete a created appointment?
+
+#### First Person:
 
 ## Conclusion 
 ## Recommendations
