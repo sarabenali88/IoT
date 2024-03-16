@@ -71,6 +71,15 @@ poor accessibility, complex forms and a lot more.
 
 (Beon Systems), (Nomensa)
 
+_**What do people think of the user interface in my own website?**_
+
+The last couple of weeks I have worked on my website and I have tried to make everything as simple as possible. I have 
+added a form where you can enter the date, time and the name of the appointment. If you add the appointment a card like 
+box will appear next to the form with a delete button if you want to delete the appointment. The design of the website 
+looks like this:
+![website_design](../assets/website.png)
+
+
 ## Conclusion 
 ## Recommendations
 ## Sources
