@@ -27,33 +27,29 @@ of the page:
 
 ```
 <body>
-<form>
-<div class="mt-5 m-sm-4">
-<div class="row col-7">
-    <div class="col-5">
-        <h1>All appointments</h1>
+<div class="container p-2 mx-4">
+<div class="row">
+    <div class="col-3">
+        <h2>My appointments</h2>
         <div class="form-group">
             <label for="date-input">Date</label>
-            <input type="date" class="form-control w-75 " id="date-input">
+            <input type="date" class="form-control " id="date-input">
         </div>
         <div class="form-group">
             <label for="time-input">Time</label>
-            <input type="time" class="form-control w-75" id="time-input"></div>
+            <input type="time" class="form-control" id="time-input"></div>
         <div class="form-group">
             <label for="app_name">Appointment name</label>
-            <input type="text" class="form-control w-75" id="app_name">
+            <input type="text" class="form-control" id="app_name">
         </div>
         <div class="alert-danger error" style="background: none"></div>
         <div class="mt-4">
-            <button type="submit" id="button" class="btn">Add appointment</button>
+            <button type="submit" id="button" class="btn btn-outline-secondary">Add appointment</button>
         </div>
     </div>
-    <div class="col-7 mt-5" id="card">
-    </div>
-    </div>
+    <div class="col-7 offset-2 mt-5" id="card"></div>
 </div>
-</form>
-
+</div>
 </body>
 ```
 
@@ -61,5 +57,5 @@ This div tag is used for the appointments that are made. Everytime an appointmen
 to this div tag so it kind of looks like a list:
 
 ```
- <div class="col-7 mt-5" id="card">
+   <div class="col-7 offset-2 mt-5" id="card"></div>
 ```
