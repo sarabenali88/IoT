@@ -4,12 +4,13 @@
 
 For the research market I will be researching about User Interaction. I want to find out how I can make it easier for 
 non-it people to  use my website and device. My research question is:
-- "What user interface elements can be added to optimize the user interaction for people with 
-no IT-background?"
+- "What user interface elements can be added to optimize the user interaction for people with no IT-background?"
+
 For this research question I have also added two sub questions:
+
 - What are some common examples of user interface problems?
-- What are the consequences of user interface problems on website performance?
-- What are the experiences of different users while interacting with bad interface?
+
+- What do people think of the user interface in my own website? 
 
 
 ## Introduction 
@@ -31,13 +32,13 @@ By clicking on the button you can turn the buzzer sound off.
 ## Research Method 
 
 For this research I have decided when I am going to <em>collect</em> the data, I will be collecting secondary data. I will do online research for my research 
-question. This involves searching for different types of articles, reports and scientific articles that talk about the 
-improvement in user interaction for non-IT people.
+question. This involves searching for different types of articles, reports and scientific articles that talk about common 
+problems in user interaction.
 
 I will be analyzing data in search for <em>qualitative data</em>. This
 is because I want to improve my own project idea. I will be looking for common issues, recurring themes and ways to improve my device. 
-I want to search and ask for the experiences of a couple of people on how difficult it is to sometimes use IT-related tools 
-and what would help them to improve their user experience. I will also take a look at what users say online. 
+I want to search and ask for the experiences of a couple of people on how difficult it is to use my own website
+and what would help them to improve their user experience.
 
 I will be conducting <em>descriptive research</em> and I hope I can get the answer to my research question by using these research 
 methods. 
@@ -66,32 +67,12 @@ website.
 to start. 
 
 These are not the only problems people face when interacting with a website. More occurring problems are poor readability,
-poor accessibility, complex forms and a lot more. [1] [2] 
+poor accessibility, complex forms and a lot more. 
 
-_**What are the consequences of user interface problems on website performance?**_
-
-When the user does not feel satisfied with how everything went while interacting with the website, it often means that 
-there are issues with the user interface. User satisfaction is one of the key metrics in knowing how effective the website
-is. So, when users encounter frustration, confusion or difficulties it could impact their user experience. But what are 
-the consequences when this happens? 
-
-- Decrease user engagement: I already talked a little about how certain user interface problems make users feel. When the 
-user experiences any frustration or become disengaged, they tend to abandon the website completely which leads to no user 
-engagement and reduced revenue potential. 
-
-- Bad reviews: In today's world, users who experience bad interface will share their frustration with other people. Wether 
-it is online or face-to-face. Negative reviews will lead to a loss of potential customers, because people tend to trust 
-the opinions of people around them. When this happens, it will take a lot for the company to gain its users trust again. 
-
-- Low conversion rates: Because a badly designed experience can result in lower conversion rates and lower income, user
-experience (UX) is essential for directing users through the conversion funnel. When users are not experiencing a good user 
-interface, they will abandon the app before they can explore all the features that the website provides. 
-
-[3]
+(Beon Systems), (Nomensa)
 
 ## Conclusion 
 ## Recommendations
 ## Sources
 1. A, S. (2024, 22 februari). UI Design: 15 Things That Tell You It Is a Problem. Beon Systems. https://beonsystems.com/ui-design-15-things-that-tell-you-it-is-a-problem/ 
 2. Nomensa. (2023, 14 november). 10 common usability problems with websites. Nomensa. https://www.nomensa.com/blog/10-common-usability-problems-with-websites/
-3. Sharma, M. (2023, 24 mei). The Cost of Bad User Experience: Impact and Examples. Medium. https://medium.com/@mohituxer/the-cost-of-bad-user-experience-impact-and-examples-edfbbba070
