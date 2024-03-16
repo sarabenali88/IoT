@@ -81,32 +81,41 @@ fetch("get_data.php", {
 
 I then added another then method with the data that is retrieved. I created a forEach loop to loop through the data, because 
 I wanted each appointment to have its own "container". I created a div element and in this div element, I add the data and
-some styling. I append this div element on the div I created in the HTML file: 
+some styling. I split the date-time data, so it has a nice format on the website too. I append this div element on the 
+div I created in the HTML file: 
 ```
 .then(function (data) {
-    for (let appointment of data){
+    for (let appointment of data) {
         let div = document.createElement("div");
         div.classList.add("appointment");
+        let appointmentDate = new Date(appointment.date_time_appointment);
+        let options = {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'};
+        let formattedDate = appointmentDate.toLocaleDateString('en-GB', options);
+        let time = appointment.date_time_appointment.split(' ')[1];
         div.innerHTML = `
-            <p>${appointment.date_time_appointment} ${appointment.name}</p> <button 
-            class="deleteButton form-control">Delete</button>`;
-        div.style.borderStyle = "solid"
-        div.style.borderColor = "#EDC9AFFF";
+        <h6>Appointment: ${appointment.name}</h6>
+        <h6>Date: ${formattedDate}</h6>
+        <h6>Time: ${time}</h6>  
+        <button class="deleteButton mt-2 btn btn-outline-secondary" data-id="${appointment.appointment_id}">Delete</button>`;
+        div.style.borderStyle = "groove"
+        div.style.width = "50%";
         div.style.padding = "8px";
         div.style.margin = "10px";
         document.getElementById("card").appendChild(div);
+
 ```
 
 Next, I added an event listener on the button that I named delete, because I am making a DELETE request. In the fetch 
 method I added the php file for the DELETE with the id of the appointment. I did this because I needed to include the parameter
-for the appointment id. In the then method I do a check to see if the response is successful and if it is then I remove
-the div and if it's not, an error message will be console logged:
+for the appointment id, because I am doing a GET request on the appointment_id in the PHP file. In the then method I do 
+a check to see if the response is successful and if it is then I remove the div and if it's not, an error message will 
+be console logged:
 ```
-document.getElementById("card").appendChild(div);
-        div.querySelector(".deleteButton").addEventListener("click", function() {
-            let appointmentId = appointment.appointment_id;
+ div.querySelector(".deleteButton").addEventListener("click", function (event) {
+            event.preventDefault();
 
-            fetch(`delete_data.php?appointment_id=${appointmentId}`, {
+            let appointmentId = this.getAttribute('data-id');
+            fetch('delete_data.php?appointment_id=' + appointmentId, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json; charset=utf-8"
@@ -119,5 +128,8 @@ document.getElementById("card").appendChild(div);
                 }
             })
         });
+
+        console.log(data);
     }
+});
 ```
