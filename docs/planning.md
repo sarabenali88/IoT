@@ -56,7 +56,16 @@ into the database.
 - Friday: 
 On friday I will continue working on my research to market project. 
 
-
+## 2024-03-15
+- Monday: 
+On monday I plan on talking to one of the teachers about my design issue, and I am going to the makers-lab. On this day
+I want to finish my design completely. 
+- Wednesday: 
+On this day I want to try to convert everything on my Wemos and I want to work on my system architecture. 
+- Thursday:
+On thursday I want to save the data from my sensors into my database and work a little on the technical documentation.
+- Friday:
+On friday I will continue working on my research. 
 
 
 
