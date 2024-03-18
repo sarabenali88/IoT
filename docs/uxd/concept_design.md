@@ -44,34 +44,28 @@ One requirement I want to try to make work is that the moment the user turns off
 be displayed on the LCD-display screen.
 
 ### Design
-I have chosen to design a pyramid as the smart device. I think a pyramid is simple, easy to look at and doesn't require
-lots of functionalities to actually understand the device. The pyramid will have 4 sides and will look like a 3d pyramid. 
+I have chosen to design a box as the smart device. I think a box is simple, easy to look at and doesn't require
+lots of functionalities to actually understand the device. The box will have 4 sides and will look like a 3d box. 
 This is because I can place different technical materials on different sides. The LCD-display screen will be placed on 
-the front of the pyramid. The push button to turn the buzzer off, will be placed on the right side of the pyramid. Below
-I have some starter designs for the pyramid I want to build:
-![origami_1-](../assets/origami_1.jpg)
-![origami_2](../assets/origami_2.jpg)
-Here I have made an origami pyramid. It doesn't look very nice because I made it from paper. But it does resemble the 
-design I want to have for my smart device.
+the front of the box. The push button to turn the buzzer off and the LED, will be placed on top of the box. 
 
 ### Measurements
 *Latest measurements:* 
 
-Pyramid side: 17 cm. 
+Box side: 18 cm. 
 LCD-screen: 7.2 x 2.4 cm.
 
 ## Digital Manufacturing
 
 
 
-
 ## Digital Design
 
 ### Software choice
-The software I have chosen for my design is Inkscape. The reason why I have chosen Inkscape is that I have a pyramid as 
+The software I have chosen for my design is Inkscape. The reason why I have chosen Inkscape is that I have a box as 
 my design. I find more joy in making designs in software programs like inkscape instead of openScad. 
-Even though the pyramid is a 3d object, I think it's better to use Inkscape. Mainly because of the type of material 
-I want to use. I want to use the wood MDF material, because I think given my design, it's easier to work with pyramid. 
+Even though the box is a 3d object, I think it's better to use Inkscape. Mainly because of the type of material 
+I want to use. I want to use the wood MDF material, because I think given my design, it's easier to work with box. 
 Wood gives me option to easily put the all the 4 sides together on the contrary with using polystyrene. The device I am 
 using to make my design is the laser cutter. Using the laser cutter is more efficient because it's fast and very precise.
 This is also a reason why I choose to not work with the 3d-printer. If I make a mistake during the laser cutting I can 
