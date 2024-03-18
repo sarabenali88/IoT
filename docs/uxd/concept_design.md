@@ -56,7 +56,11 @@ Box side: 18 cm.
 LCD-screen: 7.2 x 2.4 cm.
 
 ## Digital Manufacturing
-
+The material I am using for my embedded device is MDF. The reason why I am using MDF is because of my design. I am designing
+a box, and I want the box to be pretty strong. The material is pretty hard and pretty strong, so that is perfect for my design.
+If I need to cut something out the material it would also work pretty well, and it would not melt for example. 
+I am also using the laser cutter instead of the 3d-printer, because 3d-printing would take longer and the laser cutter 
+gives me option to make multiple designs in a small amount of time. 
 
 
 ## Digital Design
