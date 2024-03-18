@@ -62,33 +62,7 @@ LCD-screen: 7.2 x 2.4 cm.
 
 ## Digital Manufacturing
 
-### First prototype
 
-For the first prototype I used the speed/power 20.0/65.0. I used the material MDF with a measurement of 4mm
-and everything went well. Though I did find out one week after that I entered the wrong material in de software program.
-I entered wood (as I was told to enter)but I was actually using MDF. Even though I did enter the wrong material, 
-the design came out good. There were no burn marks or whatsoever. The only thing that wasn't accurate was the measurements
-for my design.
-![pyramid_wood](../assets/pyramid_wood_1.jpg)
-
-### Second prototype
-For the second prototype I used another material. This time I used plywood with a thickness of 4mm and with the same 
-speed/power 20.0/65.0. This time things didn't go all too well, because after the laser was done with cutting, 
-I saw some black spots on the back of my design. I think the power was too high for the plywood. I also didn't like how 
-the plywood felt and looked. So I have decided to definitely use the MDF material for my design. Something I also realised
-is the new measurements I used, weren't the right measurements either.
-![pyramid_wood](../assets/pyramid_pro2_1.jpg)
-![pyramid_wood](../assets/pyramid_pro2_2.jpg)
-![pyramid_wood](../assets/pyramid_pro2_3.jpg)
-
-### Third prototype
-Since we're not allowed to use any glue or tape, I wanted to work with fingers in my design. I used multiplex again, 
-because that's the only test material there was and this time it did look good. I searched on Google for some
-websites and I found one where I can laser cut a pyramid with. It didn't go too well. I cut out the first design, only 
-two sides of the pyramid, with the fingers and when the cutting was done, I saw that the fingers were the exact same. I then 
-tried some other measurements for the fingers, but it didn't fit again. I ended up with four different sides and none of them 
-fit with the other. I tried to make a new design in makers case and next time I am going to try to cut that design out.
-![pyramid_fingers](../assets/pyramid_fingers.jpg)
 
 
 ## Digital Design
@@ -122,7 +96,34 @@ On this day I went to the makers-lab again to cut out a design that has fingers.
 and this time it wasn't so bad like the last time. I thought I had a good design, but it ended up not looking too good.
 I tried to give the fingers in my design different measurements and nothing worked, it kept coming out the wrong way. 
 I tried to make another design in the makers case and I think I am going to use that one next week. 
-### Documentation 
 
+### Documentation 
+### First prototype
+
+For the first prototype I used the speed/power 20.0/65.0. I used the material MDF with a measurement of 4mm
+and everything went well. Though I did find out one week after that I entered the wrong material in de software program.
+I entered wood (as I was told to enter)but I was actually using MDF. Even though I did enter the wrong material,
+the design came out good. There were no burn marks or whatsoever. The only thing that wasn't accurate was the measurements
+for my design.
+![pyramid_wood](../assets/pyramid_wood_1.jpg)
+
+### Second prototype
+For the second prototype I used another material. This time I used plywood with a thickness of 4mm and with the same
+speed/power 20.0/65.0. This time things didn't go all too well, because after the laser was done with cutting,
+I saw some black spots on the back of my design. I think the power was too high for the plywood. I also didn't like how
+the plywood felt and looked. So I have decided to definitely use the MDF material for my design. Something I also realised
+is the new measurements I used, weren't the right measurements either.
+![pyramid_wood](../assets/pyramid_pro2_1.jpg)
+![pyramid_wood](../assets/pyramid_pro2_2.jpg)
+![pyramid_wood](../assets/pyramid_pro2_3.jpg)
+
+### Third prototype
+Since we're not allowed to use any glue or tape, I wanted to work with fingers in my design. I used multiplex again,
+because that's the only test material there was and this time it did look good. I searched on Google for some
+websites and I found one where I can laser cut a pyramid with. It didn't go too well. I cut out the first design, only
+two sides of the pyramid, with the fingers and when the cutting was done, I saw that the fingers were the exact same. I then
+tried some other measurements for the fingers, but it didn't fit again. I ended up with four different sides and none of them
+fit with the other. I tried to make a new design in makers case and next time I am going to try to cut that design out.
+![pyramid_fingers](../assets/pyramid_fingers.jpg)
 
 
