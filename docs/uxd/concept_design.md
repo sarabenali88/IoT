@@ -95,6 +95,14 @@ and this time it wasn't so bad like the last time. I thought I had a good design
 I tried to give the fingers in my design different measurements and nothing worked, it kept coming out the wrong way. 
 I tried to make another design in the makers case and I think I am going to use that one next week. 
 
+#### Monday 18-03-2024
+On this day I asked for advice from the teacher because I didn't know how to properly use the finger joints. My design idea
+also started to change a little, because I had to make a design in makers-case and the pyramid ended up looking a little 
+different. I went to the makers-lab and tried to use the makers-case with a box design this time. At first, it didn't work 
+again, but then I just asked for help from someone who works there, and he explained everything perfectly. I created a 
+design in makers-case and with the right measurements of everything this time, I laser-cut it and I tried to fit each side
+into the other, and it fits perfectly. Next I am going to make cuts for the LCD-screen, button and led. 
+
 ### Documentation 
 ### First prototype
 
@@ -116,7 +124,7 @@ is the new measurements I used, weren't the right measurements either.
 ![pyramid_wood](../assets/pyramid_pro2_3.jpg)
 
 ### Third prototype
-Since we're not allowed to use any glue or tape, I wanted to work with fingers in my design. I used multiplex again,
+Since we're not "allowed" to use any glue or tape, I wanted to work with fingers in my design. I used multiplex again,
 because that's the only test material there was and this time it did look good. I searched on Google for some
 websites and I found one where I can laser cut a pyramid with. It didn't go too well. I cut out the first design, only
 two sides of the pyramid, with the fingers and when the cutting was done, I saw that the fingers were the exact same. I then
@@ -124,4 +132,16 @@ tried some other measurements for the fingers, but it didn't fit again. I ended 
 fit with the other. I tried to make a new design in makers case and next time I am going to try to cut that design out.
 ![pyramid_fingers](../assets/pyramid_fingers.jpg)
 
+### Fourth prototype
+For the fourth prototype I have changed my design idea. Since the pyramid didn't work with the finger joints and this 
+design idea in the makers-case wasn't practical. Building it like this didn't make any sense to me, and it didn't look nice
+at all:
+![3d_design_pyramid](../assets/3d_pyramid_design.png)
+So I just chose to build a box as my design. I bought some MDF material and I cut out my design three times. The first one 
+was too small because I changed the measurements in the LIGHTBURN program, but that was my fault. The second and third 
+came out perfectly, this time I just imported it and didn't change anything. The sides fit perfectly with each other. 
+Unfortunately, I didn't take a picture of the box before I took the box apart. Below is a picture of the design in 
+makers-case and in Inkscape: 
+![box_design](../assets/box_design.png)
+![box_plans](../assets/box_plans.png)
 
