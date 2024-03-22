@@ -1,2 +1,10 @@
-
-
+.appointment {
+    border-style: groove;
+    width: 50%;
+    padding: 8px;
+    margin: 10px;
+}
+.alert-success {
+    width: 120%;
+    display: none;
+}

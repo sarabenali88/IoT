@@ -40,11 +40,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 return response.json();
             }).then(function (data) {
                 reloadAppointments();
+                console.log(data);
             });
             errorMsg.innerHTML = "";
             successMsg.innerHTML = "Your appointment has been added!";
             successMsg.style.display = "block";
-            successMsg.style.width = "120%";
         }
     }
 });
@@ -71,10 +71,6 @@ function reloadAppointments() {
         <h6>Date: ${formattedDate}</h6>
         <h6>Time: ${time}</h6>  
         <button class="deleteButton mt-2 btn btn-outline-secondary" data-id="${appointment.appointment_id}">Delete</button>`;
-            div.style.borderStyle = "groove"
-            div.style.width = "50%";
-            div.style.padding = "8px";
-            div.style.margin = "10px";
             document.getElementById("card").appendChild(div);
 
             div.querySelector(".deleteButton").addEventListener("click", function (event) {
