@@ -1,6 +1,12 @@
 <?php
 require 'connection_database.php';
 
+/**
+ * This file is used to create a GET request from the database by using a SELECT query
+ *
+ * @author Sara Benali
+ */
+
 if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($dbConnection)) {
     $query = "SELECT * FROM Appointment";
     $query_run = mysqli_query($dbConnection, $query);

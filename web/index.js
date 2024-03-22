@@ -1,3 +1,15 @@
+/**
+ * In this file the JavaScript code manages a scheduling application's UI interactions, input validation, server
+ * communication for data insertion and deletion, and dynamic display of appointments.
+ *
+ * @author Sara Benali
+ */
+
+/**
+ * The fields are being checked on the entered value and data is being inserted
+ *
+ * @author Sara Benali
+ */
 document.addEventListener("DOMContentLoaded", function () {
     let dateField = document.getElementById("date-input");
     let timeField = document.getElementById("time-input");
@@ -53,6 +65,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+/**
+ * In this method the data is being retrieved and shown on the page
+ * @author Sara Benali
+ */
 function reloadAppointments() {
     fetch("get_data.php", {
         "method": "GET",

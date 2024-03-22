@@ -1,6 +1,12 @@
 <?php
 require 'connection_database.php';
 
+/**
+ * This file is used to create a DELETE request to the database by using a DELETE query
+ *
+ * @author Sara Benali
+ */
+
     if ($_SERVER["REQUEST_METHOD"] === "DELETE") {
         $appointment_id = isset($_GET['appointment_id']) ? $_GET['appointment_id'] : null;
         define('HTTP_STATUS_OK', 200);

@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * This file is used to create a POST request to the database by using an INSERT query
+ *
+ * @author Sara Benali
+ */
 require 'connection_database.php';
 
 
