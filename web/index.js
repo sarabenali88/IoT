@@ -17,11 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
         let nameInput = nameField.value;
 
         if (dateInput === '') {
-            errorMsg.innerText = "Date cannot be empty!";
+            errorMsg.innerHTML = "Date cannot be empty!";
+            errorMsg.style.display = "block";
         } else if (timeInput === '') {
-            errorMsg.innerText = "Time cannot be empty"
+            errorMsg.innerHTML = "Time cannot be empty"
+            errorMsg.style.display = "block";
         } else if (nameInput === '') {
-            errorMsg.innerText = "Name cannot be empty!";
+            errorMsg.innerHTML = "Name cannot be empty!";
+            errorMsg.style.display = "block";
         } else {
             let dateTimeAppointment = dateInput + ' ' + timeInput
             let appointment = {
@@ -43,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log(data);
             });
             errorMsg.innerHTML = "";
+            errorMsg.style.display = "none";
             successMsg.innerHTML = "Your appointment has been added!";
             successMsg.style.display = "block";
         }

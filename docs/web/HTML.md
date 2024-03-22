@@ -20,7 +20,7 @@ In the head of the file I have added the title of the website by using the title
 ```
 
 In the form I have added the title of the page using an h1 tag and I have added three input fields, a date field, a
-time field and a text field. By using the label tag, I have given each field a name so it's clear which field is for
+time field and a text field. By using the label tag, I have given each field a name, so it's clear which field is for
 which. In the class tag you can see I have added some styling and I did this with bootstrap. This form exists in the
 body
 of the page:
@@ -45,6 +45,9 @@ of the page:
         <div class="alert-danger error" style="background: none"></div>
         <div class="mt-4">
             <button type="submit" id="button" class="btn btn-outline-secondary">Add appointment</button>
+        </div>
+        <div class=" mt-5">
+            <div class="alert alert-success" role="alert"></div>
         </div>
     </div>
     <div class="col-7 offset-2 mt-5" id="card"></div>

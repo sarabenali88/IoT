@@ -1,20 +1,24 @@
 In this file I will be explaining the styling I did with CSS. 
 
-I did some styling for the button I have in the HTML file. I am using bootstrap, but I didn't like any of the button
-colours from bootstrap, so I basically overrode them by adding a background colour and a border color to the button.
-The colour I added was a kind of like light beige: 
+I added some styling for the "containers" that each appointment go into. I have added a border-style, width, and some 
+padding and margin, so it looks nice on the page.
+
 ```
-.btn {
-    background-color: #edc9af;
-    border-color: #edc9af;
+.appointment {
+    border-style: groove;
+    width: 50%;
+    padding: 8px;
+    margin: 10px;
 }
 ```
 
-In the next part, I added some styling for hovering over the button. To do this I added the :hover and I added a
-background colour of white and a border colour of black:
+I added some styling for the alert box message that is shown after an appointment is created. I added some width, so it 
+doesn't overlap with the containers for the appointments, and I added none to the display, so a green a bar isn't shown
+on the page before you created an appointment. 
+
 ```
-.btn:hover {
-    background-color: #f3f3f3;
-    border-color: #000000;
+.alert-success {
+    width: 120%;
+    display: none;
 }
 ```

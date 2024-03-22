@@ -1,7 +1,8 @@
 In this file I will be explaining the code I have written for the different requests I have made:
 
 First, I have added an event listener on the page, so all the content will be loaded first before anything else happens. 
-By using the getElementById I am retrieving the fields of the inputs, the button and the error field from the HTML file:
+By using the getElementById I am retrieving the fields of the inputs, the button and the error and success field from 
+the HTML file:
 ```
 document.addEventListener("DOMContentLoaded", function () {
     let dateField = document.getElementById("date-input");
@@ -9,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let nameField = document.getElementById("app_name");
     let button = document.getElementById("button");
     let errorMsg = document.querySelector(".error");
+    let successMsg = document.querySelector(".alert-success");
 ```
 
 Next, I add an onclick event on the button and this means that the moment the button is clicked everything after that 
@@ -32,11 +34,14 @@ function checkFields() {
         let nameInput = nameField.value;
 
         if (dateInput === '') {
-            errorMsg.innerText = "Date cannot be empty!";
+            errorMsg.innerHTML = "Date cannot be empty!";
+            errorMsg.style.display = "block";
         } else if (timeInput === '') {
-            errorMsg.innerText = "Time cannot be empty"
+            errorMsg.innerHTML = "Time cannot be empty"
+            errorMsg.style.display = "block";
         } else if (nameInput === '') {
-            errorMsg.innerText = "Name cannot be empty!";
+            errorMsg.innerHTML = "Name cannot be empty!";
+            errorMsg.style.display = "block";
         } else {
             let dateTimeAppointment = dateInput + ' ' + timeInput
             let appointment = {
@@ -47,7 +52,9 @@ function checkFields() {
 
 Next, I created a fetch function that uses the php file insert_data to make a POST request. I send the appointment as a 
 stringified JSON object in the body. I then use the then method that returns a promise and this returns the response in 
-JSON format. Lastly, there is an alert that says the appointment has been added:
+JSON format. In the second then method, I call the reloadAppointments method because I want the appointment to immediately
+be added on the page without having to refresh the page first. Lastly, there is an alert-message that says the 
+appointment has been added:
 ```
 fetch("insert_data.php", {
                 "method": "POST",
@@ -58,18 +65,24 @@ fetch("insert_data.php", {
             }).then(function (response) {
                 return response.json();
             }).then(function (data) {
+                reloadAppointments();
                 console.log(data);
             });
 
             errorMsg.innerHTML = "";
-            alert("Your appointment has been added!");
-        }
+            errorMsg.style.display = "none";
+            successMsg.innerHTML = "Your appointment has been added!";
+            successMsg.style.display = "block";    
+            
+             }
     }
 ```
 
 In the next fetch I created a GET request, I retrieved the data that is saved in the database and I display it 
-on the page. I added another then method returns a promise and this returns the response in JSON format again. 
+on the page. I put this fetch method in a function, because I need to reuse the code in other places as well.
+I added another then method returns a promise and this returns the response in JSON format again. 
 ```
+function reloadAppointments() {
 fetch("get_data.php", {
     "method": "GET",
     "headers": {
@@ -79,9 +92,9 @@ fetch("get_data.php", {
     return response.json();
 ```
 
-I then added another then method with the data that is retrieved. I created a forEach loop to loop through the data, because 
-I wanted each appointment to have its own "container". I created a div element and in this div element, I add the data and
-some styling. I split the date-time data, so it has a nice format on the website too. I append this div element on the 
+In the second then method I am looping through the data that is being retrieved. I created a forEach loop to loop through 
+the data, because I wanted each appointment to have its own "container". I created a div element and in this div element,
+I add the data. I split the date-time data, so it has a nice format on the website too. I append this div element on the 
 div I created in the HTML file: 
 ```
 .then(function (data) {
@@ -97,10 +110,6 @@ div I created in the HTML file:
         <h6>Date: ${formattedDate}</h6>
         <h6>Time: ${time}</h6>  
         <button class="deleteButton mt-2 btn btn-outline-secondary" data-id="${appointment.appointment_id}">Delete</button>`;
-        div.style.borderStyle = "groove"
-        div.style.width = "50%";
-        div.style.padding = "8px";
-        div.style.margin = "10px";
         document.getElementById("card").appendChild(div);
 
 ```
@@ -131,5 +140,12 @@ be console logged:
 
         console.log(data);
     }
-});
+ });
+}
+```
+
+Lastly, I call the method reloadAppointments, so the data from the database is also shown on the website.
+
+```
+reloadAppointments();
 ```
