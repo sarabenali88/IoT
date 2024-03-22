@@ -1,6 +1,6 @@
 # API reference
 
-<details><summary>POST</summary>
+### POST
 
 _**Parameters**_
 
@@ -16,10 +16,8 @@ _**Response**_
 | 201       | "application/json" | {"success": true, "message": "Appointment is added succesfully!" | 
 | 500       | "application/json" | {"success": false, "error": ""}                                  |
 
-</details>
 
-<details><summary>GET</summary>
-
+### GET
 _**Parameters**_
 
 None
@@ -30,9 +28,8 @@ _**Response**_
 |-----------|--------------------------------|--------------------|
 | 200       | application/json;charset=UTF-8 | "application/json" |
 
-</details>
 
-<details><summary>DELETE</summary>
+### DELETE
 
 _**Parameters**_
 
@@ -47,4 +44,3 @@ _**Response**_
 | 200       | "application/json" | {"success": true, "message": "Successfully deleted appointment" | 
 | 500       | "application/json" | {"success": false, "error": ""}                                 |
 
-</details>
