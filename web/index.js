@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let nameField = document.getElementById("app_name");
     let button = document.getElementById("button");
     let errorMsg = document.querySelector(".error");
+    let successMsg = document.querySelector(".alert-success");
 
     button.onclick = function (event) {
         event.preventDefault();
@@ -41,7 +42,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 reloadAppointments();
             });
             errorMsg.innerHTML = "";
-            alert("Your appointment has been added!");
+            successMsg.innerHTML = "Your appointment has been added!";
+            successMsg.style.display = "block";
+            successMsg.style.width = "120%";
         }
     }
 });
