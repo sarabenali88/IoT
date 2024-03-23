@@ -1,8 +1,6 @@
-# API reference
-
 In this file I will be explaining the API endpoints that I have created.
 
-## POST API
+## POST 
 
 This POST method sends the date, time and name of the appointment to the database.
 
@@ -50,7 +48,7 @@ if (isset($dbConnection)) {
 }
 ```
 
-## GET request
+## GET 
 
 This GET method retrieves the date, time and name of the appointments from the database.
 
@@ -89,7 +87,7 @@ if ($query_run){
 }
 ```
 
-## DELETE request
+## DELETE 
 
 This DELETE method deletes the date, time and name of the selected appointment from the database.
 
