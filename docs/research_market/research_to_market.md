@@ -113,7 +113,9 @@ manage to create an appointment.
 hard at all.
 
 I asked her if she had any other thoughts on my website, if she had something to add, and she said it was a nice website, 
-but I could a little more colours to it. The website now only exists out of black and, grey and white mostly. 
+but I could a little more colours to it. The website now only exists out of black and, grey and white mostly. One thing 
+she also asked me if it was possible to change something after you created an appointment, so to update something, and I 
+told her that that was not possible. 
 ## Conclusion 
 ## Recommendations
 ## Sources
