@@ -13,7 +13,6 @@ void  loop() {
     if(light > 450) { // If it is bright...
         Serial.println("It  is quite light!");
         digitalWrite(13, LOW); //turn the LED off
-        
     }
     else if(light > 229 && light < 451) { // If  it is average light...
         Serial.println("It is average light!");
