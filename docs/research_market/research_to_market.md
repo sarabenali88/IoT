@@ -88,7 +88,32 @@ I want to ask three people on their opinions on my website. I want ask for their
 5. Is it easy to delete a created appointment?
 
 #### First Person:
+I let the first person try out my website. I first wanted to see if she would understand the purpose of the website, so 
+I didn't explain anything yet, but she immediately realised that the website was for making appointments, though she did
+understand it in a different way. I asked her the five questions and this is what came out of it.
 
+1. She said that the website was easy to look at it, and it was very simple to use, so everybody could easily use it. It
+wasn't like it was very difficult to find your way through the website. The website was handy according to her.
+
+2. She liked the card design I used, because its simple, it tells you the date, time, and name of the appointment, and
+it's also provided with a delete button if you want to delete your appointment. She also liked that a new one gets created
+everytime you make an appointment, so each card has its own. 
+
+3. She did understand initially that the website is used for appointments, but at first she thought that she had to enter
+her own personal details. So, her date of birth and her name, but then I had to explain that it was for creating an appointment,
+and then she realised it, and it made much more sense to her. 
+
+4. Because everything was in English and that means the date and time format was also in English, she found it a little 
+difficult. She didn't understand for example why the datepicker started with month instead of day, because usually when 
+you make appointments here, you start with the day. She also didn't understand the time format, because normally the time 
+is military time, but this time you had A.M. and P.M. and we don't use that here often, so she wasn't used to that. She did 
+manage to create an appointment. 
+
+5. I also asked here if she could delete an appointment, and she did. She clicked on the delete button and that wasn't 
+hard at all.
+
+I asked her if she had any other thoughts on my website, if she had something to add, and she said it was a nice website, 
+but I could a little more colours to it. The website now only exists out of black and, grey and white mostly. 
 ## Conclusion 
 ## Recommendations
 ## Sources
