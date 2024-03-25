@@ -103,6 +103,12 @@ again, but then I just asked for help from someone who works there, and he expla
 design in makers-case and with the right measurements of everything this time, I laser-cut it and I tried to fit each side
 into the other, and it fits perfectly. Next I am going to make cuts for the LCD-screen, button and led. 
 
+#### Monday 25-03-2024
+On this day I went to the makers-lab. I wanted to finish up my design. The only thing that was left to do was cut out some 
+shapes for the LCD-screen, push button, LED and LDR. I had two versions of my design, so I practiced on the first one and 
+cut out some shapes with different measurements. I ended up finding the right measurements and I cut them out. I think I 
+finished working on the design in the makers-lab. 
+
 ### Documentation 
 
 ### First prototype
