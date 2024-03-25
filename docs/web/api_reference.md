@@ -7,11 +7,9 @@ None
 
 _**Body**_
 
-|     | Data                | 
-|-----|---------------------|
-| Yes | dateTimeAppointment |
-| Yes | name                |    
-
+| Required | Data                          | 
+|----------|-------------------------------|
+| Yes      | "dateTimeAppointment", "name" |
 _**Response**_
 
 | HTTP code | Content-type       | Response                                                                 |
@@ -20,7 +18,7 @@ _**Response**_
 | 500       | "application/json" | {"success": false, "message": "No connection with database, "error": ""} |
 
 _**URL link**_
-curl -X POST -H "Content-Type: application/json" --data @post.json http://localhost:8080/appointments
+http://benalis2.loca.lt/insert_data.php
 
 ### GET
 _**Parameters**_
@@ -29,19 +27,19 @@ None
 
 _**Body**_
 
-|     | Data | 
-|-----|------|
-| No  | None |
-| No  | None |
+| Required | Data | 
+|----------|------|
+| No       | None |
+| No       | None |
 
 _**Response**_
 
-| HTTP code | Content-type                   | Response           |
-|-----------|--------------------------------|--------------------|
-| 200       | application/json;charset=UTF-8 | "application/json" |
+| HTTP code | Content-type     | Response |
+|-----------|------------------|----------|
+| 200       | application/json | JSON     |
 
 _**URL link**_
-curl -X POST -H "Content-Type: application/json;charset=UTF-8" --data @post.json http://localhost:8080/appointments
+http://benalis2.loca.lt/get_data.php
 
 ### DELETE
 
@@ -53,10 +51,10 @@ _**Parameters**_
 
 _**Body**_
 
-|     | Data | 
-|-----|------|
-| No  | None |
-| No  | None |
+| Required | Data | 
+|----------|------|
+| No       | None |
+| No       | None |
 
 _**Response**_
 
@@ -66,4 +64,4 @@ _**Response**_
 | 500       | "application/json" | {"success": false, "message": "No connection with database,  "error": ""} |
 
 _**URL link**_
-curl -X POST -H "Content-Type: application/json" --data @post.json http://localhost:8080/appointment_id
+http://benalis2.loca.lt/delete_data.php
