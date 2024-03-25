@@ -2,10 +2,10 @@
 #include <ESP8266HTTPClient.h>
 #include <WiFiClient.h>
 #include <ArduinoJson.h>
-#define WIFI_SSID "iotroam"
-#define WIFI_PASSWORD "LXfu9HZkNP"
 #include <LiquidCrystal_I2C.h>
 
+#define WIFI_SSID "iotroam"
+#define WIFI_PASSWORD "LXfu9HZkNP"
 // set the LCD number of columns and rows
 int lcdColumns = 16;
 int lcdRows = 2;
