@@ -18,7 +18,7 @@ _**Response**_
 | 500       | "application/json" | {"success": false, "message": "No connection with database, "error": ""} |
 
 _**URL link**_
-http://benalis2.loca.lt/insert_data.php
+https://benalis2.loca.lt/insert_data.php
 
 ### GET
 _**Parameters**_
@@ -39,7 +39,7 @@ _**Response**_
 | 200       | application/json | JSON     |
 
 _**URL link**_
-http://benalis2.loca.lt/get_data.php
+https://benalis2.loca.lt/get_data.php
 
 ### DELETE
 
@@ -64,4 +64,4 @@ _**Response**_
 | 500       | "application/json" | {"success": false, "message": "No connection with database,  "error": ""} |
 
 _**URL link**_
-http://benalis2.loca.lt/delete_data.php
+https://benalis2.loca.lt/delete_data.php
