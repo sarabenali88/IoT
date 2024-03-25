@@ -20,7 +20,8 @@ require 'connection_database.php';
                 echo json_encode(["message" => "Successfully deleted appointment"]);
             } else {
                 http_response_code(HTTP_STATUS_INTERNAL_SERVER_ERROR);
-                echo json_encode(["success" => false, "error" => $dbConnection->error]);
+                echo json_encode(["success" => false, "message" => "No connection with database",
+                    "error" => $dbConnection->error]);
             }
         }
     }
