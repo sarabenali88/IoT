@@ -12,6 +12,10 @@ Height: 80 mm
 Depth: 101.6 mm
 Finger size: 39
 Material thickness: 4mm
+LCD-screen: 72 mm * 24 mm 
+Push button: 12.5 mm * 12.5 mm
+LED: 4 mm * 4 mm
+LDR: 5 mm * 5 mm
 
 ### First prototype
 
@@ -48,6 +52,16 @@ at all:
 ![3d_design_pyramid](../assets/3d_pyramid_design.png)
 So I just chose to build a box as my design. I bought some MDF material and I cut out my design three times. The first one
 was too small because I changed the measurements in the LIGHTBURN program, but that was my fault. The second and third
-came out perfectly, this time I just imported it and didn't change anything. The sides fit perfectly with each other.
-Unfortunately, I didn't take a picture of the box before I took the box apart. Below is a picture of the design I cut:
+came out perfectly, this time I just imported it and didn't change anything. The sides fit perfectly with each other. I 
+cut out the design twice, because on one I want to cut out some shapes to check which measurements I need for the device 
+materials. Unfortunately, I didn't take a picture of the box before I took the box apart. 
+Below is a picture of the design I cut:
 ![semi-finale-design](../assets/semi-finale_design.jpg)
+
+### Fifth prototype
+For the fifth prototype I cut out the last things for my design. I cut out some shapes for the push button, LED and LDR,
+so I know exactly which measurements I need. I found the measurements and I put them in the top of this file under the 
+heading device and materials. I think I am finished with the design now. I will add a picture later of how the box looks
+like after putting the sides together:
+![material_measurements](../assets/material_measurements.jpg)
+![final_design](../assets/final_design.jpg)
