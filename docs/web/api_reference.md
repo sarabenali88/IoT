@@ -10,6 +10,7 @@ _**Body**_
 | Required | Data                          | 
 |----------|-------------------------------|
 | Yes      | "dateTimeAppointment", "name" |
+
 _**Response**_
 
 | HTTP code | Content-type       | Response                                                                 |
@@ -18,9 +19,12 @@ _**Response**_
 | 500       | "application/json" | {"success": false, "message": "No connection with database, "error": ""} |
 
 _**URL link**_
-https://benalis2.loca.lt/insert_data.php
 
-### GET
+```
+https://benalis2.loca.lt/insert_data.php
+```
+
+### GET (GET request for all the appointments)
 _**Parameters**_
 
 None
@@ -39,7 +43,37 @@ _**Response**_
 | 200       | application/json | JSON     |
 
 _**URL link**_
+
+```
 https://benalis2.loca.lt/get_data.php
+
+```
+
+### GET (GET request for appointments according to the current date)
+
+_**Parameters**_
+
+None
+
+_**Body**_
+
+| Required | Data | 
+|----------|------|
+| No       | None |
+| No       | None |
+
+_**Response**_
+
+| HTTP code | Content-type     | Response |
+|-----------|------------------|----------|
+| 200       | application/json | JSON     |
+
+_**URL link**_
+
+```
+https://benalis2.loca.lt/get_date.php
+
+```
 
 ### DELETE
 
@@ -64,4 +98,6 @@ _**Response**_
 | 500       | "application/json" | {"success": false, "message": "No connection with database,  "error": ""} |
 
 _**URL link**_
+```
 https://benalis2.loca.lt/delete_data.php
+```
