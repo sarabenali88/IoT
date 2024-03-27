@@ -138,3 +138,9 @@ my get php code, and then I decoded the JSON object by using the JSON buffer. I 
 LCD-screen. I am glad that I am making progress with this and next time I want to make sure the buzzer works according 
 to the time. 
 ![display_appointment](assets/display_appointment.jpg);
+
+## 2024-03-27
+Today I learned how to make the active buzzer work according to the requirements. I had to try lots of things because I 
+converted everything to my Wemos, so the button and active buzzer were acting weird. I had to ask for some help to rewire
+some things. I have written some code to make the buzzer go off one hour before the appointment time. I think everything 
+looks good. All of my inputs and outputs work and the only thing that's left is to put it into a box (at least for embedded).
