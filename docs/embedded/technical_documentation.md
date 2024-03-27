@@ -25,4 +25,4 @@ need references to all the materials I used.
 Below you will find the Wiring diagram of my project. This wiring diagram is created for others who want to recreate my 
 project and want to see a reference of how the parts are connected on the breadboard.
 
-![wiring_diagram_arduino](../assets/wiring_diagram_arduino.png)
+![wiring_diagram_arduino](../assets/final_wiring_diagram.png)
