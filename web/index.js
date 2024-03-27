@@ -55,7 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 return response.json();
             }).then(function (data) {
                 reloadAppointments();
-                console.log(data);
             });
             errorMsg.innerHTML = "";
             errorMsg.style.display = "none";
@@ -106,14 +105,25 @@ function reloadAppointments() {
                     if (response.ok) {
                         div.remove();
                     } else {
-                        console.error("Failed to delete appointment");
+                        console.log("Failed to delete appointment");
                     }
                 })
             });
 
-            console.log(data);
         }
     });
 }
 
 reloadAppointments();
+
+
+// fetch("get_date.php", {
+//     "method": "GET",
+//     "headers": {
+//         "Content-Type": "application/json; charset=utf-8"
+//     }
+// }).then(function (response) {
+//     return response.json();
+// }).then(function (data) {
+//     console.log(data);
+// });

@@ -18,7 +18,6 @@ if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($dbConnection)) {
         echo json_encode($res);
     }else{
         http_response_code(HTTP_STATUS_INTERNAL_SERVER_ERROR);
-        echo json_encode(array("success" => false,"message" => "No connection with database",
-            "error" => $dbConnection->error));
+        echo json_encode(array("success" => false, "error" => $dbConnection->error));
     }
 }
