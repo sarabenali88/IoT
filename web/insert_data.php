@@ -3,6 +3,7 @@
  * This file is used to create a POST request to the database by using an INSERT query
  *
  * @author Sara Benali
+ * @date 7-03-2024
  */
 require 'connection_database.php';
 
@@ -28,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 echo json_encode(array("success" => false, "message" => "No connection with database",
                     "error" => $dbConnection->error));
             }
+            $dbConnection->close();
         }
     }
 }

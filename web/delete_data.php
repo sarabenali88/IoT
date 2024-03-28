@@ -5,6 +5,7 @@ require 'connection_database.php';
  * This file is used to create a DELETE request to the database by using a DELETE query
  *
  * @author Sara Benali
+ * @date 14-03-2024
  */
 
     if ($_SERVER["REQUEST_METHOD"] === "DELETE") {
@@ -23,5 +24,6 @@ require 'connection_database.php';
                 echo json_encode(["success" => false, "message" => "No connection with database",
                     "error" => $dbConnection->error]);
             }
+            $dbConnection->close();
         }
     }

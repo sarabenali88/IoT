@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * This file is used to retrieve all the appointments from the database according to today's date
+ *
+ * @author Sara Benali
+ * @date 27-03-2024
+ */
 require 'connection_database.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($dbConnection)) {
@@ -9,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($dbConnection)) {
         $res = mysqli_fetch_all($query_run, MYSQLI_ASSOC);
         echo json_encode($res);
     }else{
-        echo json_encode(array("success" => false, "error" => $dbConnection->error));
+        echo json_encode(array("success" => false, "error" => $dbConnection->error, "message" => "No connection with database"));
     }
-
+    $dbConnection->close();
 }
