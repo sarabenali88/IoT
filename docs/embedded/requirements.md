@@ -40,16 +40,25 @@ In the setup I set the buzzer as the OUTPUT and the button as the INPUT.
 
 ```
 digitalWrite(buzzerPin, HIGH);
-  while (buttonState == LOW) {
-    buttonState = digitalRead(buttonPin);
-    if (buttonState == HIGH) {
-      digitalWrite(buzzerPin, LOW);
-      delay(5);
-    }
+        Serial.println("Het is tijd");
+        // Keep the buzzer on for 60 seconds or until the button is pressed
+        unsigned long startTime = millis();      // Record the start time
+        while (millis() - startTime < 60000) {   // Keep looping for 60 seconds
+          buttonState = digitalRead(buttonPin);  // Check the button state
+
+          // If the button is pressed, turn off the buzzer and exit the loop
+          if (buttonState == HIGH) {
+            digitalWrite(buzzerPin, LOW); 
+            break;                         
+          }
+
+          // Add a small delay to avoid excessive CPU usage
+          delay(10);
+        }
+      }
 ```
-For now the buzzer always goes off so the buzzer is set to HIGH. In the code I set the state of the button on LOW, 
-and then I read the state of the button. I then check if the button state is HIGH and if it is then the buzzer will 
-be set to LOW again. 
+The buzzer goes off when it's time for an appointment. You can turn the buzzer off by clicking on the button. If the button
+is clicked, then it means that the buttonState is HIGH and the buzzer is LOW.
 
 **_Second input**_
 
@@ -58,6 +67,55 @@ if the LDR detects lots of light then the LED will be turned off and if it doesn
 on. I want to save the value of the LDR into the database. 
 Below is code snippet of how I did this: 
 
+```
+int light = 0;  // store the current light value
+int pinNumber = 13;
+int maxLight = 451;
+int minLight = 229;
+int midLight = 450;
+```
+I first save the numbers I am checking the light value with, I also created a variable called light because here I am storing 
+the value of the light. 
+
+```
+Serial.begin(9600);
+  // Your WeMos tries to connect to your Wi-fi network
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+
+  // Keep the while-statement alive as long as we are NOT connected to the Wi-fi network.
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+  }
+  pinMode(pinNumber, OUTPUT);
+```
+
+I am making a connection with the WI-FI for the Wemos. 
+
+```
+void regulateLight() {
+  light = analogRead(A0); 
+```
+
+I created a method called regulateLight and I call this method in the loop. With the analogRead I read the light value that 
+comes from the LDR. 
+
+```
+if (light > midLight) {  // If it is bright...
+    Serial.println("It  is quite light!");
+    digitalWrite(pinNumber, LOW);  //turn the LED off
+
+  } else if (light > minLight && light < maxLight) {  // If  it is average light...
+    Serial.println("It is average light!");
+    digitalWrite(pinNumber, LOW);  // turn the LED off
+
+  }
+  else if (light < minLight) {  // If it's dark...
+    Serial.println("It  is pretty dark!");
+    digitalWrite(pinNumber, HIGH); 
+    }
+```
+
+The light value is being checked for the minimum and maximum value and based on that the LED will be turned on or off. 
 
 
 ## EMBRQ04
