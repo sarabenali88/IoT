@@ -115,15 +115,3 @@ function reloadAppointments() {
 }
 
 reloadAppointments();
-
-
-// fetch("get_date.php", {
-//     "method": "GET",
-//     "headers": {
-//         "Content-Type": "application/json; charset=utf-8"
-//     }
-// }).then(function (response) {
-//     return response.json();
-// }).then(function (data) {
-//     console.log(data);
-// });

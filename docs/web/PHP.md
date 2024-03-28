@@ -44,12 +44,63 @@ if (isset($dbConnection)) {
                 echo json_encode(array("success" => false, "message" => "No connection with database", 
                 "error" => $dbConnection->error));
             }
+                $dbConnection->close();
         }
     }
 }
 ```
 
-## GET 
+Lastly, I close the connection.
+
+```
+    $dbConnection->close();
+```
+
+## POST (POST request for the LDR sensor data)
+This POST method is used to insert the data from the LDR light value when it's dark.
+
+First, I add the php file for the database connection, because you can't make a request to the database without a
+connection:
+```
+require 'connection_database.php';
+```
+
+To read data from the request from the API I use the $_POST. I then encode the data into a JSON object. I also added HTTP
+response code I will be sending for when the query is being executed.
+```
+$light = $_POST["light"];
+echo json_encode(array("light" => $light));
+
+const HTTP_STATUS_CREATED = 201;
+const HTTP_STATUS_INTERNAL_SERVER_ERROR = 500;
+```
+
+Next, I check for the database connection and I created a query that inserts the light value into the table Sensor, and
+the date and time for when the value is read and inserted.
+```
+if (isset($dbConnection)) {
+    $insertQuery = $dbConnection->prepare("INSERT INTO `Sensor` (`light`, `date_time`) VALUES (" . $light . ", NOW())");
+```
+
+Next, I check if the query is executed and if it is then the message will be sent and the HTTP code 201 and if not, another
+message will be sent with the HTTP code 500. 
+
+```
+if ($insertQuery->execute()) {
+        http_response_code(HTTP_STATUS_CREATED);
+        echo json_encode(array("succes" => true, "message" => "Sensor data inserted succesfully"));
+    } else {
+        http_response_code(HTTP_STATUS_INTERNAL_SERVER_ERROR);
+        echo json_encode(array("success" => false, "error" => $dbConnection->error, "message" => "No connection with database"));
+    }
+```
+
+Lastly, I close the connection.
+
+```
+    $dbConnection->close();
+```
+## GET (GET request for all the appointments)
 
 This GET method retrieves the date, time and name of the appointments from the database.
 
@@ -86,7 +137,63 @@ if ($query_run){
         echo json_encode(array("success" => false, "message" => "No connection with database",
          "error" => $dbConnection->error));
     }
+        $dbConnection->close();
 }
+```
+Lastly, I close the connection.
+
+```
+    $dbConnection->close();
+```
+
+## GET (GET request for the appointments according to the date)
+
+This GET method retrieves all the dates according to what date it is. 
+
+
+First, I add the php file for the database connection, because you can't make a request to the database without a
+connection:
+```
+require 'connection_database.php';
+
+```
+
+Next, I check if the server request method is a GET method, and then I also immediately check for a database connection.
+I then proceed to create a SELECT query where I select all the data from the Appointment table according to "today's date".
+So today alle the appointments are selected from today, tomorrow from tomorrow and so on. Then the query is being
+executed with the given query and database connection. I also added constants of HTTP code that I will be sending with
+in the code.
+```
+if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($dbConnection)) {
+    $query = "SELECT * FROM Appointment WHERE DATE(date_time_appointment) = CURDATE();";
+    $query_run = mysqli_query($dbConnection, $query);
+    define('HTTP_STATUS_OK', 200);
+    define('HTTP_STATUS_INTERNAL_SERVER_ERROR', 500);
+```
+
+Lastly, I check if the query is executed and if it is I fetch all the rows from the Appointment table. After that, the
+fetched data is encoded into a JSON format. Then the JSON-encoded data is sent back to the client by using echo. If it
+didn't execute, an error will be sent back to the client. I also send an HTTP code of 200 if the query is executed and
+an HTTP code of 500 if something went wrong.
+
+```
+if ($query_run){
+        $res = mysqli_fetch_all($query_run, MYSQLI_ASSOC);
+        http_response_code(HTTP_STATUS_OK);
+        echo json_encode($res);
+    }else{
+        http_response_code(HTTP_STATUS_INTERNAL_SERVER_ERROR);
+        echo json_encode(array("success" => false, "message" => "No connection with database",
+         "error" => $dbConnection->error));
+    }
+        $dbConnection->close();
+}
+```
+
+Lastly, I close the connection.
+
+```
+    $dbConnection->close();
 ```
 
 ## DELETE 
@@ -133,6 +240,13 @@ went wrong.
                 echo json_encode(["success" => false, "message" => "No connection with database", 
                 "error" => $dbConnection->error]);
             }
+                $dbConnection->close();
         }
     }
+```
+
+Lastly, I close the connection.
+
+```
+    $dbConnection->close();
 ```
