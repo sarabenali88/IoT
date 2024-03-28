@@ -18,7 +18,7 @@ if (isset($dbConnection)) {
     $insertQuery = $dbConnection->prepare("INSERT INTO `Sensor` (`light`, `date_time`) VALUES (" . $light . ", NOW())");
     if ($insertQuery->execute()) {
         http_response_code(HTTP_STATUS_CREATED);
-        echo json_encode(array("succes" => true, "message" => "Sensor data inserted succesfully"));
+        echo json_encode(array("succes" => true, "message" => "Sensor data inserted successfully"));
     } else {
         http_response_code(HTTP_STATUS_INTERNAL_SERVER_ERROR);
         echo json_encode(array("success" => false, "error" => $dbConnection->error, "message" => "No connection with database"));
