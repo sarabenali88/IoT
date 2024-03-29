@@ -79,13 +79,14 @@ box will appear next to the form with a delete button if you want to delete the 
 looks like this:
 ![website_design](../assets/website.png)
 
-I want to ask three people on their opinions on my website. I want ask for their opinion by asking these five questions.
+I want to ask four people on their opinions on my website. I want ask for their opinion by asking three questions and
+giving them 2 tasks.
 
 1. What are your initial thoughts about the website design?
 2. What do you think of the card design that has your appointment details?
 3. Is it easy to understand what you need to do? 
-4. Is it easy to create a new appointment? 
-5. Is it easy to delete a created appointment?
+4. Can you create an appointment to your choice? 
+5. Can you delete one of the appointments?
 
 #### First Person:
 I let the first person try out my website. I first wanted to see if she would understand the purpose of the website, so 
@@ -116,6 +117,30 @@ I asked her if she had any other thoughts on my website, if she had something to
 but I could a little more colours to it. The website now only exists out of black and, grey and white mostly. One thing 
 she also asked me if it was possible to change something after you created an appointment, so to update something, and I 
 told her that that was not possible. 
+
+## Second Person
+
+1. The second user didn't really have an opinion about the website. The only thing he said was that the design looked
+simple. 
+2. He did like the design of the cards and thought that it was nice that you could see the necessary things only. 
+3. When he looked at the website he didn't really understand what it was for. After I explained the website idea a little
+he understood what it was for. 
+4. He did create an appointment to his choice. He did struggle a little with entering the date. He kept entering the day 
+for the month. 
+5. He also could delete appointment to his choice. This wasn't a hard task for him. 
+
+
+## Third Person
+1. The third user really liked the way the website looked. She did mention that when you think of a calendar with
+appointments, you mostly think of a roster. Because then you don't need multiple cards with the same date for example.
+2. She liked the design of the cards. She said that they were small enough with all the needed information.
+3. The moment she looked at the website, she knew what the website was for, because she took a good look at the cards and 
+the form. 
+4. When I asked her if she could create an appointment, she immediately did it. She didn't have a problem with the format 
+of the date or time. 
+5. When I asked her to delete one of the appointments, she chose one, and clicked on the delete button. She didn't have 
+to ask if it is the right button or not. 
+
 ## Conclusion 
 ## Recommendations
 ## Sources
