@@ -15,16 +15,18 @@ int pinNumber = 13;
 int maxLight = 451;
 int minLight = 229;
 int midLight = 450;
+int serialStartNumber = 9600;
+int initializationDelay = 1000;
 void setup() {
 
   //configure  serial to talk to computer
-  Serial.begin(9600);
+  Serial.begin(serialStartNumber);
   // Your WeMos tries to connect to your Wi-fi network
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
 
   // Keep the while-statement alive as long as we are NOT connected to the Wi-fi network.
   while (WiFi.status() != WL_CONNECTED) {
-    delay(1000);
+    delay(initializationDelay);
   }
   pinMode(pinNumber, OUTPUT);  // configure digital pin 13 as an output
 
@@ -67,7 +69,7 @@ void regulateLight() {
     }
 
   }
-  delay(1000);  // don't spam the computer!
+  delay(initializationDelay);  // don't spam the computer!
     
   }
 

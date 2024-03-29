@@ -22,34 +22,48 @@ LiquidCrystal_I2C lcd(0x27, lcdColumns, lcdRows);
 int buzzerPin = 16;
 int buttonPin = 14;
 int buttonState;
-int cursorState = 0;
+int ORG_X = 0;
+int ORG_Y = 0;
 
 int currentIndex = 0;
+
+int serialStartNumber = 9600;
+int initializationDelay = 1000;
+int smallDelay = 10;
+int dataUpdateDelay = 30000;
+int connectionRetryDelay = 5000;
+
+int lcdCol = 5; 
+int lcdRow = 4;
+int timeOffset = 3600;
+
+int maxTime = 60000;
 
 
 void setup() {
   // Initialize the Serial-connection on a speed of 115200 b/s
-  Serial.begin(9600);
+  Serial.begin(serialStartNumber);
 
   // Your WeMos tries to connect to your Wi-fi network
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
 
   // Keep the while-statement alive as long as we are NOT connected to the Wi-fi network.
   while (WiFi.status() != WL_CONNECTED) {
-    delay(1000);
+    delay(initializationDelay);
   }
 
   pinMode(buzzerPin, OUTPUT);
   pinMode(buttonPin, INPUT);
 
   // initialize LCD
-  lcd.begin(5, 4);
+  lcd.begin(lcdCol, lcdRow);
   lcd.init();
 
   // turn on LCD backlight
   lcd.backlight();
+
   timeClient.begin();
-  timeClient.setTimeOffset(3600);
+  timeClient.setTimeOffset(timeOffset);
 }
 
 void loop() {
@@ -92,11 +106,11 @@ void makeSound() {
       // Compare the appointment time with the current time
       if (timeClient.getHours() == appointmentHour - 1 && timeClient.getMinutes() == appointmentMinute) {
         digitalWrite(buzzerPin, HIGH);
-        Serial.println("Het is tijd");
+        Serial.println("It's time");
 
         // Keep the buzzer on for 60 seconds or until the button is pressed
         unsigned long startTime = millis();      // Record the start time
-        while (millis() - startTime < 60000) {   // Keep looping for 60 seconds
+        while (millis() - startTime < maxTime) {   // Keep looping for 60 seconds
           buttonState = digitalRead(buttonPin);  // Check the button state
 
           // If the button is pressed, turn off the buzzer and exit the loop
@@ -106,24 +120,24 @@ void makeSound() {
           }
 
           // Add a small delay to avoid excessive CPU usage
-          delay(10);
+          delay(smallDelay);
         }
       }
     }
     lcd.clear();
 
-    lcd.setCursor(cursorState, cursorState);
+    lcd.setCursor(ORG_X, ORG_Y);
     lcd.print(appointmentDateTime);
 
-    lcd.setCursor(cursorState, cursorState + 1);
+    lcd.setCursor(ORG_X, ORG_X + 1);
     lcd.print(appointmentName);
     
     currentIndex = (currentIndex + 1) % jsonBuffer.size();
 
-    delay(30000);  
+    delay(dataUpdateDelay);  
     
   } else {
     Serial.println("Unable to connect :(");
   }
-  delay(5000);
+  delay(connectionRetryDelay );
 }
