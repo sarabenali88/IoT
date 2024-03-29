@@ -11,6 +11,7 @@ Width: 180 mm
 Height: 80 mm
 Depth: 101.6 mm
 Finger size: 39
+Material: MDF wood
 Material thickness: 4mm
 LCD-screen: 72 mm * 24 mm 
 Push button: 12.5 mm * 12.5 mm
@@ -65,3 +66,14 @@ heading device and materials. I think I am finished with the design now. I will 
 like after putting the sides together:
 ![material_measurements](../assets/material_measurements.jpg)
 ![final_design](../assets/final_design.jpg)
+
+
+## Optimization
+
+| Prototype | Material Used | Speed/Power | Outcome                                                    | Optimization                                         |
+|-----------|---------------|-------------|------------------------------------------------------------|------------------------------------------------------|
+| 1         | MDF           | 20.0/65.0   | Accurate design but wrong material entered initially.      | -                                                    |
+| 2         | Plywood       | 20.0/65.0   | Black spots due to high power. Decision to stick with MDF. | Change the material back to MDF.                     |
+| 3         | Multiplex     | 20.0/65.0   | Issues with finger joints.                                 | Experiment with different finger joint measurements. |
+| 4         | MDF           | 16.0/75.0   | Shifted to building a box. Initial size issues fixed.      | Import design without alterations.                   |
+| 5         | MDF           | 16.0/75.0   | Cutting shapes for components. Finalizing design.          | -                                                    |

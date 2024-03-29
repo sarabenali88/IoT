@@ -118,7 +118,7 @@ but I could a little more colours to it. The website now only exists out of blac
 she also asked me if it was possible to change something after you created an appointment, so to update something, and I 
 told her that that was not possible. 
 
-## Second Person
+#### Second Person
 
 1. The second user didn't really have an opinion about the website. The only thing he said was that the design looked
 simple. 
@@ -130,7 +130,7 @@ for the month.
 5. He also could delete appointment to his choice. This wasn't a hard task for him. 
 
 
-## Third Person
+#### Third Person
 1. The third user really liked the way the website looked. She did mention that when you think of a calendar with
 appointments, you mostly think of a roster. Because then you don't need multiple cards with the same date for example.
 2. She liked the design of the cards. She said that they were small enough with all the needed information.
