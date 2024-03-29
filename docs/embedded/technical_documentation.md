@@ -2,6 +2,8 @@
 
 Your Wiring Diagram, Bill of Materials, ... everything about how you built your embedded device should be documented here.
 
+## BOM (Bill of Materials)
+
 Below you will find the Bill of Materials of my own project. This is made for others who want to recreate my project and 
 need references to all the materials I used. 
 
@@ -21,6 +23,8 @@ need references to all the materials I used.
  | LR1F220R     | NEOHM - TE CONNECTIVITY      | Resistor 220 ohm                                 | 4            | 0,05                  | 0,20                     | https://www.tinytronics.nl/nl/componenten/weerstanden/weerstanden/220%CF%89-weerstand-(led-voorschakelweerstand)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
  | EP-DW700CBE  | Samsung                      | Samsung USB-C naar USB kabel                     | 1            | 7,95                  | 7,95                     | https://www.mobilesupplies.nl/samsung-usb-c-naar-usb-kabel-extra-lang-1-5m-ep-dw700cbe.html                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
+
+## Wiring diagram
 
 Below you will find the Wiring diagram of my project. This wiring diagram is created for others who want to recreate my 
 project and want to see a reference of how the parts are connected on the breadboard.
