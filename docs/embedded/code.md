@@ -1,91 +1,237 @@
-# Embedded code
+## Code for the LCD-display, Active buzzer and Push button
 
-## Active buzzer code 
-I used the pins from the Arduino to keep track of when the behaviour of the buzzer and button should change. I declared 
-first that the buzzer sound will be the output and the button will be the input. I also tracked the state of the button. 
+// @author Sara Benali
+// This section of the program retrieves saved appointments and presents them on the LCD-display. It monitors local time
+// to trigger the buzzer alarm and provides functionality to stop the buzzer with a button press.
+// License type: MIT License
+
 ```
-int buzzerPin = 8;
-int buttonPin = 3;
+#include <ESP8266WiFi.h>
+#include <ESP8266HTTPClient.h>
+#include <WiFiClient.h>
+#include <ArduinoJson.h>
+#include <LiquidCrystal_I2C.h>
+#include <NTPClient.h>
+#include <WiFiUdp.h>
+
+#define WIFI_SSID "iotroam"
+#define WIFI_PASSWORD "LXfu9HZkNP"
+
+DynamicJsonDocument jsonBuffer(1024);
+WiFiUDP ntpUDP;
+NTPClient timeClient(ntpUDP, "pool.ntp.org");
+
+// set the LCD number of columns and rows
+// set LCD address, number of columns and rows
+int lcdColumns = 16;
+int lcdRows = 2;
+LiquidCrystal_I2C lcd(0x27, lcdColumns, lcdRows);
+
+int buzzerPin = 16;
+int buttonPin = 14;
 int buttonState;
-int newButtonState;
+int ORG_X = 0;
+int ORG_Y = 0;
+
+int currentIndex = 0;
+
+int serialStartNumber = 9600;
+int initializationDelay = 1000;
+int smallDelay = 10;
+int dataUpdateDelay = 30000;
+int connectionRetryDelay = 5000;
+
+int lcdCol = 5; 
+int lcdRow = 4;
+int timeOffset = 3600;
+
+int maxTime = 60000;
+
+
 void setup() {
+  // Initialize the Serial-connection on a speed of 115200 b/s
+  Serial.begin(serialStartNumber);
+
+  // Your WeMos tries to connect to your Wi-fi network
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+
+  // Keep the while-statement alive as long as we are NOT connected to the Wi-fi network.
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(initializationDelay);
+  }
+
   pinMode(buzzerPin, OUTPUT);
   pinMode(buttonPin, INPUT);
-  Serial.begin(9600);
-}
-```
 
-I set the buzzer to HIGH, so it would always make a buzzing sound. I then use a while-loop, so I can check when the buzzer
-is supposed to stop buzzing. In the while-loop I used an if-statement to check if the button State is LOW, if it is then 
-the buzzer should be HIGH. 
-```
+  // initialize LCD
+  lcd.begin(lcdCol, lcdRow);
+  lcd.init();
+
+  // turn on LCD backlight
+  lcd.backlight();
+
+  timeClient.begin();
+  timeClient.setTimeOffset(timeOffset);
+}
+
 void loop() {
-  buttonState = digitalRead(buttonPin);
-  Serial.println(buttonState);
-  digitalWrite(buzzerPin, HIGH);
-  while (buttonState == LOW) {
-    buttonState = digitalRead(buttonPin);
-    if (buttonState == HIGH) {
-      digitalWrite(buzzerPin, LOW);
-      delay(5);
+  makeSound();
+}
+
+
+void makeSound() {
+  // Initialize a wi-fi client & http client
+  WiFiClient client;
+  HTTPClient httpClient;
+
+  // Set the URL of where the call should be made to.
+  httpClient.begin(client, "http://benalis2.loca.lt/get_date.php");
+
+  // Make the GET-request, this returns the HTTP-code.
+  int httpCode = httpClient.GET();
+
+  // Check if the response is fine.
+  if (httpCode == HTTP_CODE_OK) {  // HTTP_CODE_OK == 200
+
+    String payload = httpClient.getString();
+    deserializeJson(jsonBuffer, payload);
+
+    String appointmentDateTime = jsonBuffer[currentIndex]["date_time_appointment"];
+    String appointmentName = jsonBuffer[currentIndex]["name"];
+
+    for (int i = 0; i <= jsonBuffer.size(); i++) {
+      timeClient.update();
+      String appointmentTime = jsonBuffer[i]["date_time_appointment"];
+      String currentTime = timeClient.getFormattedTime();
+
+      int indexDate = appointmentTime.indexOf(" ");
+      String date = appointmentTime.substring(indexDate + 1);
+
+      int indexTime = date.indexOf(":");
+      int appointmentHour = date.substring(0, indexTime).toInt();
+      int appointmentMinute = date.substring(indexTime + 1, indexTime + 3).toInt();
+
+      // Compare the appointment time with the current time
+      if (timeClient.getHours() == appointmentHour - 1 && timeClient.getMinutes() == appointmentMinute) {
+        digitalWrite(buzzerPin, HIGH);
+        Serial.println("It's time");
+
+        // Keep the buzzer on for 60 seconds or until the button is pressed
+        unsigned long startTime = millis();      // Record the start time
+        while (millis() - startTime < maxTime) {   // Keep looping for 60 seconds
+          buttonState = digitalRead(buttonPin);  // Check the button state
+
+          // If the button is pressed, turn off the buzzer and exit the loop
+          if (buttonState == HIGH) {
+            digitalWrite(buzzerPin, LOW); 
+            break;                         
+          }
+
+          // Add a small delay to avoid excessive CPU usage
+          delay(smallDelay);
+        }
+      }
     }
+    lcd.clear();
 
-```
+    lcd.setCursor(ORG_X, ORG_Y);
+    lcd.print(appointmentDateTime);
 
-I also added a delay in the while-loop and outside the while-loop, so when you actually 
-click on the button, the buzzer stops making a sound. 
-```
- delay(1000);
+    lcd.setCursor(ORG_X, ORG_X + 1);
+    lcd.print(appointmentName);
+    
+    currentIndex = (currentIndex + 1) % jsonBuffer.size();
+
+    delay(dataUpdateDelay);  
+    
+  } else {
+    Serial.println("Unable to connect :(");
   }
-  delay(30);
+  delay(connectionRetryDelay );
 }
 ```
-[Link to my embedded code](https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/embedded/test_code/active-sound-file.ino?ref_type=heads)
 
-## LDR code
-I first set the value of the light to 0.
-```
-int light = 0;
-```
+## Code for the LDR and the LED
 
-In the setup I set pin 13 as my output because that is the pin that I am using. I then assign the converted value to the 
-light variable after reading the analog voltage from the light sensor connected to pin A0. I then do a print of the 
-light variable, so I can see the current light value in the serial monitor.
-```
-void  loop() {
-    light = analogRead(A0);
-    Serial.println(light);
-```
+// @author Sara Benali
+// This program segment measures the light level in a room using an LDR sensor and activates the LED based on the measured value.
+// License type: MIT License
 
-Next, I use an if-condition to check the light value. If the light value is larger than 450, then it means that
-there's a lot of light and the LED needs to be turned off. 
 ```
-if(light > 450) { // If it is bright...
-        Serial.println("It  is quite light!");
-        digitalWrite(13, LOW); //turn the LED off 
-    }
-```
+#include <ESP8266WiFi.h>
+#include <ESP8266HTTPClient.h>
+#include <WiFiClient.h>
+#include <NTPClient.h>
+#include <WiFiUdp.h>
 
-If the light value is between 229 and 450 than there is still light and the LED needs to be turned off.
-```
-else if(light > 229 && light < 451) { // If  it is average light...
-        Serial.println("It is average light!");
-       digitalWrite(13, LOW); // turn the LED off
-    }
-```
+#define WIFI_SSID "iotroam"
+#define WIFI_PASSWORD "LXfu9HZkNP"
 
-Lastly, I do an else that turns the LED on. I added a delay so the program doesn't execute too quickly.
-```
-else { // If it's dark...
-        Serial.println("It  is pretty dark!");
-        digitalWrite(13,HIGH); // Turn the LED on
-        
-    }
-    delay(1000); // don't spam the computer!
+WiFiUDP ntpUDP;
+NTPClient timeClient(ntpUDP, "pool.ntp.org");
+
+int light = 0;  // store the current light value
+int pinNumber = 13;
+int maxLight = 451;
+int minLight = 229;
+int midLight = 450;
+int serialStartNumber = 9600;
+int initializationDelay = 1000;
+void setup() {
+
+  //configure  serial to talk to computer
+  Serial.begin(serialStartNumber);
+  // Your WeMos tries to connect to your Wi-fi network
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+
+  // Keep the while-statement alive as long as we are NOT connected to the Wi-fi network.
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(initializationDelay);
+  }
+  pinMode(pinNumber, OUTPUT);  // configure digital pin 13 as an output
+
 }
+
+void loop() {
+  regulateLight();
+}
+
+void regulateLight() {
+  light = analogRead(A0);  // read and save value from PR
+
+  Serial.println(light);  // print current light value
+
+  if (light > midLight) {  // If it is bright...
+    Serial.println("It  is quite light!");
+    digitalWrite(pinNumber, LOW);  //turn the LED off
+
+  } else if (light > minLight && light < maxLight) {  // If  it is average light...
+    Serial.println("It is average light!");
+    digitalWrite(pinNumber, LOW);  // turn the LED off
+
+  } else if (light < minLight) {  // If it's dark...
+    Serial.println("It  is pretty dark!");
+    digitalWrite(pinNumber, HIGH);  // Turn the LED on
+    
+    WiFiClient client;
+    HTTPClient httpClient;
+    httpClient.begin(client, "http://benalis2.loca.lt/insert_sensor_data.php");
+    httpClient.addHeader("Content-Type", "application/x-www-form-urlencoded");
+    String httpRequestData = "light=" + String(light);
+    int httpResponseCode = httpClient.POST(httpRequestData);
+    Serial.println(httpResponseCode);
+
+    if (httpResponseCode == HTTP_CODE_OK) {
+      String payload = httpClient.getString();
+      Serial.println(payload);
+    } else {
+      Serial.println("Unable to connect :(");
+    }
+
+  }
+  delay(initializationDelay);  // don't spam the computer!
+    
+  }
+
+
 ```
-[link to my embedded code](https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/embedded/test_code/ldr_led_light.ino?ref_type=heads)
-
-
-
-This is not a place to put your code, but to describe the code that you have written. You can describe the code in a general way, but also go into detail on specific parts of the code. You can also refer to the code in your repository. So just add a link to the code in your repository.
