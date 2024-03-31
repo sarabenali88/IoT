@@ -29,13 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
         let nameInput = nameField.value;
 
         if (dateInput === '') {
-            errorMsg.innerHTML = "Date cannot be empty!";
+            errorMsg.innerHTML = "Datum mag niet leeg zijn!";
             errorMsg.style.display = "block";
         } else if (timeInput === '') {
-            errorMsg.innerHTML = "Time cannot be empty"
+            errorMsg.innerHTML = "Tijd mag niet leeg zijn!"
             errorMsg.style.display = "block";
         } else if (nameInput === '') {
-            errorMsg.innerHTML = "Name cannot be empty!";
+            errorMsg.innerHTML = "Naam mag niet leeg zijn!";
             errorMsg.style.display = "block";
         } else {
             let dateTimeAppointment = dateInput + ' ' + timeInput
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
             errorMsg.innerHTML = "";
             errorMsg.style.display = "none";
-            successMsg.innerHTML = "Your appointment has been added!";
+            successMsg.innerHTML = "Uw afspraak is toegevoegd!";
             successMsg.style.display = "block";
 
         }
