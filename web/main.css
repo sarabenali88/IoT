@@ -5,6 +5,37 @@
     margin: 10px;
 }
 .alert-success {
-    width: 120%;
+    width: 70%;
     display: none;
+}
+.card-container {
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 10px; /* Add padding to the right to create space for the scrollbar */
+    float: right;
+}
+
+.card-container::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+}
+
+.card-container::-webkit-scrollbar-thumb {
+    background-color: gray; /* Set the color of the scrollbar thumb */
+    border-radius: 10px; /* Set the border radius of the scrollbar thumb */
+}
+
+.card {
+    background-color: #f8f9fa; /* Light gray background color */
+    border: 1px solid #ced4da; /* Gray border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+p {
+    font-size: 12px;
+    color: #333;
+}
+img{
+    height: 130px;
 }
