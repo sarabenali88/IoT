@@ -54,12 +54,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 }).then(function (response) {
                 return response.json();
             }).then(function (data) {
-                reloadAppointments();
+                createAppointments();
             });
             errorMsg.innerHTML = "";
             errorMsg.style.display = "none";
             successMsg.innerHTML = "Your appointment has been added!";
             successMsg.style.display = "block";
+
         }
     }
 });
@@ -68,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
  * In this method the data is being retrieved and shown on the page
  * @author Sara Benali
  */
-function reloadAppointments() {
+function createAppointments() {
     fetch("get_data.php", {
         "method": "GET",
         "headers": {
@@ -83,13 +84,14 @@ function reloadAppointments() {
             div.classList.add("appointment");
             let appointmentDate = new Date(appointment.date_time_appointment);
             let options = {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'};
-            let formattedDate = appointmentDate.toLocaleDateString('en-GB', options);
+            let formattedDate = appointmentDate.toLocaleDateString('nl-NL', options);
             let time = appointment.date_time_appointment.split(' ')[1];
             div.innerHTML = `
-        <h6>Appointment: ${appointment.name}</h6>
-        <h6>Date: ${formattedDate}</h6>
-        <h6>Time: ${time}</h6>  
-        <button class="deleteButton mt-2 btn btn-outline-secondary" data-id="${appointment.appointment_id}">Delete</button>`;
+        <h6>Afspraak: ${appointment.name}</h6>
+        <h6>Datum: ${formattedDate}</h6>
+        <h6>Tijd: ${time}</h6>  
+        <button class="deleteButton mt-2 btn btn-outline-secondary" data-id="${appointment.appointment_id}">Verwijderen</button>`;
+            data.sort((a, b) => new Date(a.date_time_appointment) - new Date(b.date_time_appointment));
             document.getElementById("card").appendChild(div);
 
             div.querySelector(".deleteButton").addEventListener("click", function (event) {
@@ -114,4 +116,4 @@ function reloadAppointments() {
     });
 }
 
-reloadAppointments();
+createAppointments();
