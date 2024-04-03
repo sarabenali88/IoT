@@ -91,6 +91,13 @@ void makeSound() {
     String appointmentDateTime = jsonBuffer[currentIndex]["date_time_appointment"];
     String appointmentName = jsonBuffer[currentIndex]["name"];
 
+    if (appointmentDateTime == "null" && appointmentName == "null") {
+          lcd.clear();
+          lcd.setCursor(ORG_X, ORG_Y);
+          lcd.print("No appointments");
+          return;
+        }
+
     for (int i = 0; i <= jsonBuffer.size(); i++) {
       timeClient.update();
       String appointmentTime = jsonBuffer[i]["date_time_appointment"];
