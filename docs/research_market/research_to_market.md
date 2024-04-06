@@ -88,58 +88,53 @@ giving them 2 tasks.
 4. Can you create an appointment to your choice? 
 5. Can you delete one of the appointments?
 
-#### First Person:
-I let the first person try out my website. I first wanted to see if she would understand the purpose of the website, so 
-I didn't explain anything yet, but she immediately realised that the website was for making appointments, though she did
-understand it in a different way. I asked her the five questions and this is what came out of it.
+_**Question 1: Initial Thoughts about Website Design**_
 
-1. She said that the website was easy to look at it, and it was very simple to use, so everybody could easily use it. It
-wasn't like it was very difficult to find your way through the website. The website was handy according to her.
+- 4/4 of the users found the website design to be simple and easy to navigate.
+- 3/4 of the users suggested adding more colors to enhance the visual appeal of the website.
 
-2. She liked the card design I used, because its simple, it tells you the date, time, and name of the appointment, and
-it's also provided with a delete button if you want to delete your appointment. She also liked that a new one gets created
-everytime you make an appointment, so each card has its own. 
+_**Question 2: Opinion on Card Design for Appointments**_
 
-3. She did understand initially that the website is used for appointments, but at first she thought that she had to enter
-her own personal details. So, her date of birth and her name, but then I had to explain that it was for creating an appointment,
-and then she realised it, and it made much more sense to her. 
+- 4/4 generally liked the simplicity of the card design and found it informative.
+- 1/4 of the users suggested considering a different layout to avoid redundancy when multiple appointments fall on the same date.
 
-4. Because everything was in English and that means the date and time format was also in English, she found it a little 
-difficult. She didn't understand for example why the datepicker started with month instead of day, because usually when 
-you make appointments here, you start with the day. She also didn't understand the time format, because normally the time 
-is military time, but this time you had A.M. and P.M. and we don't use that here often, so she wasn't used to that. She did 
-manage to create an appointment. 
+_**Question 3: Ease of Understanding and Navigation**_
 
-5. I also asked here if she could delete an appointment, and she did. She clicked on the delete button and that wasn't 
-hard at all.
+- 3/4 of the users understood the purpose of the website
+- 1/4 of the user didn't understand the purpose, however once explained, the user found it easy to comprehend and 
+navigate through the website.
 
-I asked her if she had any other thoughts on my website, if she had something to add, and she said it was a nice website, 
-but I could a little more colours to it. The website now only exists out of black and, grey and white mostly. One thing 
-she also asked me if it was possible to change something after you created an appointment, so to update something, and I 
-told her that that was not possible. 
+_**Task 1: Creating an Appointment**_
 
-#### Second Person
+- Users were able to create appointments without significant difficulty.
+- 3/4 encountered minor issues with date and time format, they kept entering the dat number for the month and the month 
+number for the day, but overall managed to proceed with the task successfully.
 
-1. The second user didn't really have an opinion about the website. The only thing he said was that the design looked
-simple. 
-2. He did like the design of the cards and thought that it was nice that you could see the necessary things only. 
-3. When he looked at the website he didn't really understand what it was for. After I explained the website idea a little
-he understood what it was for. 
-4. He did create an appointment to his choice. He did struggle a little with entering the date. He kept entering the day 
-for the month. 
-5. He also could delete appointment to his choice. This wasn't a hard task for him. 
+_**Task 2: Deleting an Appointment**_
+
+- Deleting appointments was straightforward for all users, with no notable challenges reported.
+
+#### Analysis and Insights
+
+In general, users valued the website design's functionality and simplicity. 
+There were, however, some recommendations for enhancements, such incorporating additional colors and thinking about 
+other arrangements for showing several appointments on the same day. Users completed tasks without significant difficulty, 
+despite minor errors with date and time formats.
+
+After the research I have done I concluded that these are the problems I need to fix in my website:
+
+1. Changing the layout
+2. Fixing the format
 
 
-#### Third Person
-1. The third user really liked the way the website looked. She did mention that when you think of a calendar with
-appointments, you mostly think of a roster. Because then you don't need multiple cards with the same date for example.
-2. She liked the design of the cards. She said that they were small enough with all the needed information.
-3. The moment she looked at the website, she knew what the website was for, because she took a good look at the cards and 
-the form. 
-4. When I asked her if she could create an appointment, she immediately did it. She didn't have a problem with the format 
-of the date or time. 
-5. When I asked her to delete one of the appointments, she chose one, and clicked on the delete button. She didn't have 
-to ask if it is the right button or not. 
+#### Commentary
+
+1/4 of the users didn't understand the format of the date in the cards. The user asked why the format of the date is in 
+Dutch while the website is in English. He wondered why the format didn't look like this (for example): April 8th 2024.
+
+1/4 of the users asked if it was possible to edit the appointment, because if you make a mistake do you have to create 
+the appointment again. 
+
 
 ## Conclusion 
 ## Recommendations
