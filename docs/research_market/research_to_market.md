@@ -167,6 +167,21 @@ loading times, refining error messaging, and considering user preferences can re
 experience for this demographic.
 
 ## Recommendations
+
+These are the recommendations I have gotten from the research results:
+
+1. Enhance visual consistency: Simplify the design and layout to produce an interface that is both aesthetically 
+pleasing and consistent.
+
+2. Optimize Page Loading Times: To reduce user wait times and avoid annoyance, optimize the performance and loading 
+speed of your website.
+
+3. Refine Error Messaging: Give users clear, helpful error messages to help them figure out how to fix problems on their own.
+
+4. Organize Content Effectively: Organize information logically and hierarchically to make it easier to navigate and understand.
+
+5. Tackle Date Format: To ensure clarity and consistency, standardize the date format to meet user expectations and preferences.
+
 ## Sources
 1. A, S. (2024, 22 februari). UI Design: 15 Things That Tell You It Is a Problem. Beon Systems. https://beonsystems.com/ui-design-15-things-that-tell-you-it-is-a-problem/ 
 2. Nomensa. (2023, 14 november). 10 common usability problems with websites. Nomensa. https://www.nomensa.com/blog/10-common-usability-problems-with-websites/
