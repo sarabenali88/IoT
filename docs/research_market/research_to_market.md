@@ -4,6 +4,7 @@
 
 For the research market I will be researching about User Interaction. I want to find out how I can make it easier for 
 non-it people to  use my website and device. My research question is:
+
 - "What user interface elements can be added to optimize the user interaction for people with no IT-background?"
 
 For this research question I have also added two sub questions:
