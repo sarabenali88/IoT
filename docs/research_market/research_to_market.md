@@ -136,7 +136,36 @@ Dutch while the website is in English. He wondered why the format didn't look li
 the appointment again. 
 
 
-## Conclusion 
+## Conclusion
+
+- "What user interface elements can be added to optimize the user interaction for people with no IT-background?"
+
+To answer my own research question, I conducted a research by looking for common examples of bad user interface
+that people experience when using a website and I asked for user opinions of my website to improve the user interface.
+
+#### Conclusion: Addressing the Research Question
+The results of the research provide insight into the essential UI components that are needed to maximize engagement for
+non-IT professionals. Through a comprehensive examination of prevalent user interface issues and the integration of user 
+testing feedback, we are able to identify practical suggestions for enhancing the user experience.
+
+_**Typical Issues with User Interfaces**_
+
+Users encounter difficulties while dealing with IT-related tools, as demonstrated by an analysis of frequent user 
+interface issues. Problems with unclear error messages, erratic layout, complicated navigation, sluggish website loads, 
+and disjointed information were noted as obstacles to a seamless user experience.
+
+_**Results from User Input**_
+
+User-provided direct feedback offered insightful viewpoints on the advantages and disadvantages of the user interface 
+on my website. Although most users said the design was straightforward and easy to use, there were certain areas that 
+needed work. These include adding color to improve visual appeal, changing the layout of the website, and lastly fixing 
+the format of the date.
+
+By tackling common user interface problems and including user feedback, I can improve my own website that I have 
+created. Implementing recommendations such as simplifying navigation, enhancing visual consistency, optimizing page 
+loading times, refining error messaging, and considering user preferences can remarkably improve the overall user 
+experience for this demographic.
+
 ## Recommendations
 ## Sources
 1. A, S. (2024, 22 februari). UI Design: 15 Things That Tell You It Is a Problem. Beon Systems. https://beonsystems.com/ui-design-15-things-that-tell-you-it-is-a-problem/ 
