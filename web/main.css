@@ -1,9 +1,9 @@
 .appointment {
     border-style: groove;
-    width: 50%;
+    width: 60%;
     padding: 8px;
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .alert-success {
     width: 70%;
@@ -12,31 +12,34 @@
 .card-container {
     max-height: 500px;
     overflow-y: auto;
-    padding-right: 10px; /* Add padding to the right to create space for the scrollbar */
-    float: right;
-}
 
+}
 .card-container::-webkit-scrollbar {
     width: 8px; /* Set the width of the scrollbar */
 }
 
 .card-container::-webkit-scrollbar-thumb {
-    background-color: #9a9999; /* Set the color of the scrollbar thumb */
+    background-color: #483C32; /* Set the color of the scrollbar thumb */
     border-radius: 10px; /* Set the border radius of the scrollbar thumb */
 }
 
-.card {
-    background-color: #f8f9fa; /* Light gray background color */
-    border: 1px solid #d5d2d2; /* Gray border */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-    padding: 20px;
-    border-radius: 8px;
+.header {
+    background-color: #483C32; /* Brown color */
+    padding: 20px; /* Add some padding to give space around the text */
+}
+p{
+    font-size: 14px;
 }
 
-p {
-    font-size: 12px;
-    color: #333;
+.btn{
+    background-color: #483C32;
+    color: #FFFFFF;
 }
-img{
-    height: 130px;
+
+.btn:hover{
+    border-color: #483C32;
+    color: #000000;
+    background-color: #FFFFFF;
 }
+
+

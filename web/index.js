@@ -29,15 +29,18 @@ document.addEventListener("DOMContentLoaded", function () {
         let nameInput = nameField.value;
 
         if (dateInput === '') {
-            errorMsg.innerHTML = "Datum mag niet leeg zijn!";
+            errorMsg.innerHTML = "Date cannot be empty!";
             errorMsg.style.display = "block";
         } else if (timeInput === '') {
-            errorMsg.innerHTML = "Tijd mag niet leeg zijn!"
+            errorMsg.innerHTML = "Time cannot be empty!"
             errorMsg.style.display = "block";
         } else if (nameInput === '') {
-            errorMsg.innerHTML = "Naam mag niet leeg zijn!";
+            errorMsg.innerHTML = "Name cannot be empty!";
             errorMsg.style.display = "block";
-        } else {
+        } else if (nameInput.length > 16){
+            errorMsg.innerHTML = "Name has to be between 0-16 characters";
+            errorMsg.style.display = "block";
+        }else {
             let dateTimeAppointment = dateInput + ' ' + timeInput
             let appointment = {
                 "dateTimeAppointment": dateTimeAppointment,
@@ -58,8 +61,15 @@ document.addEventListener("DOMContentLoaded", function () {
             });
             errorMsg.innerHTML = "";
             errorMsg.style.display = "none";
-            successMsg.innerHTML = "Uw afspraak is toegevoegd!";
+            successMsg.innerHTML = "Your appointment has been added!" + `<span class="close">&times;</span>`;
             successMsg.style.display = "block";
+            let closeButton = document.querySelector('.close');
+            closeButton.addEventListener('click', function() {
+                successMsg.style.display = 'none';
+                dateField.value = '';
+                timeField.value = '';
+                nameField.value = '';
+            });
 
         }
     }
@@ -78,21 +88,21 @@ function createAppointments() {
     }).then(function (response) {
         return response.json();
     }).then(function (data) {
-        document.getElementById("card").innerHTML = ' ';
+        document.getElementById("new-appointment").innerHTML = ' ';
         for (let appointment of data) {
             let div = document.createElement("div");
             div.classList.add("appointment");
             let appointmentDate = new Date(appointment.date_time_appointment);
             let options = {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'};
-            let formattedDate = appointmentDate.toLocaleDateString('nl-NL', options);
+            let formattedDate = appointmentDate.toLocaleDateString('gb-GB', options);
             let time = appointment.date_time_appointment.split(' ')[1];
             div.innerHTML = `
-        <h6>Afspraak: ${appointment.name}</h6>
-        <h6>Datum: ${formattedDate}</h6>
-        <h6>Tijd: ${time}</h6>  
-        <button class="deleteButton mt-2 btn btn-outline-secondary" data-id="${appointment.appointment_id}">Verwijderen</button>`;
+        <h6>Appointment: ${appointment.name}</h6>
+        <h6>Date: ${formattedDate}</h6>
+        <h6>Time: ${time}</h6>  
+        <button class="deleteButton mt-2 btn " data-id="${appointment.appointment_id}">Delete</button>`;
             data.sort((a, b) => new Date(a.date_time_appointment) - new Date(b.date_time_appointment));
-            document.getElementById("card").appendChild(div);
+            document.getElementById("new-appointment").appendChild(div);
 
             div.querySelector(".deleteButton").addEventListener("click", function (event) {
                 event.preventDefault();
