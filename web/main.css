@@ -3,6 +3,7 @@
     width: 50%;
     padding: 8px;
     margin: 10px;
+    border-radius: 10px;
 }
 .alert-success {
     width: 70%;
@@ -20,13 +21,13 @@
 }
 
 .card-container::-webkit-scrollbar-thumb {
-    background-color: gray; /* Set the color of the scrollbar thumb */
+    background-color: #9a9999; /* Set the color of the scrollbar thumb */
     border-radius: 10px; /* Set the border radius of the scrollbar thumb */
 }
 
 .card {
     background-color: #f8f9fa; /* Light gray background color */
-    border: 1px solid #ced4da; /* Gray border */
+    border: 1px solid #d5d2d2; /* Gray border */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
     padding: 20px;
     border-radius: 8px;
