@@ -16,32 +16,33 @@ One of the key advantages of this device is its versatility in placement. Whethe
 the living room, users can position it wherever it's most convenient for them, ensuring that they never miss an
 appointment again.
 
+- As a user I can expect to see the appointments on the LCD-screen, so I know which appointments I have on today's day
+- As a user I want a buzzer to go off, so I can be reminded for an appointment.
+- As a user I want to have a button, so I can turn the buzzer off when it's time for an appointment
+- As a user I can see the LED turn on when it's dark.
+
 ### Main goal
 So in short, the main goal of this device is to make it easier for a user to follow their appointments without having
 the need to keep checking on which day the appointment is and what time the appointment takes place.
 
 ### Requirements
 To meet the user needs, these are the requirements I have set up for the smart device:
-- As a user I have access to a website to make all of my appointments. A simple website will be provided so the user 
+- There is a website to make all the appointments. A simple website will be provided so the user 
 can enter the date, time and appointment name.
 
-- As a user I want the device to make use of an LCD-display screen, so I can see the name of my appointment. By using 
+- The device makes use of an LCD-display screen, so you can see the name of my appointment. By using 
 the LCD-display the appointment name can be display on the device for the user. This is easy because you can immediately 
 read what your appointment is. 
 
-- As a user I want the device to contain an active buzzer. This buzzer will go off at least one hour before the 
+- The device to contains an active buzzer. This buzzer will go off at least one hour before the 
 appointment so the user will have enough notice to prepare for the appointment.
 
-- As a user I can expect a push button to turn the buzzer off. With this push button the user can turn the buzzer off. 
-This is because it wouldn't be nice for the user to have a sound keep going off for one hour for example. 
+- A push button will be used to turn the buzzer off. With this push button the user can turn the buzzer off. 
+This is because it wouldn't be nice for the user to have a sound keep going off for a while. 
 
-- As a user I can expect that the device makes use of an LDR. The moment that the device detects darkness, the color
-  of the screen will be changed. I think this is nice for the user because if it's night it doesn't bother the user with
-  a bright color.
+- The device makes use of an LDR and a LED. The moment that the device detects darkness, the color
+  of the LED will be changed. 
 
-- As a user I can expect to see the next appointment after I turned the buzzer for the previous appointment off. 
-One requirement I want to try to make work is that the moment the user turns off the buzzer, the next appointment will 
-be displayed on the LCD-display screen.
 
 ### Design
 I have chosen to design a box as the smart device. I think a box is simple, easy to look at and doesn't require
