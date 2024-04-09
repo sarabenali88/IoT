@@ -15,7 +15,7 @@ nav:
       - HTML: web/HTML
       - CSS: web/CSS
       - JavaScript: web/JavaScript
-      - PHP: PHP
+      - PHP: web/PHP
     - 👩‍🎨 User Experience Design:
       - Concept & Design: uxd/concept_design
       - Create & Test: uxd/create_test
