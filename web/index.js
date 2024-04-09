@@ -80,6 +80,8 @@ document.addEventListener("DOMContentLoaded", function () {
  * @author Sara Benali
  */
 function createAppointments() {
+    let successMsg = document.querySelector(".alert-success");
+
     fetch("get_data.php", {
         "method": "GET",
         "headers": {
@@ -115,6 +117,12 @@ function createAppointments() {
                     }
                 }).then(response => {
                     if (response.ok) {
+                        successMsg.innerHTML = "Your appointment has been deleted!" + `<span class="close">&times;</span>`;
+                        successMsg.style.display = "block";
+                        let closeButton = document.querySelector('.close');
+                        closeButton.addEventListener('click', function() {
+                            successMsg.style.display = 'none';
+                        });
                         div.remove();
                     } else {
                         console.log("Failed to delete appointment");
