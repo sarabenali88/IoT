@@ -27,8 +27,6 @@ the need to keep checking on which day the appointment is and what time the appo
 
 ### Requirements
 To meet the user needs, these are the requirements I have set up for the smart device:
-- There is a website to make all the appointments. A simple website will be provided so the user 
-can enter the date, time and appointment name.
 
 - The device makes use of an LCD-display screen, so you can see the name of my appointment. By using 
 the LCD-display the appointment name can be display on the device for the user. This is easy because you can immediately 
