@@ -18,6 +18,8 @@ configuration.
 - // This section explains what the variables are used for
 - // License type: MIT License
 
+**Overview**
+
 1. The urls for the urls are set, I use these to make a GET and POST request
 2. I set the port number for the Wi-Fi configuration
 3. I set the columns and rows for the LCD, because the LCD only has 16 columns and 2 rows.
