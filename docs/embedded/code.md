@@ -78,6 +78,7 @@ buzzer go off one hour before the appointment time. It also stops buzzing the mo
 measured value.
 - // License type: MIT License
 
+**Function description**
 
 The `regulateLight()` function checks for the light value in a room. If there's a little light or a lot of light, the LED
 stays off, but when it's dark the LED turns on (and a POST request is made).
