@@ -13,24 +13,23 @@ Add some images! 😉
 | EMBRQ#02            | The embedded device also acts as a server and receives status messages from the application backend over http or https.                                                                | MUST       | YES           |
 | EMBRQ#03            | The embedded device contains at least two types of input sensors (e.g. LDR, buttons, joystick, capacitive touch, etc.).                                                                | MUST       | YES           |
 | EMBRQ#04            | The embedded device contains at least two types of visual and/or sensory outputs (e.g. LED, LED Matrix, 7-segment display, motor, servo, actuator, LCD-screen, buzzer, etc.).          | MUST       | YES           |
-| EMBRQ#05            | The embedded device uses the WifiManager for configuration of SSID and password (PWD) for connecting to the network.                                                                   | MUST       | NO            |
+| EMBRQ#05            | The embedded device uses the WifiManager for configuration of SSID and password (PWD) for connecting to the network.                                                                   | MUST       | YES           |
 
 ## EMBRQ #01
 
 I created a POST request from my Wemos by using the Wi-Fi client.
 I first check when the value that the LDR detects is smaller than the minimum light value (229). If it's, then I create
 a POST request. I use the ```"http://benalis2.loca.lt/insert_sensor_data.php"``` to create the request. I add the
-Content-Type
-in the header and I set the format. By using the ```"httpClient.POST()"``` the request is executed.
+Content-Type in the header and I set the format. By using the ```"httpClient.POST()"``` the request is executed.
 
 ```
 else if (light < minLight) {  // If it's dark...
     Serial.println("It  is pretty dark!");
     digitalWrite(pinNumber, HIGH);  // Turn the LED on
     
-    WiFiClient client;
+    WiFiClient client = server.available();
     HTTPClient httpClient;
-    httpClient.begin(client, "http://benalis2.loca.lt/insert_sensor_data.php");
+    httpClient.begin(client, PHP_URL_POST);
     httpClient.addHeader("Content-Type", "application/x-www-form-urlencoded");
     String httpRequestData = "light=" + String(light);
     int httpResponseCode = httpClient.POST(httpRequestData);
@@ -44,7 +43,7 @@ the response had the status-code 200 and if it does than I deserialize the data.
 
 ```
  // Initialize a wi-fi client & http client
-  WiFiClient client;
+  WiFiClient client = server.available();
   HTTPClient httpClient;
 
   // Set the URL of where the call should be made to.
@@ -239,3 +238,33 @@ if (timeClient.getHours() == appointmentHour - 1 && timeClient.getMinutes() == a
             break;                         
           }
 ```
+
+## EMBRQ #05
+
+I have included the WiFi-Manager by including the library and for configuration it uses the SSID and the password:
+
+First, I set the port number:
+
+```
+int portNumber = 80;
+WiFiServer server(portNumber);
+boolean response;
+```
+
+I configure the network in the setup():
+
+````
+WiFiManager wifiManager;
+  // Uncomment and run it once, if you want to erase all the stored information
+  response = wifiManager.autoConnect("calendarAP", "password");
+  // or use this for auto generated name ESP + ChipID
+  //wifiManager.autoConnect();
+
+  if (response) {
+    Serial.println("Connected.");
+  } else {
+    Serial.println("Failed to connect to network.");
+  }
+  server.begin();
+
+````

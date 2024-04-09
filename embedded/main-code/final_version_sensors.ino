@@ -201,7 +201,7 @@ void regulateLight() {
     Serial.println("It  is pretty dark!");
     digitalWrite(pinNumber, HIGH);  // Turn the LED on
 
-    // Use the wifi-manager
+
     WiFiClient client = server.available();
     HTTPClient httpClient;
 
