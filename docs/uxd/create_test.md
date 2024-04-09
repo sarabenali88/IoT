@@ -92,7 +92,7 @@ like after putting the sides together:
 
 ## User Testing
 
-*Test requirements*
+**Test requirements**
 
 Below are the most important requirements I set for the users:
 
@@ -106,18 +106,18 @@ Below are the most important requirements I set for the users:
 - A push button will be used to turn the buzzer off. With this push button the user can turn the buzzer off.
   This is because it wouldn't be nice for the user to have a sound keep going off for a while.
 
-*Testable aspects*
+**Testable aspects**
 
 - The placement of the button and the LCD-screen
 - The information that is displayed on the LCD-screen
 - The overall design concept.
 
-*Test scenario*
+**Test scenario**
 
 The user is on the website, they create an appointment, and they should see the appointment on the LCD-screen. When it's
 one hour before the appointment, the buzzer will go off and the user should click on the button to stop the buzzer.
 
-*Amount users*
+**Amount users**
 
 I will be asking two users to test this device. I will give them two tasks and ask for feedback:
 

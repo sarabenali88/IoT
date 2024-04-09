@@ -46,13 +46,7 @@ This is because it wouldn't be nice for the user to have a sound keep going off 
 I have chosen to design a box as the smart device. I think a box is simple, easy to look at and doesn't require
 lots of functionalities to actually understand the device. The box will have 4 sides and will look like a 3d box. 
 This is because I can place different technical materials on different sides. The LCD-display screen will be placed on 
-the front of the box. The push button to turn the buzzer off and the LED, will be placed on top of the box. 
-
-### Measurements
-*Latest measurements:* 
-
-Box side: 18 cm. 
-LCD-screen: 7.2 x 2.4 cm.
+the front of the box. The push button to turn the buzzer off and the LED, will be placed on top of the box.
 
 ## Digital Manufacturing
 The material I am using for my embedded device is MDF. The reason why I am using MDF is because of my design. I am designing
