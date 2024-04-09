@@ -109,7 +109,8 @@ _**Task 1: Creating an Appointment**_
 
 - Users were able to create appointments without significant difficulty.
 - 3/4 encountered minor issues with date and time format, they kept entering the dat number for the month and the month 
-number for the day, but overall managed to proceed with the task successfully.
+number for the day, and didn't quite understand the AM/PM or forgot to enter it, but overall managed to proceed with 
+the task successfully.
 
 _**Task 2: Deleting an Appointment**_
 
@@ -125,7 +126,7 @@ despite minor errors with date and time formats.
 After the research I have done I concluded that these are the problems I need to fix in my website:
 
 1. Changing the layout
-2. Fixing the format
+2. Fixing the date and time format
 
 
 #### Commentary
@@ -160,7 +161,7 @@ _**Results from User Input**_
 User-provided direct feedback offered insightful viewpoints on the advantages and disadvantages of the user interface 
 on my website. Although most users said the design was straightforward and easy to use, there were certain areas that 
 needed work. These include adding color to improve visual appeal, changing the layout of the website, and lastly fixing 
-the format of the date.
+the format of the date and time.
 
 By tackling common user interface problems and including user feedback, I can improve my own website that I have 
 created. Implementing recommendations such as simplifying navigation, enhancing visual consistency, optimizing page 
@@ -177,11 +178,61 @@ pleasing and consistent.
 2. Optimize Page Loading Times: To reduce user wait times and avoid annoyance, optimize the performance and loading 
 speed of your website.
 
-3. Refine Error Messaging: Give users clear, helpful error messages to help them figure out how to fix problems on their own.
+3. Refine Error Messaging: Give users clear, helpful error messages to help them figure out how to fix problems on 
+their own.
 
-4. Organize Content Effectively: Organize information logically and hierarchically to make it easier to navigate and understand.
+4. Organize Content Effectively: Organize information logically and hierarchically to make it easier to navigate and 
+understand.
 
-5. Tackle Date Format: To ensure clarity and consistency, standardize the date format to meet user expectations and preferences.
+5. Tackle Date & Time Format: To ensure clarity and consistency, standardize the date and time format to meet user 
+expectations and preferences.
+
+# Implementation
+
+I will explain now how I implemented all the results from my research in my website. Below you can also find a picture of
+how the website looks like now.
+
+![final_website_design](../assets/final_website.png)
+
+### Fixing the date and time format
+
+During the interview I was taking with the users, I noticed that they had some problems with entering the date and time.
+So I knew that I had to fix that. At first, I tried to make changes in HTML. I tried to add a placeholder, a value, a 
+title( so that when you hover over it, it will tell you to add the date in the right format), a format and none of it worked.
+Then I tried changing the format in javascript and that didn't work too. 
+Later I found out that that my Google Chrome language is set in English and that's why the date format was mm/dd/yyyy. 
+I changed the language to Dutch and that fixed not only the date format, but also the time format immediately.
+
+### Fixing the layout
+
+During the interview I was taking with the users, the users told me that the website looked very empty and dull. So, I 
+ended up changing the layout. 
+
+_**Changes in HTML**_
+
+I noticed that the users had to look closely to the form, because it was kind of hidden in the left top corner. So I 
+put the form in the middle of the website by changing the styling a little in HTML. I added a title to the form and made 
+the input fields a little longer. 
+
+Next, I fixed the appointment cards. I put all the appointments in a card and I added a title to it. I also noticed that 
+if you added more and more appointments, the page kept getting longer, so I added a scrollbar to the appointments, so 
+the users can easily see all the appointments without the page being so long.
+
+Lastly, I added a header in the colour taupe, so the website would have more colour but also have a professional look to 
+it. In the header I added a fun title and explanation for the website that I generated.
+
+_**Changes in JavaScript**_
+
+I sorted the appointments on date and time, so all the appointments would be set in chronological order. This makes it 
+easier to find an appointment for the user. 
+
+Everytime a user adds a new appointment a message will appear that the appointment is added successfully. At first, you 
+had to refresh the page yourself to remove the message and clear the input fields, but I have added a cross button next 
+to the message, and if you click on that, the message disappears and the input fields are cleared. This is done because 
+it's easier for users to create a new appointment if everything is empty and the message is gone. 
+
+I also added a message for when the user deletes an appointment, that way the user knows for sure that it has been deleted.
+
 
 ## Sources
 1. A, S. (2024, 22 februari). UI Design: 15 Things That Tell You It Is a Problem. Beon Systems. https://beonsystems.com/ui-design-15-things-that-tell-you-it-is-a-problem/ 
