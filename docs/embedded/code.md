@@ -1,237 +1,92 @@
+## Library configuration
+
+- // @author Sara Benali
+- // This section of the program is for the libraries
+- // License type: MIT License
+
+The Libraries cover different functionalities such as Wi-Fi connection, HTTP communication, JSON data handling, LCD-display
+control, network time synchronization, UDP communication, DNS resolution, web server capabilities, and lastly Wi-Fi network
+configuration.
+
+**Link to GitLab**
+
+```https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blame/main/embedded/main-code/final_version_sensors.ino?ref_type=heads#L1```
+
+## Variables 
+
+- // @author Sara Benali
+- // This section explains what the variables are used for
+- // License type: MIT License
+
+1. The urls for the urls are set, I use these to make a GET and POST request
+2. I set the port number for the Wi-Fi configuration
+3. I set the columns and rows for the LCD, because the LCD only has 16 columns and 2 rows.
+4. I set the buzzer pin on 16 and the button pin on 14
+5. I set the origin of the cursors on the LCD to 0
+6. I have different variables for the delays
+7. I set the numbers to initialize the LCD
+8. I set maximum time for how long the buzzer will go off
+9. I set the pin-number for the LED
+10. I set the numbers for the light
+
+**Link to GitLab**
+
+```https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/embedded/main-code/final_version_sensors.ino?ref_type=heads#L12```
+
+## Setup
+
+- // @author Sara Benali
+- // This section of the program setups everything, so you can use it in the program.
+- // License type: MIT License
+
+In the setup I set Wi-Fi manager, the pins of the buzzer, button, LED, LCD and the timeClient. 
+
+**Link to GitLab**
+```https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/embedded/main-code/final_version_sensors.ino?ref_type=heads#L62```
+
 ## Code for the LCD-display, Active buzzer and Push button
 
-// @author Sara Benali
-// This section of the program retrieves saved appointments and presents them on the LCD-display. It monitors local time
-// to trigger the buzzer alarm and provides functionality to stop the buzzer with a button press.
-// License type: MIT License
+- // @author Sara Benali
+- // This section of the program retrieves saved appointments and presents them on the LCD-display. It monitors local time
+ to trigger the buzzer alarm and provides functionality to stop the buzzer with a button press. 
+- // License type: MIT License
 
-```
-#include <ESP8266WiFi.h>
-#include <ESP8266HTTPClient.h>
-#include <WiFiClient.h>
-#include <ArduinoJson.h>
-#include <LiquidCrystal_I2C.h>
-#include <NTPClient.h>
-#include <WiFiUdp.h>
+**Function description**
 
-#define WIFI_SSID "iotroam"
-#define WIFI_PASSWORD "LXfu9HZkNP"
+The `makeSound()` function displays appointments on the LCD-display. It displays the date/time of the appointment on the 
+first row of the LCD, and the name on the second row. It compares the current time to the appointment time and lets the 
+buzzer go off one hour before the appointment time. It also stops buzzing the moment you click on the push button. 
 
-DynamicJsonDocument jsonBuffer(1024);
-WiFiUDP ntpUDP;
-NTPClient timeClient(ntpUDP, "pool.ntp.org");
+**Overview**
 
-// set the LCD number of columns and rows
-// set LCD address, number of columns and rows
-int lcdColumns = 16;
-int lcdRows = 2;
-LiquidCrystal_I2C lcd(0x27, lcdColumns, lcdRows);
+1. GET request is made on today's appointments
+2. Appointments are deserialized
+3. Current time is compared to appointment time
+4. Buzzer goes off and turned off by button
+5. Appointments are displayed
 
-int buzzerPin = 16;
-int buttonPin = 14;
-int buttonState;
-int ORG_X = 0;
-int ORG_Y = 0;
+**Link to GitLab**
 
-int currentIndex = 0;
-
-int serialStartNumber = 9600;
-int initializationDelay = 1000;
-int smallDelay = 10;
-int dataUpdateDelay = 30000;
-int connectionRetryDelay = 5000;
-
-int lcdCol = 5; 
-int lcdRow = 4;
-int timeOffset = 3600;
-
-int maxTime = 60000;
-
-
-void setup() {
-  // Initialize the Serial-connection on a speed of 115200 b/s
-  Serial.begin(serialStartNumber);
-
-  // Your WeMos tries to connect to your Wi-fi network
-  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-
-  // Keep the while-statement alive as long as we are NOT connected to the Wi-fi network.
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(initializationDelay);
-  }
-
-  pinMode(buzzerPin, OUTPUT);
-  pinMode(buttonPin, INPUT);
-
-  // initialize LCD
-  lcd.begin(lcdCol, lcdRow);
-  lcd.init();
-
-  // turn on LCD backlight
-  lcd.backlight();
-
-  timeClient.begin();
-  timeClient.setTimeOffset(timeOffset);
-}
-
-void loop() {
-  makeSound();
-}
-
-
-void makeSound() {
-  // Initialize a wi-fi client & http client
-  WiFiClient client;
-  HTTPClient httpClient;
-
-  // Set the URL of where the call should be made to.
-  httpClient.begin(client, "http://benalis2.loca.lt/get_date.php");
-
-  // Make the GET-request, this returns the HTTP-code.
-  int httpCode = httpClient.GET();
-
-  // Check if the response is fine.
-  if (httpCode == HTTP_CODE_OK) {  // HTTP_CODE_OK == 200
-
-    String payload = httpClient.getString();
-    deserializeJson(jsonBuffer, payload);
-
-    String appointmentDateTime = jsonBuffer[currentIndex]["date_time_appointment"];
-    String appointmentName = jsonBuffer[currentIndex]["name"];
-
-    for (int i = 0; i <= jsonBuffer.size(); i++) {
-      timeClient.update();
-      String appointmentTime = jsonBuffer[i]["date_time_appointment"];
-      String currentTime = timeClient.getFormattedTime();
-
-      int indexDate = appointmentTime.indexOf(" ");
-      String date = appointmentTime.substring(indexDate + 1);
-
-      int indexTime = date.indexOf(":");
-      int appointmentHour = date.substring(0, indexTime).toInt();
-      int appointmentMinute = date.substring(indexTime + 1, indexTime + 3).toInt();
-
-      // Compare the appointment time with the current time
-      if (timeClient.getHours() == appointmentHour - 1 && timeClient.getMinutes() == appointmentMinute) {
-        digitalWrite(buzzerPin, HIGH);
-        Serial.println("It's time");
-
-        // Keep the buzzer on for 60 seconds or until the button is pressed
-        unsigned long startTime = millis();      // Record the start time
-        while (millis() - startTime < maxTime) {   // Keep looping for 60 seconds
-          buttonState = digitalRead(buttonPin);  // Check the button state
-
-          // If the button is pressed, turn off the buzzer and exit the loop
-          if (buttonState == HIGH) {
-            digitalWrite(buzzerPin, LOW); 
-            break;                         
-          }
-
-          // Add a small delay to avoid excessive CPU usage
-          delay(smallDelay);
-        }
-      }
-    }
-    lcd.clear();
-
-    lcd.setCursor(ORG_X, ORG_Y);
-    lcd.print(appointmentDateTime);
-
-    lcd.setCursor(ORG_X, ORG_X + 1);
-    lcd.print(appointmentName);
-    
-    currentIndex = (currentIndex + 1) % jsonBuffer.size();
-
-    delay(dataUpdateDelay);  
-    
-  } else {
-    Serial.println("Unable to connect :(");
-  }
-  delay(connectionRetryDelay );
-}
-```
+```https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/embedded/main-code/final_version_sensors.ino?ref_type=heads#L103```
 
 ## Code for the LDR and the LED
 
-// @author Sara Benali
-// This program segment measures the light level in a room using an LDR sensor and activates the LED based on the measured value.
-// License type: MIT License
-
-```
-#include <ESP8266WiFi.h>
-#include <ESP8266HTTPClient.h>
-#include <WiFiClient.h>
-#include <NTPClient.h>
-#include <WiFiUdp.h>
-
-#define WIFI_SSID "iotroam"
-#define WIFI_PASSWORD "LXfu9HZkNP"
-
-WiFiUDP ntpUDP;
-NTPClient timeClient(ntpUDP, "pool.ntp.org");
-
-int light = 0;  // store the current light value
-int pinNumber = 13;
-int maxLight = 451;
-int minLight = 229;
-int midLight = 450;
-int serialStartNumber = 9600;
-int initializationDelay = 1000;
-void setup() {
-
-  //configure  serial to talk to computer
-  Serial.begin(serialStartNumber);
-  // Your WeMos tries to connect to your Wi-fi network
-  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-
-  // Keep the while-statement alive as long as we are NOT connected to the Wi-fi network.
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(initializationDelay);
-  }
-  pinMode(pinNumber, OUTPUT);  // configure digital pin 13 as an output
-
-}
-
-void loop() {
-  regulateLight();
-}
-
-void regulateLight() {
-  light = analogRead(A0);  // read and save value from PR
-
-  Serial.println(light);  // print current light value
-
-  if (light > midLight) {  // If it is bright...
-    Serial.println("It  is quite light!");
-    digitalWrite(pinNumber, LOW);  //turn the LED off
-
-  } else if (light > minLight && light < maxLight) {  // If  it is average light...
-    Serial.println("It is average light!");
-    digitalWrite(pinNumber, LOW);  // turn the LED off
-
-  } else if (light < minLight) {  // If it's dark...
-    Serial.println("It  is pretty dark!");
-    digitalWrite(pinNumber, HIGH);  // Turn the LED on
-    
-    WiFiClient client;
-    HTTPClient httpClient;
-    httpClient.begin(client, "http://benalis2.loca.lt/insert_sensor_data.php");
-    httpClient.addHeader("Content-Type", "application/x-www-form-urlencoded");
-    String httpRequestData = "light=" + String(light);
-    int httpResponseCode = httpClient.POST(httpRequestData);
-    Serial.println(httpResponseCode);
-
-    if (httpResponseCode == HTTP_CODE_OK) {
-      String payload = httpClient.getString();
-      Serial.println(payload);
-    } else {
-      Serial.println("Unable to connect :(");
-    }
-
-  }
-  delay(initializationDelay);  // don't spam the computer!
-    
-  }
+- // @author Sara Benali
+- // This program segment measures the light level in a room using an LDR sensor and activates the LED based on the 
+measured value.
+- // License type: MIT License
 
 
-```
+The `regulateLight()` function checks for the light value in a room. If there's a little light or a lot of light, the LED
+stays off, but when it's dark the LED turns on (and a POST request is made).
+
+**Overview**
+
+1. Read the light value
+2. Check if it's light or dark
+3. If it's dark the LED turns on
+4. POST request is made
+
+**Link to GitLab**
+
+```https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/embedded/main-code/final_version_sensors.ino?ref_type=heads#L187```
