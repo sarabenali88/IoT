@@ -27,6 +27,7 @@ need references to all the materials I used.
 ## Wiring diagram
 
 Below you will find the Wiring diagram of my project. This wiring diagram is created for others who want to recreate my 
-project and want to see a reference of how the parts are connected on the breadboard.
+project and want to see a reference of how the parts are connected on the breadboard and the Wemos. This device is 
+powered by a USB c cable.
 
 ![wiring_diagram_arduino](../assets/final_wiring_diagram.png)
