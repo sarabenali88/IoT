@@ -12,10 +12,13 @@ nav:
       - API reference: web/api_reference
       - Database: web/database
       - Code: web/code
+      - HTML: web/HTML.md
+      - CSS: web/CSS.md
+      - JavaScript: web/JavaScript.md
+      - PHP: PHP.md
     - 👩‍🎨 User Experience Design:
       - Concept & Design: uxd/concept_design
       - Create & Test: uxd/create_test
       - Conclude & Reflect: uxd/conclude_reflect
     - 📝 Research Market:
       - Research: research_market/research_to_market
-      - Implementation: research_market/implementation

@@ -5,15 +5,17 @@
     margin: 10px;
     border-radius: 5px;
 }
+
 .alert-success {
     width: 90%;
     display: none;
 }
+
 .card-container {
     max-height: 500px;
     overflow-y: auto;
-
 }
+
 .card-container::-webkit-scrollbar {
     width: 8px; /* Set the width of the scrollbar */
 }
@@ -27,16 +29,17 @@
     background-color: #483C32; /* Brown color */
     padding: 20px; /* Add some padding to give space around the text */
 }
-p{
+
+p {
     font-size: 14px;
 }
 
-.btn{
+.btn {
     background-color: #483C32;
     color: #FFFFFF;
 }
 
-.btn:hover{
+.btn:hover {
     border-color: #483C32;
     color: #000000;
     background-color: #FFFFFF;

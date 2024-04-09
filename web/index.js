@@ -37,10 +37,10 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if (nameInput === '') {
             errorMsg.innerHTML = "Name cannot be empty!";
             errorMsg.style.display = "block";
-        } else if (nameInput.length > 16){
+        } else if (nameInput.length > 16) {
             errorMsg.innerHTML = "Name has to be between 0-16 characters";
             errorMsg.style.display = "block";
-        }else {
+        } else {
             let dateTimeAppointment = dateInput + ' ' + timeInput
             let appointment = {
                 "dateTimeAppointment": dateTimeAppointment,
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
             successMsg.innerHTML = "Your appointment has been added!" + `<span class="close">&times;</span>`;
             successMsg.style.display = "block";
             let closeButton = document.querySelector('.close');
-            closeButton.addEventListener('click', function() {
+            closeButton.addEventListener('click', function () {
                 successMsg.style.display = 'none';
                 dateField.value = '';
                 timeField.value = '';
@@ -94,15 +94,18 @@ function createAppointments() {
         for (let appointment of data) {
             let div = document.createElement("div");
             div.classList.add("appointment");
+
             let appointmentDate = new Date(appointment.date_time_appointment);
             let options = {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'};
-            let formattedDate = appointmentDate.toLocaleDateString('gb-GB', options);
+            let formattedDate = appointmentDate.toLocaleDateString('en-GB', options);
             let time = appointment.date_time_appointment.split(' ')[1];
+
             div.innerHTML = `
         <h6>Appointment: ${appointment.name}</h6>
         <h6>Date: ${formattedDate}</h6>
         <h6>Time: ${time}</h6>  
         <button class="deleteButton mt-2 btn " data-id="${appointment.appointment_id}">Delete</button>`;
+
             data.sort((a, b) => new Date(a.date_time_appointment) - new Date(b.date_time_appointment));
             document.getElementById("new-appointment").appendChild(div);
 
@@ -120,7 +123,7 @@ function createAppointments() {
                         successMsg.innerHTML = "Your appointment has been deleted!" + `<span class="close">&times;</span>`;
                         successMsg.style.display = "block";
                         let closeButton = document.querySelector('.close');
-                        closeButton.addEventListener('click', function() {
+                        closeButton.addEventListener('click', function () {
                             successMsg.style.display = 'none';
                         });
                         div.remove();
