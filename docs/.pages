@@ -12,10 +12,10 @@ nav:
       - API reference: web/api_reference
       - Database: web/database
       - Code: web/code
-      - HTML: web/HTML.md
-      - CSS: web/CSS.md
-      - JavaScript: web/JavaScript.md
-      - PHP: PHP.md
+      - HTML: web/HTML
+      - CSS: web/CSS
+      - JavaScript: web/JavaScript
+      - PHP: PHP
     - 👩‍🎨 User Experience Design:
       - Concept & Design: uxd/concept_design
       - Create & Test: uxd/create_test
