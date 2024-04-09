@@ -21,20 +21,25 @@ darkness.
 **Purpose:** Stores appointment details including date, time, and appointment name.
 
 **Attributes:**
+
 - `appointment_id` (AI): Unique identifier for each appointment.
-- `date`: Date of the appointment.
-- `time`: Time of the appointment.
+
+- `date_time_appointment`: Date and time of the appointment.
+
 - `name`: Name of the appointment.
 
 **Key Constraints:** `appointment_id` is the primary key.
 
 #### Sensor Table:
 
-**Purpose:** Records light detection data captured by sensors.
+**Purpose:** Records light detection data captured by sensor.
 
 **Attributes:**
+
 - `sensor_id` (AI): Unique identifier for each sensor entry.
-- `light_value`: Value of light detected by the sensor.
-- `detection_datetime`: Date and time of light detection.
+
+- `light`: Value of light detected by the sensor.
+
+- `datetime`: Date and time of light detection.
 
 **Key Constraints:** `sensor_id` is the primary key.
