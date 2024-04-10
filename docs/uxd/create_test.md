@@ -11,7 +11,7 @@ I wanted to work with wood. I used the laser cutter in the makers-lab. The type 
 - Height: 80 mm
 - Depth: 101.6 mm
 - Finger size: 39
-- Notch: 0.18 mm
+- Notch (kerf): 0.18 mm
 - LCD-screen: 71 mm * 24 mm 
 - Push button: 12.1 mm * 12.1 mm
 - LED: 4 mm * 4 mm
