@@ -121,5 +121,33 @@ one hour before the appointment, the buzzer will go off and the user should clic
 
 I will be asking two users to test this device. I will give them two tasks and ask for feedback:
 
-1. Create an appointment and look if you can see the appointment on the LCD-screen
+1. Create an appointment and check if you can see the appointment on the LCD-screen
 2. Turn the buzzer off when it's time for an appointment
+3. Ask them what they think about the overall design of the device (including placement of the components)
+
+## Results User testing
+
+**Check appointment on LCD-screen**
+
+- 2/2 of the users could create an appointment on the website and after that they verified that they could see the 
+appointments on the LCD-screen.
+
+**Turn buzzer off when it's time**
+
+- 1/2 of the users immediately clicked on the button when the buzzer went off and the other user took a little to click 
+on the button. 
+
+**Overall design opinions**
+
+- 2/2 of the users didn't like the placement of the button, LED and LDR. They thought that it kind of looked weird where I 
+placed the components. The button is placed a little to the left but also in the middle, what kind of looks off. They 
+also didn't understand why the LDR was placed there next to the button. The LED looks like it's in the middle but also not.
+Overall that doesn't look very nice. They did like the placement of the LCD-screen, and they liked the fact that you could
+see all the needed information.
+
+- 1/2 of the users didn't like the sound that was coming from the buzzer, because it sounds like a very long peep that
+can be very annoying. 
+
+
+
+
