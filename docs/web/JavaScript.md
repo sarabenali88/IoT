@@ -19,7 +19,7 @@ that validates the fields:
 ```
 button.onclick = function (event) {
         event.preventDefault();
-        checkFields();
+        handleAppointmentSubmission();
     }
 ```
 
@@ -28,7 +28,7 @@ be displayed. If all the fields are entered, you won't see the error message. I 
 because I need to save this in the database with the datatype DATETIME. Lastly, I am creating an object of the entered 
 values and I use this for the post request:
 ```
-function checkFields() {
+function handleAppointmentSubmission() {
         let dateInput = dateField.value;
         let timeInput = timeField.value
         let nameInput = nameField.value;
@@ -68,19 +68,19 @@ fetch("insert_data.php", {
                 return response.json();
             }).then(function (data) {
                 createAppointments();
-            });
-
-            errorMsg.innerHTML = "";
-            errorMsg.style.display = "none";
-            successMsg.innerHTML = "Your appointment has been added!" + `<span class="close">&times;</span>`;
-            successMsg.style.display = "block";
-            let closeButton = document.querySelector('.close');
-            closeButton.addEventListener('click', function() {
+                successMsg.innerHTML = "Your appointment has been added!" + `<span class="close">&times;</span>`;
+                successMsg.style.display = "block";
+                let closeButton = document.querySelector('.close');
+                closeButton.addEventListener('click', function() {
                 successMsg.style.display = 'none';
                 dateField.value = '';
                 timeField.value = '';
                 nameField.value = '';
             });   
+            });
+
+            errorMsg.innerHTML = "";
+            errorMsg.style.display = "none";
             
          }
     }

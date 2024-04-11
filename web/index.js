@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     button.onclick = function (event) {
         event.preventDefault();
-        checkFields();
+        handleAppointmentSubmission();
     }
 
-    function checkFields() {
+    function handleAppointmentSubmission() {
         let dateInput = dateField.value;
         let timeInput = timeField.value
         let nameInput = nameField.value;
@@ -58,18 +58,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 return response.json();
             }).then(function (data) {
                 createAppointments();
+                successMsg.innerHTML = "Your appointment has been added!" + `<span class="close">&times;</span>`;
+                successMsg.style.display = "block";
+                let closeButton = document.querySelector('.close');
+                closeButton.addEventListener('click', function () {
+                    successMsg.style.display = 'none';
+                    dateField.value = '';
+                    timeField.value = '';
+                    nameField.value = '';
+                });
             });
             errorMsg.innerHTML = "";
             errorMsg.style.display = "none";
-            successMsg.innerHTML = "Your appointment has been added!" + `<span class="close">&times;</span>`;
-            successMsg.style.display = "block";
-            let closeButton = document.querySelector('.close');
-            closeButton.addEventListener('click', function () {
-                successMsg.style.display = 'none';
-                dateField.value = '';
-                timeField.value = '';
-                nameField.value = '';
-            });
 
         }
     }
