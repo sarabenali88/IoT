@@ -1,5 +1,5 @@
 1. @author Sara Benali
-2. This file explains the purpose calendar program, including its features
+2. This file explains the purpose of the calendar program, including its features
 3. License type: MIT License:
 ```
 MIT License
