@@ -35,9 +35,7 @@ configuration.
 
 **Link to GitLab**
 
-```https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blame/main/embedded/main-code/final_version_sensors.ino?ref_type=heads#L1```
-
-**Example picture**
+[Link to Library configuration](https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blame/main/embedded/main-code/final_version_sensors.ino?ref_type=heads#L1)
 
 ## Variables
 
@@ -56,14 +54,14 @@ configuration.
 
 **Link to GitLab**
 
-```https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/embedded/main-code/final_version_sensors.ino?ref_type=heads#L12```
+[Link to variables](https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/embedded/main-code/final_version_sensors.ino?ref_type=heads#L12)
 
 ## Setup
 
 In the setup I set Wi-Fi manager, the pins of the buzzer, button, LED, LCD and the timeClient. 
 
 **Link to GitLab**
-```https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/embedded/main-code/final_version_sensors.ino?ref_type=heads#L62```
+[Link to set-up](https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/embedded/main-code/final_version_sensors.ino?ref_type=heads#L62)
 
 ## Code for the LCD-display, Active buzzer and Push button
 
@@ -83,7 +81,7 @@ buzzer go off one hour before the appointment time. It also stops buzzing the mo
 
 **Link to GitLab**
 
-```https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/embedded/main-code/final_version_sensors.ino?ref_type=heads#L103```
+[Link to makeSound() function](https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/embedded/main-code/final_version_sensors.ino?ref_type=heads#L103)
 
 ## Code for the LDR and the LED
 
@@ -101,4 +99,4 @@ stays off, but when it's dark the LED turns on (and a POST request is made).
 
 **Link to GitLab**
 
-```https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/embedded/main-code/final_version_sensors.ino?ref_type=heads#L187```
+[Link to regulateLight() function](https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/embedded/main-code/final_version_sensors.ino?ref_type=heads#L187)
