@@ -77,7 +77,7 @@ the users to get a clear message of what is missing or needs to be changed. Belo
 ```
 
 Above you can see that the moment everything is correct, an object is made out of the values and this will be sent to the
-database. Below you can find how I did it:
+database by using the PHP file `insert_data.php`. Below you can find how I did it:
 
 ```
         fetch("insert_data.php",
@@ -107,4 +107,36 @@ In the options I sent the method, headers and body. You can see that I sent the 
 is created it will be immediately added to the list of appointments. You will also see a message that displays that the 
 appointment has been added. The message also contains a close button that removes the message and clears the input
 fields, so the users can add new appointments immediately. 
+
+
+## API endpoint
+
+After the request is sent, it will end up here in the backend and the request will be handled by PHP. The object is 
+deserialized into separate variables, so I can add the values in the INSERT query. To prevent SQL injection, I replaced
+the variables in the `VALUES()` with question marks (?), and I then bound the parameters with the variables. The query is
+executed and a message will be sent. Below you'll find how the request is handled:
+```
+$data = file_get_contents("php://input");
+    $appointment = json_decode($data, true);
+    define('HTTP_STATUS_CREATED', 201);
+    define('HTTP_STATUS_INTERNAL_SERVER_ERROR', 500);
+
+    if ($appointment !== null) {
+        $dateTimeAppointment = $appointment["dateTimeAppointment"];
+        $name = $appointment["name"];
+
+        if (isset($dbConnection)) {
+            $insertQuery = $dbConnection->prepare("INSERT INTO `Appointment` (`date_time_appointment`, `name`) VALUES (?, ?)");
+            $insertQuery->bind_param("ss", $dateTimeAppointment, $name);
+            if ($insertQuery->execute()) {
+                http_response_code(HTTP_STATUS_CREATED);
+                echo json_encode(array("succes" => true, "message" => "Appointment is added succesfully!"));
+            } else {
+                http_response_code(HTTP_STATUS_INTERNAL_SERVER_ERROR);
+                echo json_encode(array("success" => false, "message" => "No connection with database",
+                    "error" => $dbConnection->error));
+            }
+```
+
+
 
