@@ -33,11 +33,78 @@ Below you'll find a picture of how the website looks like now:
 ![final_website_design](../assets/final_website.png)
 
 
-The software I used for my website is Intellij, MySqlWorkbench, and the docker environment. In the beginning of the project
-I did consider using Visual studio code, but I thought that wouldn't be necessary because I could do the exact same thing 
-in Intellij, also because I know how Intellij works. I also thought that instead of using PHP, I could create a kind of 
-like OOP framework, because I didn't know how to use PHP. But I thought it would be better to use PHP, because then I'd
-get to also learn a new programming language. 
+The software I used for my website is Intellij, MySqlWorkbench, and the docker environment. The front-end consists out of 
+HTML, CSS and JavaScript and the back-end consists out of PHP. In the beginning of the project I did consider using 
+Visual studio code, but I thought that wouldn't be necessary because I could do the exact same thing in Intellij, 
+also because I know how Intellij works. I also thought that instead of using PHP, I could create a kind of like OOP 
+framework, because I didn't know how to use PHP. But I thought it would be better to use PHP, because then I'd get to 
+also learn a new programming language. 
 
 
+## Functionalities
+
+To be able to submit the form, I used a button. On the button, I used a click event and when the user clicks on the 
+button. `handleAppointmentSubmission()` will be called. In this function I validate the fields based on if they were empty
+or if the appointment name is bigger than 16 characters. I have chosen to validate each field separately, because I wanted
+the users to get a clear message of what is missing or needs to be changed. Below you can see how I did it: 
+
+```
+        let dateField = document.getElementById("date-input");
+        let timeField = document.getElementById("time-input");
+        let nameField = document.getElementById("app_name");
+        let dateInput = dateField.value;
+        let timeInput = timeField.value
+        let nameInput = nameField.value;
+
+        if (dateInput === '') {
+            errorMsg.innerHTML = "Date cannot be empty!";
+            errorMsg.style.display = "block";
+        } else if (timeInput === '') {
+            errorMsg.innerHTML = "Time cannot be empty!"
+            errorMsg.style.display = "block";
+        } else if (nameInput === '') {
+            errorMsg.innerHTML = "Name cannot be empty!";
+            errorMsg.style.display = "block";
+        } else if (nameInput.length > 16) {
+            errorMsg.innerHTML = "Name has to be between 0-16 characters";
+            errorMsg.style.display = "block";
+        } else {
+            let dateTimeAppointment = dateInput + ' ' + timeInput
+            let appointment = {
+                "dateTimeAppointment": dateTimeAppointment,
+                "name": nameInput
+            };
+```
+
+Above you can see that the moment everything is correct, an object is made out of the values and this will be sent to the
+database. Below you can find how I did it:
+
+```
+        fetch("insert_data.php",
+                {
+                    "method": "POST",
+                    "headers": {
+                        "Content-Type": "application/json; charset=utf-8"
+                    },
+                    "body": JSON.stringify(appointment)
+                }).then(function (response) {
+                return response.json();
+            }).then(function (data) {
+                createAppointments();
+                successMsg.innerHTML = "Your appointment has been added!" + `<span class="close">&times;</span>`;
+                successMsg.style.display = "block";
+                let closeButton = document.querySelector('.close');
+                closeButton.addEventListener('click', function () {
+                    successMsg.style.display = 'none';
+                    dateField.value = '';
+                    timeField.value = '';
+                    nameField.value = '';
+                });
+            });
+```
+
+In the options I sent the method, headers and body. You can see that I sent the object as the body. When the appointment
+is created it will be immediately added to the list of appointments. You will also see a message that displays that the 
+appointment has been added. The message also contains a close button that removes the message and clears the input
+fields, so the users can add new appointments immediately. 
 
