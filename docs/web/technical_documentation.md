@@ -108,6 +108,10 @@ is created it will be immediately added to the list of appointments. You will al
 appointment has been added. The message also contains a close button that removes the message and clears the input
 fields, so the users can add new appointments immediately. 
 
+The reason why I chose to use Fetch API is because I am familiar with it. I have used it in another projects and by using
+Fetch API I can easily create HTTP requests. While other options do exists, I wanted to use this because I already know
+how it works.
+
 
 ## API endpoint
 
