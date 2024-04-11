@@ -55,9 +55,9 @@ int maxTime = 60000;
 
 int light = 0;  // store the current light value
 int pinNumber = 13;
-int maxLight = 451;
-int minLight = 229;
-int midLight = 450;
+int maxLightValue = 451; // maximum light value
+int minLightValue = 229; // minimum light value
+int middleLightValue = 450; // middle light value
 
 void setup() {
   Serial.begin(serialStartNumber);
@@ -189,15 +189,15 @@ void regulateLight() {
   light = analogRead(A0);  // read and save value from PR
   Serial.println(light);  // print current light value
 
-  if (light > maxLight) {  // If it is bright... maximum light value
+  if (light > maxLightValue) {  // If it is bright... maximum light value
     Serial.println("It  is quite light!");
     digitalWrite(pinNumber, LOW);  //turn the LED off
 
-  } else if (light > minLight && light < midLight) {  // If  it is average light... middle light value
+  } else if (light > minLightValue && light < middleLightValue) {  // If  it is average light... middle light value
     Serial.println("It is average light!");
     digitalWrite(pinNumber, LOW);  // turn the LED off
 
-  } else if (light < minLight) {  // If it's dark... minimum light value
+  } else if (light < minLightValue) {  // If it's dark... minimum light value
     Serial.println("It  is pretty dark!");
     digitalWrite(pinNumber, HIGH);  // Turn the LED on
 
