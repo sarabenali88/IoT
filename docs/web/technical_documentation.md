@@ -138,5 +138,11 @@ $data = file_get_contents("php://input");
             }
 ```
 
+## MysqlWorkbench
 
+When the request was successful and the data is sent to the database, the data will be added to a table called Appointment.
+This table exists out of an AI id, date_time_appointment column and a name column for the appointment. Below you'll find
+a picture of how it looks like:
+
+![img.png](../assets/img.png)
 
