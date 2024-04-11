@@ -72,7 +72,7 @@ Assuming you have installed mysql workbench already and have a connection!
 
 **Create database schema and tables**
 
-By using this file [Create database schema and tables](../web/sql_scripts/create_db) you can create the database schema
+By using this file [Create database schema and tables](../web/sql_scripts/create_db.md) you can create the database schema
 and create the tables.
 
 1. Save the file by using .sql extension in a location where you can easily access it.
@@ -85,10 +85,10 @@ Below is a short video explaining it:
 
 After you have created the database schema and tables you can execute queries:
 
-In this file [All the queries](../web/sql_scripts/queries) you can find all the queries and below I added a video of how
+In this file [All the queries](../web/sql_scripts/queries.md) you can find all the queries and below I added a video of how
 to execute the queries: 
 
-[IVideo explaining how to run queries](https://youtu.be/oIEXxbkNfRY)
+[Video explaining how to run queries](https://youtu.be/oIEXxbkNfRY)
 
 P.S I realised while I was recording that the Sensor table still had id as primary key, I changed it because it indeed
 is supposed to be `sensor_id`

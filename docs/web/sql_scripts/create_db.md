@@ -19,10 +19,10 @@ USE `iot` ;
 -- Table `iot`.`Appointment`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `iot`.`Appointment` (
-  `appointment_id` INT NOT NULL AUTO_INCREMENT,
-  `date_time_appointment` DATETIME NOT NULL,
-  `name` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`appointment_id`))
+`appointment_id` INT NOT NULL AUTO_INCREMENT,
+`date_time_appointment` DATETIME NOT NULL,
+`name` VARCHAR(45) NOT NULL,
+PRIMARY KEY (`appointment_id`))
 ENGINE = InnoDB;
 
 
@@ -30,10 +30,10 @@ ENGINE = InnoDB;
 -- Table `iot`.`Sensor`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `iot`.`Sensor` (
-  `sensor_id` INT NOT NULL AUTO_INCREMENT,
-  `light` INT NOT NULL,
-  `date_time` DATE NOT NULL,
-  PRIMARY KEY (`sensor_id`))
+`sensor_id` INT NOT NULL AUTO_INCREMENT,
+`light` INT NOT NULL,
+`date_time` DATE NOT NULL,
+PRIMARY KEY (`sensor_id`))
 ENGINE = InnoDB;
 
 
