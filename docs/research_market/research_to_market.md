@@ -1,5 +1,21 @@
 # Research 
 
+## Introduction
+
+Do you struggle a lot to remember to attend all of your appointments while being busy with other things? You're not alone if you're one of the numerous busy
+people who experiences this issue on a daily basis. For this reason, I've created an easy-to-use website and digital
+calendar that are supposed to make appointment scheduling easier for individuals with busy schedules.
+
+Those that have a busy lifestyle and require a productive approach to schedule their appointments without having to deal with complicated
+technologies are part of my target group. My device is designed to make your daily routine more efficient. This device
+is not something too small or too big, so you can place it anywhere you would like, for example your nightstand, on a
+desk or on a side table.
+
+This is how it works: On the website, you enter the date, time and name of the appointment,
+you save the appointment, and the appointment is now synced with the device. The appointment name will be seen on the
+device and approximately 30 minutes before the appointment, a buzzer will go off to remind you off the appointment.
+By clicking on the button you can turn the buzzer sound off.
+
 ## Research question
 
 For the research market I will be researching about User Interaction. I want to find out how I can make it easier for 
@@ -11,24 +27,7 @@ For this research question I have also added two sub questions:
 
 - What are some common examples of user interface problems?
 
-- What do people think of the user interface in my own website? 
-
-
-## Introduction 
-
-Do you struggle a lot to remember to attend all of your appointments while being busy with other things? You're not alone if you're one of the numerous busy 
-people who experiences this issue on a daily basis. For this reason, I've created an easy-to-use website and digital 
-calendar that are supposed to make appointment scheduling easier for individuals with busy schedules. 
-
-Those that have a busy lifestyle and require a productive approach to schedule their appointments without having to deal with complicated 
-technologies are part of my target group. My device is designed to make your daily routine more efficient. This device
-is not something too small or too big, so you can place it anywhere you would like, for example your nightstand, on a 
-desk or on a side table. 
-
-This is how it works: On the website, you enter the date, time and name of the appointment, 
-you save the appointment, and the appointment is now synced with the device. The appointment name will be seen on the 
-device and approximately 30 minutes before the appointment, a buzzer will go off to remind you off the appointment. 
-By clicking on the button you can turn the buzzer sound off. 
+- What do people think of the user interface in my own website?
 
 ## Research Method 
 
