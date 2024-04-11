@@ -93,3 +93,6 @@ to execute the queries:
 P.S I realised while I was recording that the Sensor table still had id as primary key, I changed it because it indeed
 is supposed to be `sensor_id`
 
+Also, I think I forgot to show that the queries actually executed so here is a picture of proof:
+![proof](../assets/proof_queries.jpg)
+
