@@ -2,7 +2,11 @@
 
 ## Usability of Product
 
-Below you'll find some pictures and video's of the final working product:
+Below you'll find a video of the final working product. In the video I show that the LED works when it's dark (I cover 
+the LDR with my hand), I show you how I create an appointment, I show that I am waiting for the buzzer to go off and 
+that I can turn te buzzer off. P.S. Sorry for any background noice and my voice :)
+
+[Final product design](https://youtu.be/wGgFLyGELOs)
 
 ## Achieved requirements
 
