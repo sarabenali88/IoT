@@ -15,6 +15,7 @@ darkness.
 ![database-diagram](../assets/appointments_database.png)
 
 **Reasoning:**
+
 For the `Appointment` table, I chose to save the date and time of the appointment as DATETIME, because they would 
 always be stored together. Storing it separately could lead to inconsistencies and needing more storage. The name of the
 appointment is a string and that's why I chose to save it as a VARCHAR.
