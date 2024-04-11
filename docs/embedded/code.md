@@ -1,8 +1,33 @@
-## Library configuration
+1. @author Sara Benali
+2. This file explains the purpose calendar program, including its features
+3. License type: MIT License:
+```
+MIT License
 
-- // @author Sara Benali
-- // This section of the program is for the libraries
-- // License type: MIT License
+Copyright (c) [2024] [Sara Benali]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+I have also included a link to the GitLab repository for each functionality at the exact line.
+
+## Library configuration
 
 The Libraries cover different functionalities such as Wi-Fi connection, HTTP communication, JSON data handling, LCD-display
 control, network time synchronization, UDP communication, DNS resolution, web server capabilities, and lastly Wi-Fi network
@@ -12,11 +37,9 @@ configuration.
 
 ```https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blame/main/embedded/main-code/final_version_sensors.ino?ref_type=heads#L1```
 
-## Variables 
+**Example picture**
 
-- // @author Sara Benali
-- // This section explains what the variables are used for
-- // License type: MIT License
+## Variables
 
 **Overview**
 
@@ -37,21 +60,12 @@ configuration.
 
 ## Setup
 
-- // @author Sara Benali
-- // This section of the program setups everything, so you can use it in the program.
-- // License type: MIT License
-
 In the setup I set Wi-Fi manager, the pins of the buzzer, button, LED, LCD and the timeClient. 
 
 **Link to GitLab**
 ```https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/embedded/main-code/final_version_sensors.ino?ref_type=heads#L62```
 
 ## Code for the LCD-display, Active buzzer and Push button
-
-- // @author Sara Benali
-- // This section of the program retrieves saved appointments and presents them on the LCD-display. It monitors local time
- to trigger the buzzer alarm and provides functionality to stop the buzzer with a button press. 
-- // License type: MIT License
 
 **Function description**
 
@@ -72,11 +86,6 @@ buzzer go off one hour before the appointment time. It also stops buzzing the mo
 ```https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/embedded/main-code/final_version_sensors.ino?ref_type=heads#L103```
 
 ## Code for the LDR and the LED
-
-- // @author Sara Benali
-- // This program segment measures the light level in a room using an LDR sensor and activates the LED based on the 
-measured value.
-- // License type: MIT License
 
 **Function description**
 
