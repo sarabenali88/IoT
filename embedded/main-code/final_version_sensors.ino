@@ -189,15 +189,15 @@ void regulateLight() {
   light = analogRead(A0);  // read and save value from PR
   Serial.println(light);  // print current light value
 
-  if (light > midLight) {  // If it is bright...
+  if (light > maxLight) {  // If it is bright... maximum light value
     Serial.println("It  is quite light!");
     digitalWrite(pinNumber, LOW);  //turn the LED off
 
-  } else if (light > minLight && light < maxLight) {  // If  it is average light...
+  } else if (light > minLight && light < midLight) {  // If  it is average light... middle light value
     Serial.println("It is average light!");
     digitalWrite(pinNumber, LOW);  // turn the LED off
 
-  } else if (light < minLight) {  // If it's dark...
+  } else if (light < minLight) {  // If it's dark... minimum light value
     Serial.println("It  is pretty dark!");
     digitalWrite(pinNumber, HIGH);  // Turn the LED on
 
