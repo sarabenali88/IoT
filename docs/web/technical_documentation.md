@@ -48,7 +48,7 @@ button. `handleAppointmentSubmission()` will be called. In this function I valid
 or if the appointment name is bigger than 16 characters. I have chosen to validate each field separately, because I wanted
 the users to get a clear message of what is missing or needs to be changed. Below you can see how I did it: 
 
-```
+```javascript
         let dateField = document.getElementById("date-input");
         let timeField = document.getElementById("time-input");
         let nameField = document.getElementById("app_name");
@@ -74,12 +74,13 @@ the users to get a clear message of what is missing or needs to be changed. Belo
                 "dateTimeAppointment": dateTimeAppointment,
                 "name": nameInput
             };
+        }
 ```
 
 Above you can see that the moment everything is correct, an object is made out of the values and this will be sent to the
 database by using the PHP file `insert_data.php`. Below you can find how I did it:
 
-```
+```javascript
         fetch("insert_data.php",
                 {
                     "method": "POST",
@@ -119,7 +120,7 @@ After the request is sent, it will end up here in the backend and the request wi
 deserialized into separate variables, so I can add the values in the INSERT query. To prevent SQL injection, I replaced
 the variables in the `VALUES()` with question marks (?), and I then bound the parameters with the variables. The query is
 executed and a message will be sent. Below you'll find how the request is handled:
-```
+```injectablephp
 $data = file_get_contents("php://input");
     $appointment = json_decode($data, true);
     define('HTTP_STATUS_CREATED', 201);

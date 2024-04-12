@@ -1,7 +1,5 @@
 # Technical documentation
 
-Your Wiring Diagram, Bill of Materials, ... everything about how you built your embedded device should be documented here.
-
 ## BOM (Bill of Materials)
 
 Below you will find the Bill of Materials of my own project. This is made for others who want to recreate my project and 
