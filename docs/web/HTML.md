@@ -5,7 +5,7 @@ with Bootstrap and with CSS.
 Below I have added the files/libraries for Bootstrap, CSS by using the link tag and href reference. I used the script
 tag for the JavaScript file:
 
-```
+```html
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="main.css">
 <script type="module" src="index.js"></script>
@@ -13,7 +13,7 @@ tag for the JavaScript file:
 
 In the head of the file I have added the title of the website by using the title tag:
 
-```
+```html
 <head>
     <title>My Calender</title>
 </head> 
@@ -21,7 +21,7 @@ In the head of the file I have added the title of the website by using the title
 
 In the body of the HTML file I have added a header with a fun title and a kind of explanation of the website:
 
-```
+```html
 <div class="header">
     <h2 class="title text-center text-white">Reminder Road: Your Pathway to Organized Appointments and Timely
         Reminders!</h2>
@@ -38,7 +38,7 @@ I have given each field a name, so it's clear which field is for which. In the c
 styling and I did this with bootstrap. I have also added a success alert message that will be displayed when adding 
 and/or deleting an appointment. 
 
-```
+```html
 <div class="container p-2">
     <div class="row">
         <div class="col-5 card mt-5">
@@ -68,7 +68,7 @@ and/or deleting an appointment.
 This div tag is used for the appointments that are made. Everytime an appointment is made, the appointment will be added
 to this div tag so it kind of looks like a list:
 
-```
+```html
 <div class="card col-6 mt-5 mx-5 card-container pt-4">
             <h2 class="p-2">My appointments</h2>
             <div id="new-appointment">
@@ -77,7 +77,7 @@ to this div tag so it kind of looks like a list:
 ```
 
 Lastly, I have added a footer just as an extra thing:
-```
+```html
 <div class="card-footer">
     <p class="text-center font-weight-bold">@University of Applied Sciences</p>
 </div>
