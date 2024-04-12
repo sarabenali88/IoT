@@ -185,6 +185,7 @@ This container makes sure all of my appointments are saved and secured and that 
 the list. 
 
 **2. Delete appointment**
+
 - I delete appointments to see if they stay deleted
 - I make sure that there is a button that deletes the appointment, and when you delete it, it stays gone for good.
 
