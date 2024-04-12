@@ -2,6 +2,8 @@ In this file I will be explaining the HTML code I have written for the form that
 an appointment. This file exists out of a form where everything is handled dynamically by JavaScript. Styling is done
 with Bootstrap and with CSS.
 
+[Link to code](https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/web/index.html?ref_type=heads)
+
 Below I have added the files/libraries for Bootstrap, CSS by using the link tag and href reference. I used the script
 tag for the JavaScript file:
 

@@ -1,5 +1,7 @@
 In this file I will be explaining the code I have written for the different requests I have made:
 
+[Link to code](https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/web/index.js?ref_type=heads)
+
 First, I have added an event listener on the page, so all the content will be loaded first before anything else happens. 
 By using the getElementById I am retrieving the fields of the inputs, the button and the error and success field from 
 the HTML file:

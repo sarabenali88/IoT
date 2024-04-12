@@ -2,6 +2,8 @@ In this file I will be explaining the API endpoints that I have created.
 
 ## POST 
 
+[Link to code](https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/web/insert_data.php?ref_type=heads)
+
 This POST method sends the date, time and name of the appointment to the database.
 
 First, I add the php file for the database connection, because you can't make a request to the database without a
@@ -57,6 +59,9 @@ Lastly, I close the connection.
 ```
 
 ## POST (POST request for the LDR sensor data)
+
+[Link to code](https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/web/insert_sensor_data.php?ref_type=heads)
+
 This POST method is used to insert the data from the LDR light value when it's dark.
 
 First, I add the php file for the database connection, because you can't make a request to the database without a
@@ -101,6 +106,8 @@ Lastly, I close the connection.
     $dbConnection->close();
 ```
 ## GET (GET request for all the appointments)
+
+[Link to code](https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/web/get_data.php?ref_type=heads)
 
 This GET method retrieves the date, time and name of the appointments from the database.
 
@@ -147,6 +154,8 @@ Lastly, I close the connection.
 ```
 
 ## GET (GET request for the appointments according to the date)
+
+[Link to code](https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/web/get_date.php?ref_type=heads)
 
 This GET method retrieves all the dates according to what date it is. 
 
@@ -197,6 +206,8 @@ Lastly, I close the connection.
 ```
 
 ## DELETE 
+
+[Link to code](https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/web/delete_data.php?ref_type=heads)
 
 This DELETE method deletes the date, time and name of the selected appointment from the database.
 

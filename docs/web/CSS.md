@@ -1,5 +1,6 @@
 In this file I will be explaining the styling I did with CSS. 
 
+[Link to code](https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/web/main.css?ref_type=heads)
 I added some styling for the "containers" that each appointment go into. I have added a border-style, width, and some 
 padding and margin, and a border-radius, so it looks nice on the page.
 
