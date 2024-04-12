@@ -1,5 +1,9 @@
 # Requirements
 
+Here is a link to my embedded code for more information: 
+
+[Link to embedded code](https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blame/main/embedded/main-code/final_version_sensors.ino?ref_type=heads)
+
 ## System requirements table
 
 | **Requirement ID#** | **Requirement**                                                                                                                                                                        | **MoSCoW** | **Compliant** |
