@@ -1,10 +1,5 @@
 # Requirements
 
-To build your embedded device you need to have a clear idea of the requirements. On this page you can describe the
-requirements of your embedded device. This includes the requirements from DLO, but also your own requirements.
-
-Add some images! 😉
-
 ## System requirements table
 
 | **Requirement ID#** | **Requirement**                                                                                                                                                                        | **MoSCoW** | **Compliant** |
@@ -71,7 +66,7 @@ to stop the active buzzer from buzzing for when it's time for an appointment.
 I first initialize the pins of the button, buzzer and the state of the button. In the setup I set the buzzer as 
 the OUTPUT and the button as the INPUT.
 
-```
+```cpp
 int buzzerPin = 16;
 int buttonPin = 14;
 int buttonState;
@@ -81,7 +76,7 @@ pinMode(buttonPin, INPUT);
 
 I first check the button state. I check if the button state is HIGH and if it is than that means that the button is pressed.
 The buzzer is then set to LOW, so it stops buzzing. 
-```
+```cpp
    buttonState = digitalRead(buttonPin);  // Check the button state
    // If the button is pressed, turn off the buzzer and exit the loop
    
@@ -99,7 +94,7 @@ turned on.
 
 I first save the numbers I am checking the light value with, I also created a variable called light because here I am
 storing the value of the light.
-```
+```cpp
 int light = 0;  // store the current light value
 int pinNumber = 13;
 int maxLight = 451;
@@ -109,13 +104,13 @@ int midLight = 450;
 
 I created a method called regulateLight and I call this method in the loop. With the analogRead I read the light value
 that comes from the LDR.
-```
+```cpp
 void regulateLight() {
   light = analogRead(A0); 
 ```
 
 The light value is being checked for the minimum and maximum value and based on that the LED will be turned on or off.
-```
+```cpp
 if (light > midLight) {  // If it is bright...
     Serial.println("It  is quite light!");
     digitalWrite(pinNumber, LOW);  //turn the LED off
@@ -142,14 +137,14 @@ and time and on the second row the name of the appointment.
 
 I set the columns and rows for the LCD-display 
 
-```
+```cpp
 int lcdColumns = 16;
 int lcdRows = 2;
 LiquidCrystal_I2C lcd(0x27, lcdColumns, lcdRows);
 ```
 
 I deserialized the data I got and I saved the value from the date_time_appointment and the name of the appointment.
-```
+```cpp
     String payload = httpClient.getString();
     deserializeJson(jsonBuffer, payload);
     currentIndex = (currentIndex + 1) % jsonBuffer.size();
@@ -160,7 +155,7 @@ I deserialized the data I got and I saved the value from the date_time_appointme
 I then print the date/time of the appointment on the first row of the LCD-screen by using 0,0 and the name on the
 second row by using 0,1.
 
-```
+```cpp
     lcd.setCursor(ORG_X, ORG_Y);
     lcd.print(appointmentDateTime);
     lcd.setCursor(ORG_X, ORG_X + 1);
@@ -174,7 +169,7 @@ light will shine and if it's light, then the LED will be turned off.
 
 I initialize the numbers I use to check how strong the light is.
 
-```
+```cpp
 int light = 0;  // store the current light value
 int pinNumber = 13;
 int maxLight = 451;
@@ -186,7 +181,7 @@ I then do three checks to check how light it is. If it's really light tha the LE
 light then the LED will also be set on LOW and if the light is lower than the minimum light than that means that it's dark and
 the LED will be set on HIGH.
 
-```
+```cpp
 if (light > midLight) {  // If it is bright...
     Serial.println("It  is quite light!");
     digitalWrite(pinNumber, LOW);  //turn the LED off
@@ -209,7 +204,7 @@ that the user has an appointment.
 I first initialize the pins of the button, buzzer and the state of the button. In the setup I set the buzzer as
 the OUTPUT and the button as the INPUT.
 
-```
+```cpp
 int buzzerPin = 16;
 int buttonPin = 14;
 int buttonState;
@@ -222,7 +217,7 @@ One hour before the appointment's time the buzzer will go off. If you click on t
 want the buzzer to go off forever, so it goes off for one minute and if you didn't click on the button in that one minute
 then it turns off on its own. 
 
-```
+```cpp
 if (timeClient.getHours() == appointmentHour - 1 && timeClient.getMinutes() == appointmentMinute) {
         digitalWrite(buzzerPin, HIGH);
         Serial.println("It's time");
@@ -245,7 +240,7 @@ I have included the WiFi-Manager by including the library and for configuration 
 
 First, I set the port number:
 
-```
+```cpp
 int portNumber = 80;
 WiFiServer server(portNumber);
 boolean response;
@@ -253,7 +248,7 @@ boolean response;
 
 I configure the network in the setup():
 
-````
+````cpp
 WiFiManager wifiManager;
   // Uncomment and run it once, if you want to erase all the stored information
   response = wifiManager.autoConnect("calendarAP", "password");
