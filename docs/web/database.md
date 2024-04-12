@@ -79,9 +79,10 @@ and create the tables.
 1. Save the file by using .sql extension in a location where you can easily access it.
 2. Open Mysql workbench and open one of your connection
 3. In your connection go to File -> Open SQL script and select the file you have saved.
-4. To run the script you can click on the left lightning bolt
+4. Open the file
+5. To run the script you can click on the left lightning bolt
 
-Below is a short video explaining it:
+Below is a short video explaining it (In the video I have selected a random file):
 
 [Intro to run a script](https://youtu.be/HASmQIaTziQ)
 
@@ -89,8 +90,10 @@ Below is a short video explaining it:
 
 After you have created the database schema and tables you can execute queries:
 
-In this file [All the queries](../web/sql_scripts/queries.md) you can find all the queries and below I added a video of how
-to execute the queries: 
+In this file [All the queries](../web/sql_scripts/queries.md) you can find all the queries to select data from the database
+, to insert new data into the tables and to delete data from the tables.
+
+Below I added a video of how to execute the queries: 
 
 [Video explaining how to run queries](https://youtu.be/oIEXxbkNfRY)
 
