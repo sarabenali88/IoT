@@ -61,7 +61,8 @@ configuration.
 In the setup I set Wi-Fi manager, the pins of the buzzer, button, LED, LCD and the timeClient. 
 
 **Link to GitLab**
-[Link to set-up](https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/embedded/main-code/final_version_sensors.ino?ref_type=heads#L87)
+
+[Link to set up](https://gitlab.fdmci.hva.nl/IoT/2023-2024-semester-2/individual-project/tiitiizuuxuu49/-/blob/main/embedded/main-code/final_version_sensors.ino?ref_type=heads#L87)
 
 ## Code for the LCD-display, Active buzzer and Push button
 

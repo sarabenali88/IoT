@@ -136,3 +136,14 @@ Below is a picture of the design in makers-case and in Inkscape:
 ![box_design](../assets/box_design.png)
 ![box_plans](../assets/box_plans.png)
 
+## Final touches
+
+I have received feedback from my users and based on that I have created a rough sketch of how it looks like now. I have
+decided to bring the button to the front and put it in the corner on the right. I thought it would look fun to put the LED
+in the middle of the box as the light. I also thought it would be better to put the LDR in the back and so there wouldn't
+be a lot of focus on it. 
+
+Below you can find a sketch of how it looks like now. I made it in Inkscape:
+
+![Final sketch](../assets/sketch_design.png)
+

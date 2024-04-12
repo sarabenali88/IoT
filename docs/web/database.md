@@ -82,9 +82,11 @@ and create the tables.
 4. To run the script you can click on the left lightning bolt
 
 Below is a short video explaining it:
+
 [Intro to run a script](https://youtu.be/HASmQIaTziQ)
 
 **Queries**
+
 After you have created the database schema and tables you can execute queries:
 
 In this file [All the queries](../web/sql_scripts/queries.md) you can find all the queries and below I added a video of how

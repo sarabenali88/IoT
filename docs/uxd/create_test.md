@@ -88,6 +88,17 @@ like after putting the sides together:
 ![material_measurements](../assets/material_measurements.jpg)
 ![final_design](../assets/final_design.jpg)
 
+#### Final touches (After user testing)
+For the final product I went to the makers-lab to cut out new shapes for the button, Led and LDR according to the user
+testing. I also finally knew how I can make the components show in my design box. I came up with the idea to solder wires
+to my components, and it worked. I did have a little problem with soldering the wires because this time it was harder, 
+so Seyma helped me.
+
+Below you can find the measurements I used:
+
+|     | Button      | LCD       | LED   | LDR         |
+|-----|-------------|-----------|-------|-------------|
+| mm  | 12.1 * 12.1 | 7.1 * 2.4 | 4 * 4 | 4.75 * 4.75 |
 
 
 ## User Testing
@@ -145,7 +156,7 @@ also didn't understand why the LDR was placed there next to the button. The LED 
 Overall that doesn't look very nice. They did like the placement of the LCD-screen, and they liked the fact that you could
 see all the needed information.
 
-- 1/2 of the users didn't like the sound that was coming from the buzzer, because it sounds like a very long peep that
+- 1/2 of the users didn't really like the sound that was coming from the buzzer, because it sounds like a very long peep that
 can be very annoying. 
 
 

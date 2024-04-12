@@ -24,7 +24,7 @@ that they could see the appointment on the screen.
 - Assessment: During the testing, the device successfully let the buzzer go off one hour before the appointment. The users
 could also identify the sound.
 - Recommendation: It would be nice to create a nice tune for the buzzer. Now it sounds like a long peep which is quite 
-annoying to hear.
+loud to hear.
 
 **Requirement 3: Button to turn buzzer off**
 
