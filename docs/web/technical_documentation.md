@@ -151,3 +151,47 @@ a picture of how it looks like:
 
 ![img.png](../assets/img.png)
 
+
+## Docker environment and their roles
+
+**1. Tunnel**
+
+The tunnel creates a safe way for users outside my system to connect to it. It's like a secured tunnel for authorized 
+systems to interact with my websites from far away. 
+
+**2. iot-nginx**
+
+This container is used, so users are directed to the right parts of my website quick and efficient. 
+
+**3. iot-php**
+
+The PHP container handles the requests of my website. It makes sure users can create an appointment, getting data, deleting
+data and overall makes sure the website works smoothly
+
+**4. iot-phpmyadmin**
+
+This container is used to help you control and manage the data from the website
+
+**5. iot-mariadb**
+
+This container makes sure all of my appointments are saved and secured and that I can access them whenever I want
+
+## Testing 
+
+**1. Create new appointments**
+
+- I create new appointments to see if everything works
+- I make sure that you can enter all the values and when you click on the submit button, the appointment is added to 
+the list. 
+
+**2. Delete appointment**
+- I delete appointments to see if they stay deleted
+- I make sure that there is a button that deletes the appointment, and when you delete it, it stays gone for good.
+
+**3. Seeing the appointments**
+
+- I make sure I can see the appointments that I have created already
+- I make sure that when they show up, they have the name, date and time of the appointment
+
+
+
