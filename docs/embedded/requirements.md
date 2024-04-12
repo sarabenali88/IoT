@@ -22,7 +22,7 @@ I first check when the value that the LDR detects is smaller than the minimum li
 a POST request. I use the ```"http://benalis2.loca.lt/insert_sensor_data.php"``` to create the request. I add the
 Content-Type in the header and I set the format. By using the ```"httpClient.POST()"``` the request is executed.
 
-```
+```cpp
 else if (light < minLight) {  // If it's dark...
     Serial.println("It  is pretty dark!");
     digitalWrite(pinNumber, HIGH);  // Turn the LED on
@@ -41,7 +41,7 @@ I created a GET request to request data from my server. I create a request by us
 ```"http://benalis2.loca.lt/get_date.php"```. I use the ``` "httpClient.GET()"``` to execute the GET request. I check if
 the response had the status-code 200 and if it does than I deserialize the data.
 
-```
+```cpp
  // Initialize a wi-fi client & http client
   WiFiClient client = server.available();
   HTTPClient httpClient;
